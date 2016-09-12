@@ -101,7 +101,7 @@ else:
     define('DB_USER',          'database_username');
     define('DB_PASSWORD',      'database_password');
     define('DB_HOST',          'database_host');
-    define('DB_CHARSET',       'utf8');
+    define('DB_CHARSET', 'utf8');
     define('DB_COLLATE',       '');
     define('AUTH_KEY',         'put your unique phrase here');
     define('SECURE_AUTH_KEY',  'put your unique phrase here');
@@ -147,6 +147,7 @@ define('WPLANG', '');
 if ( ! defined( 'WP_DEBUG' ) ) {
     define('WP_DEBUG', false);
 }
+
 
 /* That's all, stop editing! Happy Pressing. */
 
