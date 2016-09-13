@@ -1,11 +1,11 @@
 /* Navigation breakpoints */
 
 .desktop-menu, .top-bar-left {
-  @include show-for(medium);
+  @include show-for(tablet);
 }
 
 #mobile-menu, .title-bar {
-  @include hide-for(medium);
+  @include hide-for(tablet);
 }
 
 /* Mobile menu */
@@ -16,7 +16,9 @@
     padding: 1rem;
   }
 }
-
+.title-bar .menu-icon {
+    float: right;
+}
 .title-bar-title {
   a {
     font-size: 1rem;

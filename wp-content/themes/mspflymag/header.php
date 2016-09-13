@@ -28,13 +28,16 @@
 	<?php do_action( 'foundationpress_layout_start' ); ?>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="title-bar" data-responsive-toggle="site-navigation">
-			<button class="menu-icon" type="button" data-toggle="mobile-menu"></button>
-			<div class="title-bar-title">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-			</div>
-		</div>
-
+        <div class="title-bar-container" data-sticky-container>
+            <div class="sticky" data-sticky data-options="anchor-top: page; marginTop: 0; stickyOn: small;" style="width:100%; z-index:2">
+                <div class="title-bar" data-responsive-toggle="site-navigation">
+                    <button class="menu-icon" type="button" data-toggle="mobile-menu"></button>
+                    <div class="title-bar-title">
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+                    </div>
+                </div>
+            </div>
+        </div>   
 		<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
 			<div class="top-bar-left">
 				<ul class="menu">
@@ -45,10 +48,13 @@
 				<?php foundationpress_top_bar_r(); ?>
 
 				<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'topbar' ) : ?>
-					<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
+					
+                    <?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
+                
 				<?php endif; ?>
 			</div>
 		</nav>
+           
 	</header>
 
 	<section class="container">
