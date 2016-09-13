@@ -43,6 +43,7 @@
     font-weight: bold;
     font-size: 1.25rem;
     line-height: 1;
+    transform: scale(0.7,1);//TODO: Remove this with final font
 
     &:hover:not(.button) {
       color: $primary-color;
