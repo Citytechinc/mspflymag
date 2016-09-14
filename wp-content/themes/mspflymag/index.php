@@ -18,12 +18,15 @@ get_header(); ?>
 <div id="page" role="main">
 	<article class="main-content">
 	<?php if ( have_posts() ) : ?>
-
+        <div class="row small-up-1 medium-up-2 large-up-3 content-grid-container">
 		<?php /* Start the Loop */ ?>
 		<?php while ( have_posts() ) : the_post(); ?>
+        
+        <div class="column">
 			<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+            </div>
 		<?php endwhile; ?>
-
+        </div>    
 		<?php else : ?>
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 

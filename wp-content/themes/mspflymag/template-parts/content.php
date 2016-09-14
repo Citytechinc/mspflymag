@@ -11,12 +11,16 @@
 ?>
 
 <div id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry'); ?>>
-	<header>
+	<?php the_post_thumbnail(); ?>
+    <?php echo esc_url( get_permalink() ); ?>
+    <?php echo get_permalink(); ?>
+    <header>
 		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-		<?php foundationpress_entry_meta(); ?>
+		<?php //foundationpress_entry_meta(); Don't need author or date right now ?>
 	</header>
 	<div class="entry-content">
-		<?php the_content( __( 'Continue reading...', 'foundationpress' ) ); ?>
+		
+        <?php the_content( __( 'Continue reading...', 'foundationpress' ) ); ?>
 	</div>
 	<footer>
 		<?php $tag = get_the_tags(); if ( $tag ) { ?><p><?php the_tags(); ?></p><?php } ?>
