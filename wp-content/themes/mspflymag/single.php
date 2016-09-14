@@ -21,12 +21,52 @@ get_header(); ?>
 		<div class="entry-content">
 
 		<?php
+			/*
 			if ( has_post_thumbnail() ) :
 				the_post_thumbnail();
 			endif;
+			*/
 		?>
 
+
+		<?php 
+		/********************* PHOTO CAROUSEL *********************/
+		?>
+		<?php 
+			$images = get_field('photo_gallery');
+			if( $images ): 
+		?>
+		<div class="photo-carousel">
+		    <ul class="photo-carousel-slides">
+		        <?php foreach( $images as $image ): ?>
+		            <li>
+		                <?php
+		                /*
+		                <a href="<?php echo $image['url']; ?>">
+		                	<p><?php echo $image['caption']; ?></p>
+		            	</a>
+		            	*/
+		            	?>
+		                <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+		                
+		            </li>
+		        <?php endforeach; ?>
+		    </ul>
+
+		    <ul class="photo-carousel-controls">
+		        <?php foreach( $images as $image ): ?>
+		            <li>
+		             	<img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+		            </li>
+		        <?php endforeach; ?>
+		    </ul>
+		</div>
+		<?php endif; ?>
+
+
 		<?php the_content(); ?>
+
+		
 		<?php edit_post_link( __( 'Edit', 'foundationpress' ), '<span class="edit-link">', '</span>' ); ?>
 		</div>
 		<footer>

@@ -6826,6 +6826,36 @@ body#tinymce {
   .content-grid-container .blogpost-entry:hover {
     background-color: #f1f5f8; }
 
+.photo-carousel {
+  width: 100%; }
+  .photo-carousel ul {
+    margin: 0;
+    padding: 0; }
+  .photo-carousel-slides li {
+    margin-bottom: 3px;
+    height: 330px; }
+    .photo-carousel-slides li img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover; }
+  .photo-carousel-controls li {
+    opacity: .5;
+    margin-right: 3px;
+    width: 106px;
+    height: 56px; }
+    .photo-carousel-controls li img {
+      /* max-width:100%;
+			max-height:100%; */
+      height: 100%;
+      width: 100%;
+      object-fit: cover; }
+    .photo-carousel-controls li:last-child {
+      margin-right: 0; }
+    .photo-carousel-controls li.slick-current {
+      opacity: 1; }
+    .photo-carousel-controls li:hover {
+      opacity: 1; }
+
 #front-hero {
   background: url("../images/demo/hero-bg-foundation-6-small.svg") bottom center;
   -webkit-background-size: cover;
