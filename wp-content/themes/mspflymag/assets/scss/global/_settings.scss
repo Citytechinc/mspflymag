@@ -105,7 +105,7 @@ $block-grid-max: 8;
 // ------------------
 
 $header-font-family: Helvetica, sans-serif; //TODO: This needs to be changed to AkzidenzGroteskBE BoldCn
-$header-font-weight: $global-weight-bold; //was normal
+$header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-sizes: (
@@ -118,12 +118,12 @@ $header-sizes: (
     'h6': 16,
   ),
   medium: (
-    'h1': 28, //was48
-    'h2': 24, //was 40
-    'h3': 22, //was 31
-    'h4': 20, //was 25
-    'h5': 18, //was 25
-    'h6': 16, //was 20
+    'h1': 48,
+    'h2': 40,
+    'h3': 31,
+    'h4': 25,
+    'h5': 20,
+    'h6': 16,
   ),
 );
 $header-color: inherit;

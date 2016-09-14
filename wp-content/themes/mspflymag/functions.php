@@ -49,16 +49,3 @@ require_once( 'library/responsive-images.php' );
 
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/protocol-relative-theme-assets.php' );
-
-
-//function be_archive_post_class( $classes ) {
-//	// Don't run on single posts or pages
-//	if( is_singular() )
-//		return $classes;
-//	$classes[] = 'medium-2 large-3 column';
-//	global $wp_query;
-//	if( 0 == $wp_query->current_post || 0 == $wp_query->current_post % 3 )
-//		$classes[] = 'first';
-//	return $classes;
-//}
-//add_filter( 'post_class', 'be_archive_post_class' );
