@@ -28,6 +28,10 @@
 	<?php do_action( 'foundationpress_layout_start' ); ?>
 
 	<header id="masthead" class="site-header" role="banner">
+        <div class="subscription-bar">
+            <?php  //get_search_form( bool $echo = true ); ?>
+            <form></form>
+        </div>
         <div class="title-bar-container" data-sticky-container>
             <div class="sticky" data-sticky data-options="anchor-top: page; marginTop: 0; stickyOn: small;" style="width:100%; z-index:2">
                 <div class="title-bar" data-responsive-toggle="site-navigation">

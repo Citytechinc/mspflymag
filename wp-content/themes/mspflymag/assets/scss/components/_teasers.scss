@@ -1,0 +1,16 @@
+/* Styles for content box grid items
+ * used on home page, category pages, search
+ */
+.content-grid-container {
+    .blogpost-entry {
+        background-color: #ecf1f6;
+        transition: all 0.5s ease;
+        padding: 1.5em; //TODO: should this be in REM instead?
+        border-bottom: 4px $black;
+        
+        &:hover {
+            background-color: #f1f5f8;
+        }
+    }
+    
+}
