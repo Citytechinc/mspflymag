@@ -6826,8 +6826,8 @@ body#tinymce {
   .content-grid-container .blogpost-entry:hover {
     background-color: #f1f5f8; }
   .content-grid-container .blogpost-entry header {
-    margin-top: 24px;
-    margin-bottom: 20px; }
+    margin-top: 14px;
+    margin-bottom: 14px; }
   .content-grid-container .blogpost-entry header, .content-grid-container .blogpost-entry .entry-content {
     padding-left: 1.5em;
     padding-right: 1.5em; }
