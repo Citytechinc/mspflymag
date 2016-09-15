@@ -6821,10 +6821,18 @@ body#tinymce {
   background-color: #ecf1f6;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  padding: 1.5em;
-  border-bottom: 4px #000000; }
+  border-bottom: 6px solid #000000;
+  margin-bottom: 1.875rem; }
   .content-grid-container .blogpost-entry:hover {
     background-color: #f1f5f8; }
+  .content-grid-container .blogpost-entry header {
+    margin-top: 24px;
+    margin-bottom: 20px; }
+  .content-grid-container .blogpost-entry header, .content-grid-container .blogpost-entry .entry-content {
+    padding-left: 1.5em;
+    padding-right: 1.5em; }
+  .content-grid-container .blogpost-entry a {
+    color: #000000; }
 
 .photo-carousel {
   width: 100%; }

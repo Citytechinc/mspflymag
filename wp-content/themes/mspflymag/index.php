@@ -18,7 +18,7 @@ get_header(); ?>
 <div id="page" role="main">
 	<article class="main-content">
 	<?php if ( have_posts() ) : ?>
-        <div class="row small-up-1 medium-up-2 large-up-3 content-grid-container">
+        <div class="row small-up-1 medium-up-2 large-up-3 content-grid-container" data-equalizer data-equalize-on="medium">
 		<?php /* Start the Loop */ ?>
 		<?php while ( have_posts() ) : the_post(); ?>
         
