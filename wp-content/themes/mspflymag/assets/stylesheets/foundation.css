@@ -6835,7 +6835,9 @@ body#tinymce {
     color: #000000; }
 
 .photo-carousel {
-  width: 100%; }
+  width: 100%;
+  position: relative;
+  text-align: center; }
   .photo-carousel ul {
     margin: 0;
     padding: 0; }
@@ -6848,21 +6850,54 @@ body#tinymce {
       object-fit: cover; }
   .photo-carousel-controls li {
     opacity: .5;
-    margin-right: 3px;
-    width: 106px;
-    height: 56px; }
+    margin-right: 3px; }
     .photo-carousel-controls li img {
-      /* max-width:100%;
-			max-height:100%; */
-      height: 100%;
+      height: 56px;
       width: 100%;
-      object-fit: cover; }
+      object-fit: cover;
+      outline: none;
+      cursor: pointer; }
+    .photo-carousel-controls li .dot {
+      display: none; }
     .photo-carousel-controls li:last-child {
       margin-right: 0; }
     .photo-carousel-controls li.slick-current {
       opacity: 1; }
     .photo-carousel-controls li:hover {
       opacity: 1; }
+    .photo-carousel-controls li:focus {
+      outline: none;
+      cursor: pointer; }
+
+@media only screen and (max-width: 40.063em) {
+  /* max-width 641px */
+  .photo-carousel-controls {
+    position: absolute !important;
+    bottom: 10%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    display: inline !important; }
+    .photo-carousel-controls li {
+      margin: 0 12px 0 0;
+      padding: 0;
+      width: 12px !important;
+      display: inline !important;
+      opacity: 1 !important; }
+      .photo-carousel-controls li img {
+        display: none; }
+      .photo-carousel-controls li .dot {
+        background: #fff none repeat scroll 0 0;
+        border: 2px solid #164780;
+        border-radius: 0.5em;
+        display: inline-block;
+        height: 12px;
+        width: 12px;
+        outline: none;
+        cursor: pointer; }
+      .photo-carousel-controls li.slick-current .dot {
+        background: #164780;
+        border: 2px solid #fff; } }
 
 #front-hero {
   background: url("../images/demo/hero-bg-foundation-6-small.svg") bottom center;

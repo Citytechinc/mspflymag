@@ -57,6 +57,7 @@ get_header(); ?>
 		        <?php foreach( $images as $image ): ?>
 		            <li>
 		             	<img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+		             	<div class="dot"></div>
 		            </li>
 		        <?php endforeach; ?>
 		    </ul>
