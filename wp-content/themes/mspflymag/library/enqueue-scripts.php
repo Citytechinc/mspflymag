@@ -28,9 +28,9 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	// Add the comment-reply library on pages where it is necessary
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
-		wp_enqueue_script( 'slick-plugin', get_template_directory_uri() . '/assets/javascript/vendor/slick/slick.js', array(), '', false );
+		wp_enqueue_script( 'slick-plugin', get_template_directory_uri() . '/assets/javascript/custom/slick/slick.js', array(), '', false );
 		wp_enqueue_script( 'slick-options', get_template_directory_uri() . '/assets/javascript/custom/photo-carousel.js', array(), '', false );
-		wp_enqueue_style( 'slick-css', get_template_directory_uri() . '/assets/javascript/vendor/slick/slick.css', array(), '', false );
+		wp_enqueue_style( 'slick-css', get_template_directory_uri() . '/assets/javascript/custom/slick/slick.css', array(), '', false );
 	}
 
 	}

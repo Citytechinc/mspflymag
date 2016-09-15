@@ -15,6 +15,8 @@
 
 get_header(); ?>
 
+<img class="show-for-small-only float-center" src="<?php echo get_theme_root(); ?>/assets/images/logo.png">
+
 <div id="page" role="main">
 	<article class="main-content">
 	<?php if ( have_posts() ) : ?>
@@ -24,7 +26,7 @@ get_header(); ?>
         
         <div class="column">
 			<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
-            </div>
+        </div>
 		<?php endwhile; ?>
         </div>    
 		<?php else : ?>
