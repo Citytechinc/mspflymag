@@ -47,7 +47,6 @@ jQuery(function($){
                             //$( '#content-grid-container' ).foundation();
                             if( !res.data ) {
                                 allDone = true;
-                                console.log(allDone);
                                 $('#content-grid-container').after( '<div class="party-over text-center">This is the end of the line</div>' );
                             }
                         } else {
