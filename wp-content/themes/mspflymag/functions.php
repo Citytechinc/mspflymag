@@ -103,8 +103,7 @@ function be_load_more_js() {
             'query' => $wp_query->query,
         );
 
-        wp_enqueue_script( 'be-load-more', get_stylesheet_directory_uri() . '/assets/javascript/custom/load-more.js', array( 'jquery' ), '1.0', true );
-        wp_localize_script( 'be-load-more', 'beloadmore', $args );
+        wp_localize_script( 'foundation', 'beloadmore', $args );
     }
 }
 add_action( 'wp_enqueue_scripts', 'be_load_more_js' );

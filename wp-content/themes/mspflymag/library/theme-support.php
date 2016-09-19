@@ -28,7 +28,7 @@ function foundationpress_theme_support() {
 
 	// Add post thumbnail support: http://codex.wordpress.org/Post_Thumbnails
 	add_theme_support( 'post-thumbnails' );
-    set_post_thumbnail_size( 360, 225);
+    set_post_thumbnail_size( 960, 600, true);
 
 
 	// RSS thingy

@@ -26,9 +26,7 @@ get_header(); ?>
         <div class="row small-up-1 medium-up-2 large-up-3 content-grid-container" id="content-grid-container" data-equalizer data-equalize-on="medium" data-equalize-by-row="true">
             <?php /* Start the Loop */ ?>
             <?php while ( have_posts() ) : the_post(); ?>
-                <div class="column">
-                    <?php get_template_part( 'template-parts/content', get_post_format() ); ?>
-                </div>
+                <?php get_template_part( 'template-parts/content', get_post_format() ); ?>
             <?php endwhile; ?>
 
             <?php else : ?>
