@@ -10,17 +10,19 @@
 
 ?>
 
+<div class="column">
+    <div id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry'); ?> data-equalizer-watch>
+        <a href="<?php the_permalink(); ?>">
+            <?php the_post_thumbnail(); ?>
+            <header>
+                <h2><?php the_title(); ?></h2>
+            </header>
+            <div class="entry-content">
 
-<div id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry'); ?> data-equalizer-watch>
-    <a href="<?php the_permalink(); ?>">
-        <?php the_post_thumbnail(); ?>
-        <header>
-            <h2><?php the_title(); ?></h2>
-        </header>
-        <div class="entry-content">
-
-            <?php echo get_excerpt(100) //the_excerpt() //the_content( '', TRUE ); //get_excerpt(380); ?>
-        </div>
+                <?php echo get_excerpt(100) //the_excerpt() //the_content( '', TRUE ); //get_excerpt(380); ?>
+            </div>
+        </a>
+    </div>
 </div>
 
 <?php
