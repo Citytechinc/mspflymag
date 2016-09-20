@@ -1,3 +1,10 @@
+header {
+  position: relative;
+}
+.menu-item {
+    font-family: $menu-font-family;
+}
+
 /* Navigation breakpoints */
 
 .desktop-menu, .top-bar-left {
@@ -28,7 +35,27 @@
 
 /* Tablet and desktop menu */
 .top-bar {
-
+  @include grid-row;
+  position: relative; //to float desktop menu to right
+  
+  .top-bar-left {
+    @include grid-column(4);
+    box-shadow: 26px 0px -0px -25px $light-gray;
+  }
+  
+  .top-bar-right {
+    @include grid-column(8);//position it in last 2/3
+    //vertically center
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    
+    .menu {
+      float:right; //pull to right
+    }
+  }
+    
   .menu .home a {
     font-size: 1rem;
     color: $black;
@@ -41,9 +68,8 @@
     padding-top: 0;
     padding-bottom: 0;
     font-weight: bold;
-    font-size: 1.25rem;
+    font-size: 1rem;
     line-height: 1;
-    transform: scale(0.7,1);//TODO: Remove this with final font
 
     &:hover:not(.button) {
       color: $primary-color;

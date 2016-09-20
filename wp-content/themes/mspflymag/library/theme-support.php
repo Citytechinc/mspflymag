@@ -55,10 +55,5 @@ function theme_prefix_setup() {
 		'width'       => 400,
 		'flex-width' => true,
 	) );
-
 }
 add_action( 'after_setup_theme', 'theme_prefix_setup' );
-
-$custom_logo_id = get_theme_mod( ‘custom_logo’ );
-$image = wp_get_attachment_image_src( $custom_logo_id , ‘full’ );
-echo $image[0];
