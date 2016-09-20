@@ -67,6 +67,8 @@ get_header(); ?>
 
 		<?php the_content(); ?>
 
+		<?php wp_related_posts()?>
+
 		
 		<?php edit_post_link( __( 'Edit', 'foundationpress' ), '<span class="edit-link">', '</span>' ); ?>
 		</div>
