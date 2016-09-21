@@ -4285,7 +4285,7 @@ input[type="range"] {
     margin-left: 1rem; }
   .menu .active > a {
     color: #fefefe;
-    background: #121212; }
+    background: #fefefe; }
 
 .menu-text {
   font-weight: bold;
@@ -5609,16 +5609,46 @@ header {
     display: none !important; } }
 
 /* Mobile menu */
-.off-canvas > ul.menu {
-  height: 100vh;
-  padding: 1rem; }
+.menu-icon {
+  margin-top: 9px; }
 
 .title-bar .menu-icon {
   float: right; }
 
-.title-bar-title a {
-  font-size: 1rem;
-  color: #B9B9B9; }
+.mobile-menu--container {
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 5rem 0 0;
+  opacity: 0;
+  list-style: none;
+  background-color: #000000;
+  text-align: center;
+  -webkit-transform: translateX(-100%) rotateX(40deg);
+          transform: translateX(-100%) rotateX(40deg);
+  -webkit-transition: all 400ms cubic-bezier(1, -0.4, 0.44, 0.985);
+  transition: all 400ms cubic-bezier(1, -0.4, 0.44, 0.985); }
+  .mobile-menu--container li {
+    font-size: 1.5rem; }
+  .mobile-menu--container a {
+    display: block;
+    color: #fefefe;
+    font-weight: bold;
+    line-height: 6.25rem; }
+    .mobile-menu--container a:hover {
+      color: #e5e5e5; }
+
+.is-open {
+  top: 52px;
+  opacity: 1;
+  -webkit-transform: perspective(200px) translateX(0) rotateX(0);
+          transform: perspective(200px) translateX(0) rotateX(0); }
 
 /* Tablet and desktop menu */
 .top-bar {
@@ -5663,9 +5693,6 @@ header {
       float: right; }
     .top-bar .top-bar-right .menu {
       float: right; }
-  .top-bar .menu .home a {
-    font-size: 1rem;
-    color: #000000; }
   .top-bar .menu a {
     height: 45px;
     line-height: 45px;
@@ -5794,6 +5821,32 @@ body#tinymce {
           box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.2) inset;
   border-radius: 3px;
   border: none; }
+
+.close-icon {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  overflow: hidden; }
+  .close-icon:hover::before, .close-icon:hover::after {
+    background: #e6e6e6; }
+  .close-icon::before, .close-icon::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: #000; }
+
+.thick::before, .thick::after {
+  height: 4px;
+  margin-top: -2px; }
+
+.black::before, .black::after {
+  height: 8px;
+  margin-top: -4px; }
 
 #featured-hero {
   -webkit-background-size: cover;
