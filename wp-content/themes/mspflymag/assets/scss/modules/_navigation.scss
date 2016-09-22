@@ -18,26 +18,14 @@ header {
 /* Mobile menu */
 
 .menu-icon {
-  margin-top: 9px;
+  right: 0.375rem;
+  @include hamburger($white, $light-gray, 20px, 20px, 3px, 3);
+  @include vertical-center;
 }
-//.off-canvas {
-// > ul.menu {
-//    height: 100vh;
-//    padding: 1rem;
-//  }
-//}
-.title-bar .menu-icon {
-    float: right;
-}
-//.title-bar-title {
-//  a {
-//    font-size: 1rem;
-//    color: #B9B9B9;
-//  }
-//}
 
 //.overlay-menu {
 .mobile-menu--container {
+  @include vertical-center;
   position: absolute;
   z-index: 1000;
   top: 0;
@@ -45,6 +33,7 @@ header {
   bottom: 0;
   right: 0;
   height: 100vh;
+  height: calc(100vh - 52px);
   width: 100%;
   margin:0;
   padding: 5rem 0 0;
@@ -54,6 +43,7 @@ header {
   text-align: center;
   transform: translateX(-100%) rotateX(40deg);
   transition: all 400ms cubic-bezier(1.000, -0.400, 0.440, 0.985);
+  padding: 0 rem-calc(20);
   
   li {
     font-size: 1.5rem;
@@ -63,22 +53,12 @@ header {
     display: block;
     color: $white; //TODO create mobile menu color variable
     font-weight: bold;
-    //height: $menu-link-height;
     line-height: 6.25rem;
-    //border-bottom: $menu-link-border;
-    //text-decoration: none;
     
     &:hover {
       color: darken( $white, 10% );
     }
   }
-//  Rotates the menu icon
-//  &.is-open ~ .toggle-menu {
-//    display: inline-block;
-//    transition: all 0.4s ease-in-out;
-//    transform: rotate(135deg);
-//    //color: lighten($menu-icon-color, 100%);
-//  }
 }
 
 .is-open {
@@ -90,7 +70,7 @@ header {
 /* Tablet and desktop menu */
 .top-bar {
   @include grid-row;
-  position: relative; //to float desktop menu to right
+  position: relative; //keep this inside the grid
   
   .top-bar-left {
     @include grid-column(4);
@@ -99,21 +79,11 @@ header {
   
   .top-bar-right {
     @include grid-column(8);//position it in last 2/3
-    //vertically center menu
-    transform: translateY(-50%);
-    position: absolute;
-    top: 50%;
-    right: 0;
-    
-    .menu {
-      float:right; //pull to right
-    }
   }
-    
-//  .menu .home a {
-//    font-size: 1rem;
-//    color: $black;
-//  }
+    .desktop-menu {
+        @include vertical-center;
+        right: 0;
+    }
 
   .menu a {
     height: 45px;
@@ -129,25 +99,6 @@ header {
       color: $primary-color;
     }
   }
-
-  .menu>li:not(.menu-text)>a { padding: 1rem; }
-  //.menu li:not(:last-child) { border-right: 1px solid #4e4e4e; }
-
-  .dropdown.menu .submenu {
-    //background-color: #121212;
-    //color: #e6e6e6;
-    border: 0;
-  }
-
-  .dropdown.menu .has-submenu.is-down-arrow a { padding-right: 1rem; }
-  .dropdown.menu .has-submenu.is-down-arrow > a::after { border: 0; }
-
-  .dropdown.menu:first-child >
-    li.is-dropdown-submenu-parent >
-    a::after {
-      display: none;
-    }
-
 }
 /* Basic styles for post navigation. Nicolas Gallagher's "Micro clearfix" https://css-tricks.com/snippets/css/clear-fix/ */
 .post-navigation:before,

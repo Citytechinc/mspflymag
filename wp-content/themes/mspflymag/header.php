@@ -33,7 +33,7 @@
         <div class="title-bar-container hide-for-tablet" data-sticky-container>
             <div class="sticky" data-sticky data-options="anchor-top: page; marginTop: 0; stickyOn: small;" style="width:100%; z-index:2">
                 <div class="title-bar" data-responsive-toggle="site-navigation" data-hide-for="tablet">
-                    <button class="menu-icon" type="button" data-toggle="mobile-menu--container"></button>
+                    <button class="menu-icon" type="button" data-toggle="mobile-menu--container main-content--container"></button>
                     <div class="title-bar-title">
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" alt="MSP Fly Mag Home" rel="home"><img class="mobile-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-mobile.png" width="67" height="37"></a>
                     </div>
@@ -43,7 +43,7 @@
                 <?php get_search_form(); ?>
                 <?php get_template_part( 'template-parts/mobile-top-bar' ); //pull in nav class=vertical menu ?>
                 <?php //follow fly placeholder ?>
-                <?php // mailchimpSF_signup_form(); ?>
+                <?php mailchimpSF_signup_form(); ?>
             </div>
         </div>
         
@@ -64,5 +64,5 @@
            
 	</header>
 
-	<section class="container">
+	<section class="container" id="main-content--container" data-toggler=".show-for-sr">
 		<?php do_action( 'foundationpress_after_header' );
