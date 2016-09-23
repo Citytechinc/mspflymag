@@ -58,6 +58,7 @@ $foundation-palette: (
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
+$charcoal: #3f3f3f;
 $black: #000000;
 $white: #fefefe;
 //$blue: #164780;
@@ -87,7 +88,7 @@ $breakpoints: (
   xlarge: 1200px,
   xxlarge: 1440px,
 );
-$breakpoint-classes: (small medium large);
+$breakpoint-classes: (small medium tablet large);
 
 // 3. The Grid
 // -----------
@@ -104,7 +105,7 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: Helvetica, sans-serif; //TODO: This needs to be changed to AkzidenzGroteskBE BoldCn
+$header-font-family: 'Oswald', sans-serif; //TODO: This needs to be changed to AkzidenzGroteskBE BoldCn
 $header-font-weight: $global-weight-bold; //was normal
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
@@ -382,8 +383,9 @@ $menu-margin: 0;
 $menu-margin-nested: 1rem;
 $menu-item-padding: 0.7rem 1rem;
 $menu-item-color-active: $white;
-$menu-item-background-active: #121212;
+$menu-item-background-active: $white;
 $menu-icon-spacing: 0.25rem;
+$menu-font-family: $header-font-family;
 
 // 23. Meter
 // ---------
