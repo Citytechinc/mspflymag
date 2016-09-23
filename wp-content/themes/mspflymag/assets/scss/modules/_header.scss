@@ -4,3 +4,33 @@ header#masthead {
         background-color: $black;
     }
 }
+
+#searchform {
+    .input-group-field::before {       
+        content: url(/assets/images/search.png);
+        height: 24px;
+        width: 24px;
+        position: relative;
+        margin-right: 5px;
+        top: 7px;
+    }
+        
+
+    
+    .input-goup-field {
+        padding-left: 40px;
+        
+    }
+    
+    #searchsubmit {
+        @include element-invisible;
+    }
+}
+#mc_custom_border_hdr {
+    @include element-invisible;
+}
+
+#mc_signup {
+    border-top: 1px solid $light-gray;
+    margin-top: 20px;
+}

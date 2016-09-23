@@ -30,11 +30,11 @@ get_header(); ?>
                 <?php get_template_part( 'template-parts/content', get_post_format() ); ?>
             <?php endwhile; ?> 
             <?php else : ?>
-                <?php //get_template_part( 'template-parts/content', 'none' ); ?>
-
-            <?php endif; // End have_posts() check. ?>
-            
+                <?php get_template_part( 'template-parts/content', 'none' ); ?>
         </div>
+    <?php endif; // End have_posts() check. ?>
+            
+        
         <?php /* Display navigation to next/previous pages when applicable */ ?>
 		<?php if ( function_exists( 'foundationpress_pagination' ) ) { foundationpress_pagination(); } else if ( is_paged() ) { ?>
 			<nav id="post-nav">

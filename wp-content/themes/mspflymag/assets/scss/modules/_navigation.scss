@@ -2,7 +2,7 @@ header {
   position: relative;
 }
 .menu-item {
-    font-family: $menu-font-family;
+  font-family: $menu-font-family;
 }
 
 /* Navigation breakpoints */
@@ -95,8 +95,8 @@ header {
     font-size: 1rem;
     line-height: 1;
 
-    &:hover:not(.button) {
-      color: $primary-color;
+    &:hover:not(.button), &:active:not(.button)  {
+      //color: $primary-color;
     }
   }
 }

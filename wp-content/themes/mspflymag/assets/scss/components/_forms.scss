@@ -1,0 +1,16 @@
+.input-group-field, .mc_merge_var input {
+  background-color: $charcoal;
+  border: none;
+}
+
+#searchform {
+  .input-group-button {
+    //@include element-invisible;
+    font-family: FontAwesome;
+  }
+  .input-group-field {
+    //font-family: FontAwesome;
+  }
+}
+
+//f002

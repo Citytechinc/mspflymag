@@ -42,8 +42,10 @@
             <div class="mobile-menu--container" id="mobile-menu--container" data-toggler=".is-open" >
                 <?php get_search_form(); ?>
                 <?php get_template_part( 'template-parts/mobile-top-bar' ); //pull in nav class=vertical menu ?>
-                <?php //follow fly placeholder ?>
-                <?php mailchimpSF_signup_form(); ?>
+                <a type="button" data-toggle="follow-fly--container follow-fly--button" aria-controls="mobile-menu--container" id="follow-fly--button" data-toggler=".hide">Follow Fly</a>
+                <div id="follow-fly--container" class="hide" data-toggler=".hide">
+                    <?php mailchimpSF_signup_form(); ?>
+                </div>
             </div>
         </div>
         

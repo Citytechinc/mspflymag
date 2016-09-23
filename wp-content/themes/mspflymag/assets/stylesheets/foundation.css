@@ -4285,7 +4285,7 @@ input[type="range"] {
     margin-left: 1rem; }
   .menu .active > a {
     color: #fefefe;
-    background: #fefefe; }
+    background: transparent; }
 
 .menu-text {
   font-weight: bold;
@@ -5731,8 +5731,6 @@ header {
     font-weight: bold;
     font-size: 1rem;
     line-height: 1; }
-    .top-bar .menu a:hover:not(.button) {
-      color: #164780; }
 
 /* Basic styles for post navigation. Nicolas Gallagher's "Micro clearfix" https://css-tricks.com/snippets/css/clear-fix/ */
 .post-navigation:before,
@@ -5803,6 +5801,35 @@ header {
   header#masthead {
     background-color: #000000; } }
 
+#searchform .input-group-field::before {
+  content: url(/assets/images/search.png);
+  height: 24px;
+  width: 24px;
+  position: relative;
+  margin-right: 5px;
+  top: 7px; }
+
+#searchform .input-goup-field {
+  padding-left: 40px; }
+
+#searchform #searchsubmit {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0); }
+
+#mc_custom_border_hdr {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0); }
+
+#mc_signup {
+  border-top: 1px solid #e6e6e6;
+  margin-top: 20px; }
+
 .sidebar {
   width: 100%;
   float: left;
@@ -5869,7 +5896,7 @@ body#tinymce {
   height: 8px;
   margin-top: -4px; }
 
-.input-group-field {
+.input-group-field, .mc_merge_var input {
   background-color: #3f3f3f;
   border: none; }
 
@@ -6517,5 +6544,30 @@ body#tinymce {
     @media screen and (min-width: 40em) {
         #single-post .main-content:last-child:not(:first-child) {
           float: right; } }
+    #single-post .main-content h1 h1 {
+      font-size: 2.25rem; }
+    #single-post .main-content h1 h2 {
+      font-size: 1.875rem; }
+    #single-post .main-content h1 h3 {
+      font-size: 1.78125rem; }
+    #single-post .main-content h1 h4 {
+      font-size: 1.6875rem; }
+    #single-post .main-content h1 h5 {
+      font-size: 1.59375rem; }
+    #single-post .main-content h1 h6 {
+      font-size: 1.5rem; }
+    @media screen and (min-width: 40em) {
+      #single-post .main-content h1 h1 {
+        font-size: 2.625rem; }
+      #single-post .main-content h1 h2 {
+        font-size: 2.25rem; }
+      #single-post .main-content h1 h3 {
+        font-size: 2.0625rem; }
+      #single-post .main-content h1 h4 {
+        font-size: 1.875rem; }
+      #single-post .main-content h1 h5 {
+        font-size: 1.6875rem; }
+      #single-post .main-content h1 h6 {
+        font-size: 1.5rem; } }
 
 /*# sourceMappingURL=foundation.css.map */
