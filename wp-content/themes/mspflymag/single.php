@@ -12,10 +12,18 @@ get_header(); ?>
 
 <?php do_action( 'foundationpress_before_content' ); ?>
 <?php while ( have_posts() ) : the_post(); ?>
-	<article <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">
-		<header>
+
+    <div class="carousel-container column row tablet-8 small-centered">  
+        <?php  get_template_part( 'template-parts/carousel') ?>
+    </div>
+    
+    <article <?php post_class('main-content column row tablet-8 small-centered') ?> id="post-<?php the_ID(); ?>">
+      
+		<header class="text-center">
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 			<?php foundationpress_entry_meta(); ?>
+            <?php the_category(', ') ?>
+            <hr class="text-center">
 		</header>
 		<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
 		<div class="entry-content">
@@ -27,43 +35,6 @@ get_header(); ?>
 			endif;
 			*/
 		?>
-
-
-		<?php 
-		/********************* PHOTO CAROUSEL *********************/
-		?>
-		<?php 
-			$images = get_field('photo_gallery');
-			if( $images ): 
-		?>
-		<div class="photo-carousel">
-		    <ul class="photo-carousel-slides">
-		        <?php foreach( $images as $image ): ?>
-		            <li>
-		                <?php
-		                /*
-		                <a href="<?php echo $image['url']; ?>">
-		                	<p><?php echo $image['caption']; ?></p>
-		            	</a>
-		            	*/
-		            	?>
-		                <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
-		                
-		            </li>
-		        <?php endforeach; ?>
-		    </ul>
-
-		    <ul class="photo-carousel-controls">
-		        <?php foreach( $images as $image ): ?>
-		            <li>
-		             	<img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
-		             	<div class="dot"></div>
-		            </li>
-		        <?php endforeach; ?>
-		    </ul>
-		</div>
-		<?php endif; ?>
-
 
 		<?php the_content(); ?>
 

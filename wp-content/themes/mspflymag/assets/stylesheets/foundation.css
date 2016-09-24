@@ -5959,7 +5959,7 @@ body#tinymce {
     margin: 0;
     padding: 0; }
   .photo-carousel-slides li {
-    margin-bottom: 3px;
+    margin-bottom: 0;
     height: 330px; }
     .photo-carousel-slides li img {
       height: 100%;
@@ -6510,64 +6510,33 @@ body#tinymce {
     #page-full-width .main-content:last-child:not(:first-child) {
       float: right; }
 
-#single-post {
-  max-width: 73.125rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3rem; }
-  #single-post::before, #single-post::after {
-    content: ' ';
-    display: table; }
-  #single-post::after {
-    clear: both; }
-  #single-post .main-content {
-    width: 100%;
-    float: left;
-    padding-left: 0.625rem;
-    padding-right: 0.625rem; }
-    @media screen and (min-width: 40em) {
-      #single-post .main-content {
-        padding-left: 0.9375rem;
-        padding-right: 0.9375rem; } }
-    #single-post .main-content:last-child:not(:first-child) {
-      float: right; }
-    @media screen and (min-width: 40em) {
-      #single-post .main-content {
-        width: 66.66667%;
-        float: left;
-        padding-left: 0.625rem;
-        padding-right: 0.625rem; } }
-  @media screen and (min-width: 40em) and (min-width: 40em) {
+@media screen and (min-width: 50em) {
+  #single-post {
+    margin-top: 3rem; } }
+
+#single-post .carousel-container {
+  padding: 0; }
+
+#single-post .main-content {
+  background-color: #ecf1f6; }
+  @media screen and (min-width: 50em) {
     #single-post .main-content {
-      padding-left: 0.9375rem;
-      padding-right: 0.9375rem; } }
-    @media screen and (min-width: 40em) {
-        #single-post .main-content:last-child:not(:first-child) {
-          float: right; } }
-    #single-post .main-content h1 h1 {
-      font-size: 2.25rem; }
-    #single-post .main-content h1 h2 {
-      font-size: 1.875rem; }
-    #single-post .main-content h1 h3 {
-      font-size: 1.78125rem; }
-    #single-post .main-content h1 h4 {
-      font-size: 1.6875rem; }
-    #single-post .main-content h1 h5 {
-      font-size: 1.59375rem; }
-    #single-post .main-content h1 h6 {
-      font-size: 1.5rem; }
-    @media screen and (min-width: 40em) {
-      #single-post .main-content h1 h1 {
-        font-size: 2.625rem; }
-      #single-post .main-content h1 h2 {
-        font-size: 2.25rem; }
-      #single-post .main-content h1 h3 {
-        font-size: 2.0625rem; }
-      #single-post .main-content h1 h4 {
-        font-size: 1.875rem; }
-      #single-post .main-content h1 h5 {
-        font-size: 1.6875rem; }
-      #single-post .main-content h1 h6 {
-        font-size: 1.5rem; } }
+      margin-top: 1.875rem; } }
+  #single-post .main-content header {
+    padding-top: 1.25rem; }
+    @media screen and (min-width: 50em) {
+      #single-post .main-content header {
+        padding-top: 2.5rem; } }
+    #single-post .main-content header hr {
+      border-bottom: 2px solid #cacaca;
+      margin: 1.875rem; }
+      @media screen and (min-width: 50em) {
+        #single-post .main-content header hr {
+          margin: 1.875rem 40%; } }
+    #single-post .main-content header h1 {
+      font-size: 2.625rem; }
+      @media screen and (min-width: 50em) {
+        #single-post .main-content header h1 {
+          font-size: 3.5rem; } }
 
 /*# sourceMappingURL=foundation.css.map */

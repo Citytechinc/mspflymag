@@ -9,19 +9,17 @@
   }
 
   &-slides {
-	  li {
-  		margin-bottom: 3px;
-  		height: 330px;
+    li {
+      margin-bottom: 0;
+      height: 330px;
 
-  		img {
-			height: 100%; 
-			width: 100%; 
-			object-fit: cover;
-  		}
-
-	  }
+      img {
+        height: 100%; 
+        width: 100%; 
+        object-fit: cover;
+      }
+    }
   }
-
   &-controls {
 	  li {
 	  	opacity: .5;
@@ -98,5 +96,3 @@
     }
   }
 }
-
-

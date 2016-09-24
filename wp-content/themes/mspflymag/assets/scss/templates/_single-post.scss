@@ -1,15 +1,53 @@
-#single-post {
-  @include grid-row();
-  margin-top: 3rem;
-
-  .main-content {
-    @include breakpoint(small) {
-      @include grid-column(12);
+.single-post {
+    section.container {
     }
+}
 
-    @include breakpoint(medium) {
-      @include grid-column(8);
+#single-post {
+  
+  @include breakpoint(tablet) {
+    margin-top: 3rem;
+  }
+  .carousel-container {
+    padding: 0;
+  }
+  
+  .photo-carousel {
+    @include breakpoint(tablet) {
     }
   }
+  .main-content { //article item
+    background-color: map-get($foundation-palette, secondary);
 
+    @include breakpoint(tablet) {
+      margin-top: rem-calc(30px);
+    }
+    
+    header {
+      padding-top: rem-calc(20px);
+        
+      @include breakpoint(tablet) {
+        padding-top: rem-calc(40px);
+      }
+      
+      hr {
+        border-bottom: 2px solid $medium-gray;
+        margin: rem-calc(30px);
+        
+        @include breakpoint(tablet) {
+          margin: rem-calc(30px) 40%; 
+        }
+      }
+    
+      h1 {
+        font-size: rem-calc(28 * 1.5); //TODO make this access the variable in settings.scss
+
+        @include breakpoint(tablet) {
+          font-size: rem-calc(28 * 2);
+        }
+      }
+    }
+      
+    
+  }
 }
