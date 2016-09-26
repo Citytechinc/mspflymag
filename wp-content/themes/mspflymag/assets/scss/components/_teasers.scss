@@ -18,6 +18,11 @@
 		&:hover {
 			//background-color: #f1f5f8; not distinct enough
 			background-color: lighten(map-get($foundation-palette, secondary), 2%);
+			
+			img {
+				opacity: 0.8;
+				transition: all 0.5s ease;
+			}
 		}
 
 		header {
