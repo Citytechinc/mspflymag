@@ -1,4 +1,5 @@
 jQuery(function($){
+	Foundation.reInit('equalizer');
     if ($('#content-grid-container').length) { //are we even on a page with infinite scroll?
         //hide existing pager
         $(".pagination-centered").hide();
@@ -47,7 +48,6 @@ jQuery(function($){
                             //$( '#content-grid-container' ).foundation();
                             if( !res.data ) {
                                 allDone = true;
-                                $('#content-grid-container').after( '<div class="party-over text-center">This is the end of the line</div>' );
                             }
                         } else {
                             //console.log(res);
