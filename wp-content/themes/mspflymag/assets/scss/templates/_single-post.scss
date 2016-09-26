@@ -1,8 +1,3 @@
-.single-post {
-    section.container {
-    }
-}
-
 #single-post {
   
   @include breakpoint(tablet) {
@@ -17,12 +12,24 @@
     }
   }
   .main-content { //article item
-    background-color: map-get($foundation-palette, secondary);
-
+    padding: 0;
+    
     @include breakpoint(tablet) {
       margin-top: rem-calc(30px);
     }
     
+    >section, >main {
+      background-color: map-get($foundation-palette, secondary);
+      border-bottom: 7px solid $black;
+      margin-bottom: 20px;
+      //@include grid-col;
+      padding: 20px;
+      
+      h3 {
+        text-align: center;
+      }
+      
+    }
     header {
       padding-top: rem-calc(20px);
         
@@ -47,7 +54,5 @@
         }
       }
     }
-      
-    
   }
 }

@@ -6016,6 +6016,32 @@ body#tinymce {
         background: #164780;
         border: 2px solid #fff; } }
 
+#related-posts ul {
+  max-width: 73.125rem;
+  margin-left: auto;
+  margin-right: auto;
+  list-style-type: none; }
+  #related-posts ul::before, #related-posts ul::after {
+    content: ' ';
+    display: table; }
+  #related-posts ul::after {
+    clear: both; }
+
+#related-posts li {
+  width: 33.33333%;
+  float: left;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  text-align: center; }
+  @media screen and (min-width: 40em) {
+    #related-posts li {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
+  #related-posts li:last-child:not(:first-child) {
+    float: right; }
+  #related-posts li a {
+    display: block; }
+
 #front-hero {
   background: url("../images/demo/hero-bg-foundation-6-small.svg") bottom center;
   -webkit-background-size: cover;
@@ -6518,10 +6544,17 @@ body#tinymce {
   padding: 0; }
 
 #single-post .main-content {
-  background-color: #ecf1f6; }
+  padding: 0; }
   @media screen and (min-width: 50em) {
     #single-post .main-content {
       margin-top: 1.875rem; } }
+  #single-post .main-content > section, #single-post .main-content > main {
+    background-color: #ecf1f6;
+    border-bottom: 7px solid #000000;
+    margin-bottom: 20px;
+    padding: 20px; }
+    #single-post .main-content > section h3, #single-post .main-content > main h3 {
+      text-align: center; }
   #single-post .main-content header {
     padding-top: 1.25rem; }
     @media screen and (min-width: 50em) {

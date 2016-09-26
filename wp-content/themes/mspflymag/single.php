@@ -18,7 +18,7 @@ get_header(); ?>
     </div>
     
     <article <?php post_class('main-content column row tablet-8 small-centered') ?> id="post-<?php the_ID(); ?>">
-      
+      <section>
 		<header class="text-center">
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 			<?php foundationpress_entry_meta(); ?>
@@ -27,30 +27,16 @@ get_header(); ?>
 		</header>
 		<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
 		<div class="entry-content">
-
-		<?php
-			/*
-			if ( has_post_thumbnail() ) :
-				the_post_thumbnail();
-			endif;
-			*/
-		?>
-
-		<?php the_content(); ?>
-
-		<?php wp_related_posts()?>
-
-		
-		<?php edit_post_link( __( 'Edit', 'foundationpress' ), '<span class="edit-link">', '</span>' ); ?>
+		  <?php the_content(); ?>
+		  <?php edit_post_link( __( 'Edit', 'foundationpress' ), '<span class="edit-link">', '</span>' ); ?>
 		</div>
-		<footer>
-			<?php wp_link_pages( array('before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ), 'after' => '</p></nav>' ) ); ?>
-			<p><?php the_tags(); ?></p>
-		</footer>
-		<?php the_post_navigation(); ?>
-		<?php do_action( 'foundationpress_post_before_comments' ); ?>
-		<?php comments_template(); ?>
-		<?php do_action( 'foundationpress_post_after_comments' ); ?>
+      </section>
+      <section id="related-posts">
+		<?php wp_related_posts()?>
+      </section>
+      <?php do_action( 'foundationpress_post_before_comments' ); ?>
+      <?php comments_template(); ?>
+      <?php do_action( 'foundationpress_post_after_comments' ); ?>
 	</article>
 <?php endwhile;?>
 
