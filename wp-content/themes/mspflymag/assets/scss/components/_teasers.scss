@@ -2,29 +2,36 @@
  * used on home page, category pages, search
  */
 .content-grid-container {
-    .blogpost-entry {
-        background-color: #ecf1f6;
-        transition: all 0.5s ease;
-        //padding: 1.5em; //TODO: should this be in REM instead?
-        border-bottom: rem-calc(6) solid $black;
-        margin-bottom: 0.9375rem * 2;
-        padding-bottom: 1.5rem;
-        
-        &:hover {
-            background-color: #f1f5f8;
-        }
-        
-        header {
-            margin-top: rem-calc(14);
-            margin-bottom: rem-calc(14);
-        }
-        header, .entry-content {
-            padding-left: 1.5rem;
-            padding-right: 1.5rem;
-        }
-        a {
-            color: $black;
-        }
-    }
-    
+	>.column { //no gutters on mobile
+		@include breakpoint(small down) {
+			padding: 0;
+		}
+	}
+	
+	.blogpost-entry {
+		background-color: map-get($foundation-palette, secondary);
+		transition: all 0.5s ease;
+		border-bottom: rem-calc(6) solid $black;
+		margin-bottom: 0.9375rem * 2;
+		padding-bottom: 1.5rem;
+
+		&:hover {
+			//background-color: #f1f5f8; not distinct enough
+			background-color: lighten(map-get($foundation-palette, secondary), 2%);
+		}
+
+		header {
+			margin-top: rem-calc(14);
+			margin-bottom: rem-calc(14);
+		}
+		header, 
+		.entry-content {
+			padding-left: 1.5rem;
+			padding-right: 1.5rem;
+		}
+
+		a {
+			color: $black;
+		}
+	}
 }

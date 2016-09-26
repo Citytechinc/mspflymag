@@ -1,36 +1,47 @@
 header#masthead {
-    //This will change the background color underneath the scroll bar to black on mobile header. This prevents a white bit once the scrollbar disappears on mobile overlay trigger
-    @include breakpoint(tablet down) { 
-        background-color: $black;
-    }
+	position: relative;
+	background-color: $titlebar-background;
+	
+	@include breakpoint(tablet) {
+		padding-bottom: 20px;
+		border-bottom: 1px solid $light-gray;
+		background-color: $body-background;
+	}
 }
 
 #searchform {
-    .input-group-field::before {       
-        content: url(/assets/images/search.png);
-        height: 24px;
-        width: 24px;
-        position: relative;
-        margin-right: 5px;
-        top: 7px;
-    }
-        
+	.input-group-field::before {       
+		content: url(/assets/images/search.png);
+		height: 24px;
+		width: 24px;
+		position: relative;
+		margin-right: 5px;
+		top: 7px;
+	}
 
-    
-    .input-goup-field {
-        padding-left: 40px;
-        
-    }
-    
-    #searchsubmit {
-        @include element-invisible;
-    }
+	.input-goup-field {
+		padding-left: 40px;
+	}
+
+	#searchsubmit {
+		@include element-invisible;
+	}
 }
+
 #mc_custom_border_hdr {
-    @include element-invisible;
+	@include element-invisible;
 }
 
 #mc_signup {
-    border-top: 1px solid $light-gray;
-    margin-top: 20px;
+	border-top: 1px solid $light-gray;
+	margin-top: 20px;
+}
+
+#main-content--container {
+	background-color: $extra-light-gray;
+	padding-top: 3rem;
+}
+
+#home-page-logo {
+	margin-bottom: 3rem;
 }

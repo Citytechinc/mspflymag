@@ -2554,7 +2554,7 @@ button {
   display: none !important; }
 
 .row {
-  max-width: 73.125rem;
+  max-width: 75rem;
   margin-left: auto;
   margin-right: auto; }
   .row::before, .row::after {
@@ -3605,7 +3605,7 @@ a {
     border: 0; }
 
 hr {
-  max-width: 73.125rem;
+  max-width: 75rem;
   height: 0;
   border-right: 0;
   border-top: 0;
@@ -5593,9 +5593,6 @@ meter {
   My custom styles:
   Add your scss files below to structure your project styles
 */
-header {
-  position: relative; }
-
 .menu-item {
   font-family: "Oswald", sans-serif; }
 
@@ -5682,10 +5679,11 @@ header {
 
 /* Tablet and desktop menu */
 .top-bar {
-  max-width: 73.125rem;
+  max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
-  position: relative; }
+  position: relative;
+  padding-top: 0.9375rem; }
   .top-bar::before, .top-bar::after {
     content: ' ';
     display: table; }
@@ -5716,14 +5714,16 @@ header {
     .top-bar .top-bar-right:last-child:not(:first-child) {
       float: right; }
   .top-bar .desktop-menu {
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-    right: 0; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .top-bar .menu a {
-    height: 45px;
     line-height: 45px;
     color: #000000;
     padding-top: 0;
@@ -5783,7 +5783,7 @@ header {
   border-top: 1px solid #ccc;
   margin-top: 3.75rem; }
   #footer-container #footer {
-    max-width: 73.125rem;
+    max-width: 75rem;
     margin-left: auto;
     margin-right: auto;
     padding: 1.875rem 0; }
@@ -5797,9 +5797,14 @@ header {
       margin: 0;
       padding: 0; }
 
-@media screen and (max-width: 63.9375em) {
-  header#masthead {
-    background-color: #000000; } }
+header#masthead {
+  position: relative;
+  background-color: #000000; }
+  @media screen and (min-width: 50em) {
+    header#masthead {
+      padding-bottom: 20px;
+      border-bottom: 1px solid #e6e6e6;
+      background-color: #fefefe; } }
 
 #searchform .input-group-field::before {
   content: url(/assets/images/search.png);
@@ -5830,6 +5835,13 @@ header {
   border-top: 1px solid #e6e6e6;
   margin-top: 20px; }
 
+#main-content--container {
+  background-color: #f9f9f9;
+  padding-top: 3rem; }
+
+#home-page-logo {
+  margin-bottom: 3rem; }
+
 .sidebar {
   width: 100%;
   float: left;
@@ -5858,7 +5870,7 @@ header {
 
 body#tinymce {
   height: auto;
-  max-width: 73.125rem;
+  max-width: 75rem;
   padding: 1.25rem !important; }
 
 .sites-button {
@@ -5869,32 +5881,6 @@ body#tinymce {
           box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.2) inset;
   border-radius: 3px;
   border: none; }
-
-.close-icon {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  overflow: hidden; }
-  .close-icon:hover::before, .close-icon:hover::after {
-    background: #e6e6e6; }
-  .close-icon::before, .close-icon::after {
-    content: '';
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    top: 50%;
-    left: 0;
-    margin-top: -1px;
-    background: #000; }
-
-.thick::before, .thick::after {
-  height: 4px;
-  margin-top: -2px; }
-
-.black::before, .black::after {
-  height: 8px;
-  margin-top: -4px; }
 
 .input-group-field, .mc_merge_var input {
   background-color: #3f3f3f;
@@ -5933,6 +5919,10 @@ body#tinymce {
 /* Styles for content box grid items
  * used on home page, category pages, search
  */
+@media screen and (max-width: 39.9375em) {
+  .content-grid-container > .column, .content-grid-container > .columns {
+    padding: 0; } }
+
 .content-grid-container .blogpost-entry {
   background-color: #ecf1f6;
   -webkit-transition: all 0.5s ease;
@@ -5941,11 +5931,12 @@ body#tinymce {
   margin-bottom: 1.875rem;
   padding-bottom: 1.5rem; }
   .content-grid-container .blogpost-entry:hover {
-    background-color: #f1f5f8; }
+    background-color: #f3f6f9; }
   .content-grid-container .blogpost-entry header {
     margin-top: 0.875rem;
     margin-bottom: 0.875rem; }
-  .content-grid-container .blogpost-entry header, .content-grid-container .blogpost-entry .entry-content {
+  .content-grid-container .blogpost-entry header,
+  .content-grid-container .blogpost-entry .entry-content {
     padding-left: 1.5rem;
     padding-right: 1.5rem; }
   .content-grid-container .blogpost-entry a {
@@ -6017,7 +6008,7 @@ body#tinymce {
         border: 2px solid #fff; } }
 
 #related-posts ul {
-  max-width: 73.125rem;
+  max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
   list-style-type: none; }
@@ -6053,7 +6044,7 @@ body#tinymce {
   position: relative;
   text-align: left; }
   #front-hero .marketing {
-    max-width: 73.125rem;
+    max-width: 75rem;
     margin-left: auto;
     margin-right: auto;
     max-width: 55rem; }
@@ -6163,7 +6154,7 @@ body#tinymce {
     margin-top: 1.25rem; }
 
 .intro {
-  max-width: 73.125rem;
+  max-width: 75rem;
   margin-left: auto;
   margin-right: auto; }
   .intro::before, .intro::after {
@@ -6206,7 +6197,7 @@ body#tinymce {
           margin-bottom: 2rem; } }
 
 .section-divider {
-  max-width: 73.125rem;
+  max-width: 75rem;
   margin-left: auto;
   margin-right: auto; }
   .section-divider::before, .section-divider::after {
@@ -6229,7 +6220,7 @@ body#tinymce {
       float: right; }
 
 .benefits {
-  max-width: 73.125rem;
+  max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
   text-align: center; }
@@ -6316,7 +6307,7 @@ body#tinymce {
     .benefits .professional p {
       font-size: 0.9375rem; }
   .benefits .why-foundation {
-    max-width: 73.125rem;
+    max-width: 75rem;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
@@ -6337,7 +6328,7 @@ body#tinymce {
       float: right; }
 
 #kitchen-sink {
-  max-width: 73.125rem;
+  max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
   margin-top: 3rem; }
@@ -6440,10 +6431,9 @@ body#tinymce {
       background: #e1e1e1; }
 
 #page {
-  max-width: 73.125rem;
+  max-width: 75rem;
   margin-left: auto;
-  margin-right: auto;
-  margin-top: 3rem; }
+  margin-right: auto; }
   #page::before, #page::after {
     content: ' ';
     display: table; }
@@ -6451,7 +6441,7 @@ body#tinymce {
     clear: both; }
 
 #page-sidebar-left {
-  max-width: 73.125rem;
+  max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
   margin-top: 3rem; }
@@ -6515,7 +6505,7 @@ body#tinymce {
           float: right; } }
 
 #page-full-width {
-  max-width: 73.125rem;
+  max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
   margin-top: 3rem; }

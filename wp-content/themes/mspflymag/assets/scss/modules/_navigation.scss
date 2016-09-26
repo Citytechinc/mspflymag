@@ -1,6 +1,3 @@
-header {
-  position: relative;
-}
 .menu-item {
   font-family: $menu-font-family;
 }
@@ -71,6 +68,7 @@ header {
 .top-bar {
   @include grid-row;
   position: relative; //keep this inside the grid
+  padding-top: rem-calc(15px);
   
   .top-bar-left {
     @include grid-column(4);
@@ -79,14 +77,19 @@ header {
   
   .top-bar-right {
     @include grid-column(8);//position it in last 2/3
+    //@include vertical-center;
   }
     .desktop-menu {
-        @include vertical-center;
-        right: 0;
+        //@include vertical-center;
+        //@include horizontal-center;
+        //right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
   .menu a {
-    height: 45px;
+    //height: 45px;
     line-height: 45px;
     color: $black;
     padding-top: 0;
