@@ -5722,7 +5722,8 @@ meter {
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    margin-top: 2.5rem; }
   .top-bar .menu a {
     line-height: 45px;
     color: #000000;
