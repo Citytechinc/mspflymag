@@ -38,12 +38,13 @@ header#masthead {
 }
 
 #main-content--container {
-	background-color: $extra-light-gray;
 	@include breakpoint(tablet) {
-		padding-top: 3rem;
+		background-color: $extra-light-gray;
+		padding-top: rem-calc(35);
 	}
 }
 
 #home-page-logo {
-	margin-bottom: 3rem;
+	padding: rem-calc(20px);
+	//padding-bottom: 1.5rem;
 }

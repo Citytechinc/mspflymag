@@ -77,12 +77,8 @@
   
   .top-bar-right {
     @include grid-column(8);//position it in last 2/3
-    //@include vertical-center;
   }
     .desktop-menu {
-        //@include vertical-center;
-        //@include horizontal-center;
-        //right: 0;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -90,7 +86,6 @@
     }
 
   .menu a {
-    //height: 45px;
     line-height: 45px;
     color: $black;
     padding-top: 0;
@@ -99,9 +94,10 @@
     font-size: 1rem;
     line-height: 1;
 
-    &:hover:not(.button), &:active:not(.button)  {
-      //color: $primary-color;
-    }
+    &:hover,
+    &:focus {
+      color: $anchor-color-hover;
+		}
   }
 }
 /* Basic styles for post navigation. Nicolas Gallagher's "Micro clearfix" https://css-tricks.com/snippets/css/clear-fix/ */

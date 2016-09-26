@@ -5732,6 +5732,8 @@ meter {
     font-weight: bold;
     font-size: 1rem;
     line-height: 1; }
+    .top-bar .menu a:hover, .top-bar .menu a:focus {
+      color: #133d6e; }
 
 /* Basic styles for post navigation. Nicolas Gallagher's "Micro clearfix" https://css-tricks.com/snippets/css/clear-fix/ */
 .post-navigation:before,
@@ -5836,14 +5838,13 @@ header#masthead {
   border-top: 1px solid #e6e6e6;
   margin-top: 20px; }
 
-#main-content--container {
-  background-color: #f9f9f9; }
-  @media screen and (min-width: 50em) {
-    #main-content--container {
-      padding-top: 3rem; } }
+@media screen and (min-width: 50em) {
+  #main-content--container {
+    background-color: #f9f9f9;
+    padding-top: 2.1875rem; } }
 
 #home-page-logo {
-  margin-bottom: 3rem; }
+  padding: 1.25rem; }
 
 .sidebar {
   width: 100%;
@@ -6025,23 +6026,33 @@ body#tinymce {
     clear: both; }
 
 #related-posts li {
+  padding-bottom: 1.25rem;
   text-align: center; }
-  @media screen and (min-width: 50em) {
+  @media screen and (min-width: 40em) {
     #related-posts li {
       width: 33.33333%;
       float: left;
       padding-left: 0.625rem;
-      padding-right: 0.625rem; } }
-  @media screen and (min-width: 50em) and (min-width: 40em) {
+      padding-right: 0.625rem;
+      padding-bottom: 0; } }
+  @media screen and (min-width: 40em) and (min-width: 40em) {
     #related-posts li {
       padding-left: 0.9375rem;
       padding-right: 0.9375rem; } }
-  @media screen and (min-width: 50em) {
+  @media screen and (min-width: 40em) {
       #related-posts li:last-child:not(:first-child) {
         float: right; } }
+  @media screen and (max-width: 39.9375em) {
+    #related-posts li img {
+      max-width: 300px; } }
   #related-posts li a {
     display: block;
-    font-family: "Oswald", sans-serif; }
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    font-size: 1.1875rem;
+    color: #000000; }
+    #related-posts li a:hover, #related-posts li a:focus {
+      color: #133d6e; }
 
 #comments h3 {
   display: none; }
@@ -6455,6 +6466,16 @@ body#tinymce {
     display: table; }
   #page::after {
     clear: both; }
+  #page h1.entry-title {
+    padding-bottom: 0.9375rem;
+    padding-top: 1.25rem; }
+    @media screen and (min-width: 50em) {
+      #page h1.entry-title {
+        padding-bottom: 0.3125rem;
+        padding-top: 0; } }
+    @media screen and (min-width: 50em) {
+      #page h1.entry-title {
+        padding-bottom: 1.5625rem; } }
 
 #page-sidebar-left {
   max-width: 75rem;
@@ -6572,9 +6593,9 @@ body#tinymce {
         #single-post .main-content header hr {
           margin: 1.875rem 40%; } }
     #single-post .main-content header h1 {
-      font-size: 2.625rem; }
+      font-size: 2.5rem; }
       @media screen and (min-width: 50em) {
         #single-post .main-content header h1 {
-          font-size: 3.5rem; } }
+          font-size: 3.75rem; } }
 
 /*# sourceMappingURL=foundation.css.map */

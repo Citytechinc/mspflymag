@@ -1,15 +1,18 @@
 #page {
   @include grid-row();
-  //margin-top: 3rem;
+  //margin-top: rem-calc(20);
 
-//  .main-content {
-//    @include breakpoint(small) {
-//      @include grid-column(12);
-//    }
-//
-//    @include breakpoint(medium) {
-//      @include grid-column(8);
-//    }
-//  }
-
+	h1.entry-title {
+		padding-bottom: rem-calc(15);
+		padding-top: rem-calc(20);
+		
+		@include breakpoint(tablet) {
+			padding-bottom: rem-calc(5);
+			padding-top: 0;
+		}
+		
+		@include breakpoint(tablet) {
+			padding-bottom: rem-calc(25);
+		}
+	}
 }

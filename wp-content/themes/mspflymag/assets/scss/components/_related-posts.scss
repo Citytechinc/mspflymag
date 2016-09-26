@@ -5,16 +5,31 @@
   }
   
   li {
-    @include breakpoint(tablet) {
+		padding-bottom: rem-calc(20);
+		text-align: center;
+		
+    @include breakpoint(medium) {
       @include grid-column(4);
+			padding-bottom: 0;
     }
-    
-    text-align: center;
 
+		img {
+			@include breakpoint(small only) {
+				max-width: 300px;
+			}
+		}
+		
     a {
       display: block;
-        font-family: $header-font-family;
-        font-size: map-get($header-sizes, small('h3'));
+			font-family: $header-font-family;
+			font-weight: $header-font-weight;
+			font-size: rem-calc(19);
+			color: $black;
+			
+			&:hover,
+			&:focus {
+				color: $anchor-color-hover;
+			}
     }
   }
 }
