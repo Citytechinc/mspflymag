@@ -31,6 +31,10 @@ get_header(); ?>
 		  <?php edit_post_link( __( 'Edit', 'foundationpress' ), '<span class="edit-link">', '</span>' ); ?>
 		</div>
       </section>
+      <section id="share-this">
+        <h3>Share this article:</h3>
+        <?php if ( function_exists( 'ADDTOANY_SHARE_SAVE_KIT' ) ) { ADDTOANY_SHARE_SAVE_KIT(); } ?>
+      </section>
       <section id="related-posts">
 		<?php wp_related_posts()?>
       </section>
