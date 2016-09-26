@@ -1,58 +1,60 @@
 #single-post {
   
-  @include breakpoint(tablet) {
-    margin-top: 3rem;
-  }
-  .carousel-container {
-    padding: 0;
-  }
-  
-  .photo-carousel {
-    @include breakpoint(tablet) {
-    }
-  }
-  .main-content { //article item
-    padding: 0;
-    
-    @include breakpoint(tablet) {
-      margin-top: rem-calc(30px);
-    }
-    
-    >section, >main {
-      background-color: map-get($foundation-palette, secondary);
-      border-bottom: 7px solid $black;
-      margin-bottom: 20px;
-      //@include grid-col;
-      padding: 20px;
-      
-      h3 {
-        text-align: center;
-      }
-      
-    }
-    header {
-      padding-top: rem-calc(20px);
-        
-      @include breakpoint(tablet) {
-        padding-top: rem-calc(40px);
-      }
-      
-      hr {
-        border-bottom: 2px solid $medium-gray;
-        margin: rem-calc(30px);
-        
-        @include breakpoint(tablet) {
-          margin: rem-calc(30px) 40%; 
-        }
-      }
-    
-      h1 {
-        font-size: rem-calc(28 * 1.5); //TODO make this access the variable in settings.scss
+	@include breakpoint(tablet) {
+		//margin-top: 3rem;
+	}
+	.carousel-container {
+		padding: 0;
+	}
 
-        @include breakpoint(tablet) {
-          font-size: rem-calc(28 * 2);
+	.main-content { //article item
+		padding: 0;
+
+		@include breakpoint(tablet) {
+			margin-top: rem-calc(30px);
+		}
+
+		>section:not(#comments), >main {
+			background-color: map-get($foundation-palette, secondary);
+			border-bottom: 7px solid $black;
+			margin-bottom: 20px;
+			//@include grid-col;
+			padding: 20px;
+
+
+			h3 {
+				text-align: center;
+			}
+		}
+        
+        section#share-follow {
+            margin-left: 0;
+            margin-right: 0;
         }
-      }
-    }
-  }
+	  
+		header {
+			padding-top: rem-calc(20px);
+
+			@include breakpoint(tablet) {
+				padding-top: rem-calc(40px);
+			}
+
+			hr {
+				border-bottom: 2px solid $medium-gray;
+				margin: rem-calc(30px);
+
+				@include breakpoint(tablet) {
+					margin: rem-calc(30px) 40%; 
+				}
+			}
+
+			h1 {
+				font-size: rem-calc(28 * 1.5); //TODO make this access the variable in settings.scss
+
+				@include breakpoint(tablet) {
+				  font-size: rem-calc(28 * 2);
+				}
+			}
+		}
+	}
 }

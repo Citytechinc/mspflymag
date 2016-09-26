@@ -39,7 +39,9 @@ header#masthead {
 
 #main-content--container {
 	background-color: $extra-light-gray;
-	padding-top: 3rem;
+	@include breakpoint(tablet) {
+		padding-top: 3rem;
+	}
 }
 
 #home-page-logo {

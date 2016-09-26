@@ -31,9 +31,15 @@ get_header(); ?>
 		  <?php edit_post_link( __( 'Edit', 'foundationpress' ), '<span class="edit-link">', '</span>' ); ?>
 		</div>
       </section>
-      <section id="share-this">
-        <h3>Share this article:</h3>
-        <?php if ( function_exists( 'ADDTOANY_SHARE_SAVE_KIT' ) ) { ADDTOANY_SHARE_SAVE_KIT(); } ?>
+      <section id="share-follow" class="row">
+        <div class="columns tablet-6">
+            <h3>Follow Fly:</h3>
+            <?php mailchimpSF_signup_form(); ?>
+        </div>
+        <div class="columns tablet-6 text-center">
+            <h3>Share this article:</h3>
+            <?php if ( function_exists( 'ADDTOANY_SHARE_SAVE_KIT' ) ) { ADDTOANY_SHARE_SAVE_KIT(); } ?>
+        </div>
       </section>
       <section id="related-posts">
 		<?php wp_related_posts()?>

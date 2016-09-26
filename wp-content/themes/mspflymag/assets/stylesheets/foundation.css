@@ -3563,10 +3563,10 @@ h6 {
     line-height: 0; }
 
 h1 {
-  font-size: 1.5rem; }
+  font-size: 1.75rem; }
 
 h2 {
-  font-size: 1.25rem; }
+  font-size: 1.5rem; }
 
 h3 {
   font-size: 1.1875rem; }
@@ -3582,9 +3582,9 @@ h6 {
 
 @media screen and (min-width: 40em) {
   h1 {
-    font-size: 1.75rem; }
+    font-size: 2rem; }
   h2 {
-    font-size: 1.5rem; }
+    font-size: 1.75rem; }
   h3 {
     font-size: 1.375rem; }
   h4 {
@@ -5836,8 +5836,10 @@ header#masthead {
   margin-top: 20px; }
 
 #main-content--container {
-  background-color: #f9f9f9;
-  padding-top: 3rem; }
+  background-color: #f9f9f9; }
+  @media screen and (min-width: 50em) {
+    #main-content--container {
+      padding-top: 3rem; } }
 
 #home-page-logo {
   margin-bottom: 3rem; }
@@ -5885,6 +5887,9 @@ body#tinymce {
 .input-group-field, .mc_merge_var input {
   background-color: #3f3f3f;
   border: none; }
+
+#mc_signup_form .mc_var_label {
+  display: none; }
 
 #searchform .input-group-button {
   font-family: FontAwesome; }
@@ -6019,19 +6024,29 @@ body#tinymce {
     clear: both; }
 
 #related-posts li {
-  width: 33.33333%;
-  float: left;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
   text-align: center; }
-  @media screen and (min-width: 40em) {
+  @media screen and (min-width: 50em) {
+    #related-posts li {
+      width: 33.33333%;
+      float: left;
+      padding-left: 0.625rem;
+      padding-right: 0.625rem; } }
+  @media screen and (min-width: 50em) and (min-width: 40em) {
     #related-posts li {
       padding-left: 0.9375rem;
       padding-right: 0.9375rem; } }
-  #related-posts li:last-child:not(:first-child) {
-    float: right; }
+  @media screen and (min-width: 50em) {
+      #related-posts li:last-child:not(:first-child) {
+        float: right; } }
   #related-posts li a {
-    display: block; }
+    display: block;
+    font-family: "Oswald", sans-serif; }
+
+#comments h3 {
+  display: none; }
+
+#comments ol {
+  list-style-type: none; }
 
 #front-hero {
   background: url("../images/demo/hero-bg-foundation-6-small.svg") bottom center;
@@ -6526,10 +6541,6 @@ body#tinymce {
     #page-full-width .main-content:last-child:not(:first-child) {
       float: right; }
 
-@media screen and (min-width: 50em) {
-  #single-post {
-    margin-top: 3rem; } }
-
 #single-post .carousel-container {
   padding: 0; }
 
@@ -6538,13 +6549,16 @@ body#tinymce {
   @media screen and (min-width: 50em) {
     #single-post .main-content {
       margin-top: 1.875rem; } }
-  #single-post .main-content > section, #single-post .main-content > main {
+  #single-post .main-content > section:not(#comments), #single-post .main-content > main {
     background-color: #ecf1f6;
     border-bottom: 7px solid #000000;
     margin-bottom: 20px;
     padding: 20px; }
-    #single-post .main-content > section h3, #single-post .main-content > main h3 {
+    #single-post .main-content > section:not(#comments) h3, #single-post .main-content > main h3 {
       text-align: center; }
+  #single-post .main-content section#share-follow {
+    margin-left: 0;
+    margin-right: 0; }
   #single-post .main-content header {
     padding-top: 1.25rem; }
     @media screen and (min-width: 50em) {
