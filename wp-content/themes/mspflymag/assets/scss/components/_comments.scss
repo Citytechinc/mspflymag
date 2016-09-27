@@ -1,10 +1,18 @@
 #comments {
-    
-    h3 {
-        display: none;
-    }
-    
-    ol {
-        list-style-type: none;    
-    }
+	img {
+		float: left;
+		margin-right: 10px;
+	}
+	
+	h3 {
+			display: none;
+	}
+
+	ol, ul {
+			list-style-type: none;    
+	}
+	
+	.reply {
+		margin-left: 58px; //this is kind of hacky--avatar 48px + 10px padding
+	}
 }
