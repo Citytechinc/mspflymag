@@ -5974,27 +5974,33 @@ div#mc_message {
     .photo-carousel-slides li img {
       height: 100%;
       width: 100%;
-      object-fit: cover; }
-  .photo-carousel-controls li {
-    opacity: .5;
-    margin-right: 3px; }
-    .photo-carousel-controls li img {
-      height: 56px;
-      width: 100%;
       object-fit: cover;
-      outline: none;
-      cursor: pointer; }
-    .photo-carousel-controls li .dot {
-      display: none; }
-    .photo-carousel-controls li:last-child {
-      margin-right: 0; }
-    .photo-carousel-controls li.slick-current {
-      opacity: 1; }
-    .photo-carousel-controls li:hover {
-      opacity: 1; }
-    .photo-carousel-controls li:focus {
-      outline: none;
-      cursor: pointer; }
+      object-position: center; }
+  .photo-carousel-controls {
+    margin-top: 3px !important; }
+    .photo-carousel-controls li {
+      opacity: .5;
+      margin-right: 3px; }
+      .photo-carousel-controls li img {
+        height: 56px;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+        outline: none;
+        cursor: pointer; }
+      .photo-carousel-controls li .dot {
+        display: none; }
+      .photo-carousel-controls li:last-child {
+        margin-right: 0; }
+      .photo-carousel-controls li.slick-current {
+        opacity: 1; }
+      .photo-carousel-controls li:hover {
+        opacity: 1; }
+      .photo-carousel-controls li:focus {
+        outline: none;
+        cursor: pointer; }
+      .photo-carousel-controls li:last-child {
+        margin-right: 0; }
 
 @media only screen and (max-width: 40.063em) {
   /* max-width 641px */

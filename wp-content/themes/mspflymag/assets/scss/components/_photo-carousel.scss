@@ -17,10 +17,13 @@
         height: 100%; 
         width: 100%; 
         object-fit: cover;
+        object-position: center;
       }
     }
   }
   &-controls {
+    margin-top: 3px !important;
+
 	  li {
 	  	opacity: .5;
   		margin-right: 3px;
@@ -29,6 +32,7 @@
 			height: 56px; 
 			width: 100%; 
 			object-fit: cover;
+      object-position: top;
       outline: none;
       cursor: pointer;
   		}
@@ -52,6 +56,10 @@
       &:focus {
         outline: none;
         cursor: pointer;
+      }
+
+      &:last-child {
+        margin-right: 0;
       }
     }
   }
