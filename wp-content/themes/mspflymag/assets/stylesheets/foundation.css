@@ -5660,7 +5660,8 @@ meter {
           transform: translateX(-100%) rotateX(40deg);
   -webkit-transition: all 400ms cubic-bezier(1, -0.4, 0.44, 0.985);
   transition: all 400ms cubic-bezier(1, -0.4, 0.44, 0.985);
-  padding: 0 1.25rem; }
+  padding: 0 1.25rem;
+  overflow-x: hidden; }
   .mobile-menu--container li {
     font-size: 1.5rem; }
   .mobile-menu--container a {
@@ -5834,7 +5835,7 @@ header#masthead {
   overflow: hidden;
   clip: rect(0, 0, 0, 0); }
 
-#mc_signup {
+#follow-fly--container {
   border-top: 1px solid #e6e6e6;
   margin-top: 20px; }
 
@@ -5886,8 +5887,10 @@ body#tinymce {
   border-radius: 3px;
   border: none; }
 
+#mobile-menu--container .input-group-field, #mobile-menu--container .mc_merge_var input {
+  background-color: #3f3f3f; }
+
 .input-group-field, .mc_merge_var input {
-  background-color: #3f3f3f;
   border: none; }
 
 #mc_signup_form .mc_var_label {
@@ -5895,9 +5898,6 @@ body#tinymce {
 
 #searchform .input-group-button {
   font-family: FontAwesome; }
-
-div#mc_message {
-  padding: 20px; }
 
 #featured-hero {
   -webkit-background-size: cover;
@@ -6066,11 +6066,18 @@ div#mc_message {
     #related-posts li a:hover, #related-posts li a:focus {
       color: #133d6e; }
 
+#comments img {
+  float: left;
+  margin-right: 10px; }
+
 #comments h3 {
   display: none; }
 
-#comments ol {
+#comments ol, #comments ul {
   list-style-type: none; }
+
+#comments .reply {
+  margin-left: 58px; }
 
 #front-hero {
   background: url("../images/demo/hero-bg-foundation-6-small.svg") bottom center;
@@ -6582,17 +6589,32 @@ div#mc_message {
   padding: 0; }
   @media screen and (min-width: 50em) {
     #single-post .main-content {
-      margin-top: 1.875rem; } }
+      margin-top: 1.25rem; } }
   #single-post .main-content > section:not(#comments), #single-post .main-content > main {
     background-color: #ecf1f6;
     border-bottom: 7px solid #000000;
-    margin-bottom: 20px;
-    padding: 20px; }
+    margin-bottom: 1.25rem;
+    padding: 1.25rem; }
     #single-post .main-content > section:not(#comments) h3, #single-post .main-content > main h3 {
-      text-align: center; }
+      text-align: center;
+      font-size: 2.125rem; }
   #single-post .main-content section#share-follow {
     margin-left: 0;
     margin-right: 0; }
+    @media screen and (max-width: 49.9375em) {
+      #single-post .main-content section#share-follow .column:first-of-type, #single-post .main-content section#share-follow .columns:first-of-type {
+        border-bottom: 1px solid #000000;
+        padding-bottom: 1.25rem; } }
+    @media screen and (min-width: 50em) {
+      #single-post .main-content section#share-follow .column:first-of-type, #single-post .main-content section#share-follow .columns:first-of-type {
+        -webkit-box-shadow: 30px 0px 0px -29px #000000;
+                box-shadow: 30px 0px 0px -29px #000000; } }
+    @media screen and (max-width: 49.9375em) {
+      #single-post .main-content section#share-follow .column:last-of-type, #single-post .main-content section#share-follow .columns:last-of-type {
+        padding-top: 1.25rem; } }
+    #single-post .main-content section#share-follow .addtoany_list {
+      display: block;
+      padding: 1.25rem; }
   #single-post .main-content header {
     padding-top: 1.25rem; }
     @media screen and (min-width: 50em) {

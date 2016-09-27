@@ -31,18 +31,18 @@ get_header(); ?>
 		  <?php edit_post_link( __( 'Edit', 'foundationpress' ), '<span class="edit-link">', '</span>' ); ?>
 		</div>
       </section>
-      <section id="share-follow" class="row">
-        <div class="columns tablet-6">
+      <section id="share-follow" class="row" data-equalizer data-equalize-on="tablet" data-equalize-by-row="true">
+        <div class="columns tablet-6" id="follow-fly-post" data-equalizer-watch>
             <h3>Follow Fly:</h3>
             <?php mailchimpSF_signup_form(); ?>
         </div>
-        <div class="columns tablet-6 text-center">
+        <div class="columns tablet-6 text-center" id="share-article" data-equalizer-watch>
             <h3>Share this article:</h3>
             <?php if ( function_exists( 'ADDTOANY_SHARE_SAVE_KIT' ) ) { ADDTOANY_SHARE_SAVE_KIT(); } ?>
         </div>
       </section>
       <section id="related-posts">
-		<?php wp_related_posts()?>
+				<?php wp_related_posts()?>
       </section>
       <?php do_action( 'foundationpress_post_before_comments' ); ?>
       <?php comments_template(); ?>

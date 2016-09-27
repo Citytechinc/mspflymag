@@ -1,5 +1,10 @@
+#mobile-menu--container {
+	.input-group-field, .mc_merge_var input {
+		background-color: $charcoal;
+	}
+}
+
 .input-group-field, .mc_merge_var input {
-  background-color: $charcoal;
   border: none;
 }
 
@@ -13,6 +18,7 @@
   }
 }		
 
+//this needs to be restricted to header or applied somewhere else
 div#mc_message {
-	padding: 20px;
+	//padding: 20px;
 }

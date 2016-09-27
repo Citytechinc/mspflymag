@@ -41,6 +41,7 @@
   transform: translateX(-100%) rotateX(40deg);
   transition: all 400ms cubic-bezier(1.000, -0.400, 0.440, 0.985);
   padding: 0 rem-calc(20);
+	overflow-x: hidden;
   
   li {
     font-size: 1.5rem;
