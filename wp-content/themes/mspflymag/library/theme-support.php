@@ -26,10 +26,8 @@ function foundationpress_theme_support() {
 	// Let WordPress manage the document title
 	add_theme_support( 'title-tag' );
 
-	// Add post thumbnail support: http://codex.wordpress.org/Post_Thumbnails
+	// Add post thumbnail support:
 	add_theme_support( 'post-thumbnails' );
-    set_post_thumbnail_size( 960, 600, true);
-
 
 	// RSS thingy
 	add_theme_support( 'automatic-feed-links' );
