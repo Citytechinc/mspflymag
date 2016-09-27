@@ -5896,6 +5896,9 @@ body#tinymce {
 #searchform .input-group-button {
   font-family: FontAwesome; }
 
+div#mc_message {
+  padding: 20px; }
+
 #featured-hero {
   -webkit-background-size: cover;
           background-size: cover;
