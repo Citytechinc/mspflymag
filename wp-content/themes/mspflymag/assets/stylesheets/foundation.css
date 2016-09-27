@@ -5919,6 +5919,13 @@ body#tinymce {
   border-style: dashed;
   margin: 2rem 0; }
 
+hr.divider {
+  border-bottom: 2px solid #cacaca;
+  margin: 1.875rem; }
+  @media screen and (min-width: 50em) {
+    hr.divider {
+      margin: 1.875rem 40%; } }
+
 /* Apply outline styles only when input method is keyboard
  * remove :focus style via What Input using progressive enhancement
  * so :focus isn't left broken if JavaScript fails
@@ -6620,12 +6627,6 @@ body#tinymce {
     @media screen and (min-width: 50em) {
       #single-post .main-content header {
         padding-top: 2.5rem; } }
-    #single-post .main-content header hr {
-      border-bottom: 2px solid #cacaca;
-      margin: 1.875rem; }
-      @media screen and (min-width: 50em) {
-        #single-post .main-content header hr {
-          margin: 1.875rem 40%; } }
     #single-post .main-content header h1 {
       font-size: 2.5rem; }
       @media screen and (min-width: 50em) {

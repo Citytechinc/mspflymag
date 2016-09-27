@@ -62,15 +62,6 @@
 				padding-top: rem-calc(40px);
 			}
 
-			hr {
-				border-bottom: 2px solid $medium-gray;
-				margin: rem-calc(30);
-
-				@include breakpoint(tablet) {
-					margin: rem-calc(30) 40%; 
-				}
-			}
-
 			h1 {
 				font-size: rem-calc(40);
 

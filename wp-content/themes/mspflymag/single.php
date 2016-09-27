@@ -19,17 +19,21 @@ get_header(); ?>
     
     <article <?php post_class('main-content column row tablet-8 small-centered') ?> id="post-<?php the_ID(); ?>">
       <section>
-		<header class="text-center">
-			<h1 class="entry-title"><?php the_title(); ?></h1>
-			<?php foundationpress_entry_meta(); ?>
-            <?php the_category(', ') ?>
-            <hr class="text-center">
-		</header>
-		<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
-		<div class="entry-content">
-		  <?php the_content(); ?>
-		  <?php edit_post_link( __( 'Edit', 'foundationpress' ), '<span class="edit-link">', '</span>' ); ?>
-		</div>
+				<header class="text-center">
+					<h1 class="entry-title"><?php the_title(); ?></h1>
+					<?php foundationpress_entry_meta(); ?>
+								<?php the_category(', ') ?>
+								<hr class="divider">
+				</header>
+				<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
+				<div class="entry-content">
+					<?php the_content(); ?>
+					<?php edit_post_link( __( 'Edit', 'foundationpress' ), '<span class="edit-link">', '</span>' ); ?>
+				</div>
+				<div id="related-posts">
+					<hr class="divider">
+					<?php wp_related_posts()?>
+				</div>
       </section>
       <section id="share-follow" class="row" data-equalizer data-equalize-on="tablet" data-equalize-by-row="true">
         <div class="columns tablet-6" id="follow-fly-post" data-equalizer-watch>
@@ -40,9 +44,6 @@ get_header(); ?>
             <h3>Share this article:</h3>
             <?php if ( function_exists( 'ADDTOANY_SHARE_SAVE_KIT' ) ) { ADDTOANY_SHARE_SAVE_KIT(); } ?>
         </div>
-      </section>
-      <section id="related-posts">
-				<?php wp_related_posts()?>
       </section>
       <?php do_action( 'foundationpress_post_before_comments' ); ?>
       <?php comments_template(); ?>
