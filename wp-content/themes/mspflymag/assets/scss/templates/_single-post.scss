@@ -33,6 +33,15 @@
 				margin-right: 0;
 			
 			.column:first-of-type {
+				h3::before {
+					content: url(/wp-content/themes/mspflymag/assets/images/icons/follow-fly-icon.png);
+					height: 24px;
+					width: 24px;
+					position: relative;
+					margin-right: 5px;
+					top: 7px;
+				}
+
 				@include breakpoint(medium down) {
 					border-bottom: 1px solid $black;
 					padding-bottom: rem-calc(20);

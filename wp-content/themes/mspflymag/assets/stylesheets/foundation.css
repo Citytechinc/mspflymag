@@ -6608,6 +6608,13 @@ hr.divider {
   #single-post .main-content section#share-follow {
     margin-left: 0;
     margin-right: 0; }
+    #single-post .main-content section#share-follow .column:first-of-type h3::before, #single-post .main-content section#share-follow .columns:first-of-type h3::before {
+      content: url(/wp-content/themes/mspflymag/assets/images/icons/follow-fly-icon.png);
+      height: 24px;
+      width: 24px;
+      position: relative;
+      margin-right: 5px;
+      top: 7px; }
     @media screen and (max-width: 49.9375em) {
       #single-post .main-content section#share-follow .column:first-of-type, #single-post .main-content section#share-follow .columns:first-of-type {
         border-bottom: 1px solid #000000;
