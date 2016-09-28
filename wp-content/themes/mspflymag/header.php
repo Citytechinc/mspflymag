@@ -30,7 +30,7 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div id="follow-search-bar--wrapper" class="show-for-tablet dark-form">
-			<section id="follow-search-bar" class="row tablet-8 small-centered">
+			<section id="follow-search-bar" class="row tablet-12 small-centered">
 				<div id="follow-fly--wrapper" class="medium-6 large-5 medium-offset-3 large-offset-4 columns">
 					<button id="follow-fly--button" data-toggle="follow-fly-form--wrapper follow-fly--button" data-toggler=".hide"><h3 class="follow-fly-icon">Follow Fly</h3></button>
 					<div id="follow-fly-form--wrapper" class="hide" data-toggler=".hide">

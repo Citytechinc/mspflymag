@@ -13,7 +13,11 @@
 <div class="column">
     <div id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry'); ?> data-equalizer-watch>
         <a href="<?php the_permalink(); ?>">
+            
+            <div class="thumbnail-container">
             <?php the_post_thumbnail(); ?>
+        </div>
+
             <header>
                 <h2><?php the_title(); ?></h2>
             </header>

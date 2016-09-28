@@ -5918,6 +5918,36 @@ body#tinymce {
 .dark-form .input-group-field, .dark-form .mc_merge_var input {
   background-color: #3f3f3f; }
 
+.dark-form #mc_signup .mc_merge_var {
+  width: 70%;
+  float: left; }
+
+.dark-form #mc_signup .mc_signup_submit {
+  width: 20%;
+  float: left;
+  padding-left: .5em; }
+
+#single-post #mc_signup {
+  margin-top: 1.5em;
+  display: block; }
+
+#single-post #mc_signup .mc_merge_var {
+  padding: 0;
+  margin: 0;
+  width: 70%;
+  float: left; }
+
+#single-post #mc_signup .mc_signup_submit {
+  text-align: center;
+  width: 20%;
+  float: left; }
+  #single-post #mc_signup .mc_signup_submit .button {
+    font-size: 1em;
+    padding: .7em;
+    background-color: transparent;
+    color: #000;
+    font-weight: bold; }
+
 .input-group-field, .mc_merge_var input {
   border: none; }
 
@@ -5926,6 +5956,9 @@ body#tinymce {
 
 #searchform .input-group-button {
   font-family: FontAwesome; }
+
+.mc_error_msg {
+  font-weight: normal; }
 
 #featured-hero {
   -webkit-background-size: cover;
@@ -5975,11 +6008,13 @@ hr.divider {
   border-bottom: 0.375rem solid #000000;
   margin-bottom: 1.875rem;
   padding-bottom: 1.5rem; }
-  .content-grid-container .blogpost-entry img {
-    object-fit: none;
-    object-position: top;
+  .content-grid-container .blogpost-entry .thumbnail-container {
     width: 100%;
-    height: 250px; }
+    height: 250px;
+    overflow: hidden; }
+    .content-grid-container .blogpost-entry .thumbnail-container img {
+      width: 100%;
+      min-height: 250px; }
   .content-grid-container .blogpost-entry:hover {
     background-color: #f3f6f9; }
     .content-grid-container .blogpost-entry:hover img {
@@ -6005,31 +6040,38 @@ hr.divider {
     padding: 0; }
   .photo-carousel-slides li {
     margin-bottom: 0;
-    height: 330px; }
+    height: 360px; }
     .photo-carousel-slides li img {
       height: 100%;
       width: 100%;
-      object-fit: cover; }
-  .photo-carousel-controls li {
-    opacity: .5;
-    margin-right: 3px; }
-    .photo-carousel-controls li img {
-      height: 56px;
-      width: 100%;
       object-fit: cover;
-      outline: none;
-      cursor: pointer; }
-    .photo-carousel-controls li .dot {
-      display: none; }
-    .photo-carousel-controls li:last-child {
-      margin-right: 0; }
-    .photo-carousel-controls li.slick-current {
-      opacity: 1; }
-    .photo-carousel-controls li:hover {
-      opacity: 1; }
-    .photo-carousel-controls li:focus {
-      outline: none;
-      cursor: pointer; }
+      object-position: center; }
+  .photo-carousel-controls {
+    margin-top: 3px !important;
+    border: 0; }
+    .photo-carousel-controls li {
+      opacity: .5;
+      margin-right: 3px; }
+      .photo-carousel-controls li img {
+        height: 56px;
+        width: 100%;
+        object-fit: cover;
+        object-position: initial;
+        outline: none;
+        cursor: pointer; }
+      .photo-carousel-controls li .dot {
+        display: none; }
+      .photo-carousel-controls li:last-child {
+        margin-right: 0; }
+      .photo-carousel-controls li.slick-current {
+        opacity: 1; }
+      .photo-carousel-controls li:hover {
+        opacity: 1; }
+      .photo-carousel-controls li:focus {
+        outline: none;
+        cursor: pointer; }
+      .photo-carousel-controls li:last-child {
+        margin-right: 0; }
 
 @media only screen and (max-width: 40.063em) {
   /* max-width 641px */
@@ -6100,6 +6142,19 @@ hr.divider {
     color: #000000; }
     #related-posts li a:hover, #related-posts li a:focus {
       color: #133d6e; }
+
+div.wp_rp_footer a.wp_rp_edit {
+  background: #133d6e !important;
+  /* #164780 */ }
+
+div.wp_rp_footer a.wp_rp_edit:hover {
+  background: #333 !important; }
+
+.wp_rp_footer {
+  text-align: center; }
+
+#wp_rp_zem_related_posts_wrap .button {
+  background: #133d6e !important; }
 
 #comments img {
   float: left;
@@ -6660,5 +6715,12 @@ hr.divider {
       @media screen and (min-width: 50em) {
         #single-post .main-content header h1 {
           font-size: 3.75rem; } }
+
+#single-post .gss-container {
+  background-color: #2E2E2E !important; }
+
+#single-post .video-wrapper,
+#single-post .size-full {
+  margin-bottom: 1em; }
 
 /*# sourceMappingURL=foundation.css.map */

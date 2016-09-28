@@ -13,7 +13,49 @@
 	.input-group-field, .mc_merge_var input {
 		background-color: $charcoal;
 	}
+
+	#mc_signup {
+
+		.mc_merge_var {
+		    width: 70%;
+		    float: left;
+		}
+
+		.mc_signup_submit {
+		    width: 20%;
+		    float: left;
+		    padding-left: .5em;
+		}
+	}
 }
+
+
+#single-post #mc_signup {
+    margin-top: 1.5em;
+    display: block;
+}
+
+#single-post #mc_signup .mc_merge_var {
+    padding: 0;
+    margin: 0;
+    width: 70%;
+    float: left;
+}
+
+#single-post #mc_signup .mc_signup_submit {
+    text-align: center;
+    width: 20%;
+    float: left;
+
+    .button {
+	    font-size: 1em;
+	    padding: .7em;
+	    background-color: transparent;
+	    color: #000;
+	    font-weight: bold;
+	}
+}
+
 
 .input-group-field, .mc_merge_var input {
   border: none;
@@ -28,6 +70,10 @@
     font-family: FontAwesome;
   }
 }		
+
+.mc_error_msg {
+    font-weight: normal;
+}
 
 //this needs to be restricted to header or applied somewhere else
 div#mc_message {

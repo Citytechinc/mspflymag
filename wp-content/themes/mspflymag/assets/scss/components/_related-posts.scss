@@ -33,3 +33,20 @@
     }
   }
 }
+
+
+div.wp_rp_footer a.wp_rp_edit {
+    background: $anchor-color-hover !important; /* #164780 */
+}
+
+div.wp_rp_footer a.wp_rp_edit:hover {
+    background: #333 !important;
+}
+
+.wp_rp_footer {
+	text-align: center;
+}
+
+#wp_rp_zem_related_posts_wrap .button {
+    background: $anchor-color-hover !important;
+}
