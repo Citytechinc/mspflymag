@@ -78,7 +78,7 @@ if ( have_comments() ) :
 				'reply_text'        => __( 'Reply', 'foundationpress' ),
 				'page'              => '',
 				'per_page'          => '',
-				'avatar_size'       => 48,
+				'avatar_size'       => 80,
 				'reverse_top_level' => null,
 				'reverse_children'  => '',
 				'format'            => 'html5',

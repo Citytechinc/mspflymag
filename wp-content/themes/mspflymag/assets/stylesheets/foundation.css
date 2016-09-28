@@ -6156,9 +6156,13 @@ div.wp_rp_footer a.wp_rp_edit:hover {
 #wp_rp_zem_related_posts_wrap .button {
   background: #133d6e !important; }
 
+#comments a, #comments cite {
+  color: #000000;
+  font-weight: bold; }
+
 #comments img {
   float: left;
-  margin-right: 10px; }
+  margin-right: 0.625rem; }
 
 #comments h3 {
   display: none; }
@@ -6167,7 +6171,20 @@ div.wp_rp_footer a.wp_rp_edit:hover {
   list-style-type: none; }
 
 #comments .reply {
-  margin-left: 58px; }
+  margin-left: 5.625rem; }
+
+#comments cite {
+  display: inline;
+  font-style: normal;
+  font-size: 1rem; }
+  #comments cite:before {
+    content: ''; }
+  #comments cite:after {
+    content: " | ";
+    padding: 0 5px; }
+
+#comments section.comment {
+  margin-left: 5.625rem; }
 
 #front-hero {
   background: url("../images/demo/hero-bg-foundation-6-small.svg") bottom center;

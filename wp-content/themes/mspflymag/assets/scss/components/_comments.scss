@@ -1,7 +1,16 @@
+//Styles for a list of comments. Lots of overrides because markup isn't easily changed. 
+$gravatar-size: rem-calc(80);
+$gravatar-padding: rem-calc(10);
+
 #comments {
+	a, cite {
+		color: $black;
+		font-weight: bold;
+	}
+	
 	img {
 		float: left;
-		margin-right: 10px;
+		margin-right: $gravatar-padding;
 	}
 	
 	h3 {
@@ -13,6 +22,26 @@
 	}
 	
 	.reply {
-		margin-left: 58px; //this is kind of hacky--avatar 48px + 10px padding
+		margin-left: $gravatar-size + $gravatar-padding;
+	}
+	
+	cite {
+		display: inline;
+		font-style: normal;
+		font-size: rem-calc(16);
+		
+		
+		&:before {
+			content: '';
+		}
+		
+		&:after {
+			content: " | ";
+			padding: 0 5px;
+		}
+	}
+	
+	section.comment {
+		margin-left: $gravatar-size + $gravatar-padding;
 	}
 }
