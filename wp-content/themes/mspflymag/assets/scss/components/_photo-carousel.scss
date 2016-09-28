@@ -8,23 +8,23 @@
   	padding: 0;
   }
 
-  &-slides {
+  &-slides { 
     li {
       margin-bottom: 0;
-      height: 330px;
+      height: 360px;
 
       img {
         height: 100%; 
         width: 100%; 
         object-fit: cover;
-        object-position: center;
+        object-position: center; 
       }
     }
   }
   &-controls {
     margin-top: 3px !important;
 
-	  li {
+	  li { 
 	  	opacity: .5;
   		margin-right: 3px;
 
@@ -32,7 +32,7 @@
 			height: 56px; 
 			width: 100%; 
 			object-fit: cover;
-      object-position: top;
+      object-position: initial;
       outline: none;
       cursor: pointer;
   		}
