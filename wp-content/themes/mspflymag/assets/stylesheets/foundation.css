@@ -5986,7 +5986,8 @@ hr.divider {
       object-fit: cover;
       object-position: center; }
   .photo-carousel-controls {
-    margin-top: 3px !important; }
+    margin-top: 3px !important;
+    border: 0; }
     .photo-carousel-controls li {
       opacity: .5;
       margin-right: 3px; }
