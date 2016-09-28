@@ -5890,6 +5890,36 @@ body#tinymce {
 #mobile-menu--container .input-group-field, #mobile-menu--container .mc_merge_var input {
   background-color: #3f3f3f; }
 
+#mobile-menu--container #mc_signup .mc_merge_var {
+  width: 70%;
+  float: left; }
+
+#mobile-menu--container #mc_signup .mc_signup_submit {
+  width: 20%;
+  float: left;
+  padding-left: .5em; }
+
+#single-post #mc_signup {
+  margin-top: 1.5em;
+  display: block; }
+
+#single-post #mc_signup .mc_merge_var {
+  padding: 0;
+  margin: 0;
+  width: 70%;
+  float: left; }
+
+#single-post #mc_signup .mc_signup_submit {
+  text-align: center;
+  width: 20%;
+  float: left; }
+  #single-post #mc_signup .mc_signup_submit .button {
+    font-size: 1em;
+    padding: .7em;
+    background-color: transparent;
+    color: #000;
+    font-weight: bold; }
+
 .input-group-field, .mc_merge_var input {
   border: none; }
 
@@ -5898,6 +5928,9 @@ body#tinymce {
 
 #searchform .input-group-button {
   font-family: FontAwesome; }
+
+.mc_error_msg {
+  font-weight: normal; }
 
 #featured-hero {
   -webkit-background-size: cover;
@@ -6636,7 +6669,8 @@ div.wp_rp_footer a.wp_rp_edit:hover {
       width: 24px;
       position: relative;
       margin-right: 5px;
-      top: 7px; }
+      /* top: 7px; */
+      top: 0; }
     @media screen and (max-width: 49.9375em) {
       #single-post .main-content section#share-follow .column:first-of-type, #single-post .main-content section#share-follow .columns:first-of-type {
         border-bottom: 1px solid #000000;

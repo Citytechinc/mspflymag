@@ -39,7 +39,8 @@
 					width: 24px;
 					position: relative;
 					margin-right: 5px;
-					top: 7px;
+					/* top: 7px; */
+					top: 0;
 				}
 
 				@include breakpoint(medium down) {
