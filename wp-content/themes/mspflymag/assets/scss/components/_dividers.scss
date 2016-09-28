@@ -2,3 +2,12 @@
   border-style: dashed;
   margin: 2rem 0;
 }
+
+hr.divider {
+	border-bottom: 2px solid $medium-gray;
+	margin: rem-calc(30);
+
+	@include breakpoint(tablet) {
+		margin: rem-calc(30) 40%; 
+	}
+}

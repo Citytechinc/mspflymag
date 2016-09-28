@@ -5919,6 +5919,13 @@ body#tinymce {
   border-style: dashed;
   margin: 2rem 0; }
 
+hr.divider {
+  border-bottom: 2px solid #cacaca;
+  margin: 1.875rem; }
+  @media screen and (min-width: 50em) {
+    hr.divider {
+      margin: 1.875rem 40%; } }
+
 /* Apply outline styles only when input method is keyboard
  * remove :focus style via What Input using progressive enhancement
  * so :focus isn't left broken if JavaScript fails
@@ -6622,6 +6629,13 @@ div.wp_rp_footer a.wp_rp_edit:hover {
   #single-post .main-content section#share-follow {
     margin-left: 0;
     margin-right: 0; }
+    #single-post .main-content section#share-follow .column:first-of-type h3::before, #single-post .main-content section#share-follow .columns:first-of-type h3::before {
+      content: url(/wp-content/themes/mspflymag/assets/images/icons/follow-fly-icon.png);
+      height: 24px;
+      width: 24px;
+      position: relative;
+      margin-right: 5px;
+      top: 7px; }
     @media screen and (max-width: 49.9375em) {
       #single-post .main-content section#share-follow .column:first-of-type, #single-post .main-content section#share-follow .columns:first-of-type {
         border-bottom: 1px solid #000000;
@@ -6641,12 +6655,6 @@ div.wp_rp_footer a.wp_rp_edit:hover {
     @media screen and (min-width: 50em) {
       #single-post .main-content header {
         padding-top: 2.5rem; } }
-    #single-post .main-content header hr {
-      border-bottom: 2px solid #cacaca;
-      margin: 1.875rem; }
-      @media screen and (min-width: 50em) {
-        #single-post .main-content header hr {
-          margin: 1.875rem 40%; } }
     #single-post .main-content header h1 {
       font-size: 2.5rem; }
       @media screen and (min-width: 50em) {
