@@ -37,7 +37,7 @@ get_header(); ?>
       </section>
       <section id="share-follow" class="row" data-equalizer data-equalize-on="tablet" data-equalize-by-row="true">
         <div class="columns tablet-6" id="follow-fly-post" data-equalizer-watch>
-            <h3>Follow Fly:</h3>
+            <h3 class="follow-fly-icon">Follow Fly:</h3>
             <?php mailchimpSF_signup_form(); ?>
         </div>
         <div class="columns tablet-6 text-center" id="share-article" data-equalizer-watch>

@@ -1,4 +1,15 @@
-#mobile-menu--container {
+.follow-fly-icon {
+	&::before {
+		content: url(/wp-content/themes/mspflymag/assets/images/icons/follow-fly-icon.png);
+		height: 22px;
+    width: 22px;
+    position: relative;
+    margin-right: 5px;
+    bottom: 3px;
+	}				
+}
+
+.dark-form {
 	.input-group-field, .mc_merge_var input {
 		background-color: $charcoal;
 	}

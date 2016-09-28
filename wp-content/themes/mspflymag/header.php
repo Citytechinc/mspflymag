@@ -29,6 +29,20 @@
 	<?php do_action( 'foundationpress_layout_start' ); ?>
 
 	<header id="masthead" class="site-header" role="banner">
+		<div id="follow-search-bar--wrapper" class="show-for-tablet dark-form">
+			<section id="follow-search-bar" class="row tablet-8 small-centered">
+				<div id="follow-fly--wrapper" class="medium-6 large-5 medium-offset-3 large-offset-4 columns">
+					<button id="follow-fly--button" data-toggle="follow-fly-form--wrapper follow-fly--button" data-toggler=".hide"><h3 class="follow-fly-icon">Follow Fly</h3></button>
+					<div id="follow-fly-form--wrapper" class="hide" data-toggler=".hide">
+						<?php mailchimpSF_signup_form(); ?>
+					</div>
+				</div>
+
+				<div id="search-form--wrapper" class="medium-3 columns">
+					<?php get_search_form(); ?>
+				</div>
+			</section>
+		</div>
 <!--      Mobile menu-->
         <div class="title-bar-container hide-for-tablet" data-sticky-container>
             <div class="sticky" data-sticky data-options="anchor-top: page; marginTop: 0; stickyOn: small;" style="width:100%; z-index:2">
@@ -39,7 +53,7 @@
                     </div>
                 </div>
             </div>
-            <div class="mobile-menu--container" id="mobile-menu--container" data-toggler=".is-open" >
+            <div class="mobile-menu--container dark-form" id="mobile-menu--container" data-toggler=".is-open" >
                 <?php get_search_form(); ?>
                 <?php get_template_part( 'template-parts/mobile-top-bar' ); //pull in nav class=vertical menu ?>
                 <div id="follow-fly--container">

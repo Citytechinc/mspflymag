@@ -5847,6 +5847,26 @@ header#masthead {
 #home-page-logo {
   padding: 1.25rem; }
 
+#follow-search-bar--wrapper {
+  background-color: #000000;
+  color: #fefefe;
+  padding-top: 10px; }
+  #follow-search-bar--wrapper #follow-fly--wrapper {
+    padding-right: 0; }
+    #follow-search-bar--wrapper #follow-fly--wrapper input {
+      margin-bottom: 0; }
+    #follow-search-bar--wrapper #follow-fly--wrapper #follow-fly--button {
+      float: right; }
+    #follow-search-bar--wrapper #follow-fly--wrapper .mc_merge_var {
+      display: inline;
+      float: left;
+      width: calc(100% - 112px);
+      margin-right: 0.9375rem; }
+    #follow-search-bar--wrapper #follow-fly--wrapper .mc-signup_submit {
+      float: left; }
+  #follow-search-bar--wrapper #search-form--wrapper .input-group {
+    margin-bottom: 0.5rem; }
+
 .sidebar {
   width: 100%;
   float: left;
@@ -5887,7 +5907,15 @@ body#tinymce {
   border-radius: 3px;
   border: none; }
 
-#mobile-menu--container .input-group-field, #mobile-menu--container .mc_merge_var input {
+.follow-fly-icon::before {
+  content: url(/wp-content/themes/mspflymag/assets/images/icons/follow-fly-icon.png);
+  height: 22px;
+  width: 22px;
+  position: relative;
+  margin-right: 5px;
+  bottom: 3px; }
+
+.dark-form .input-group-field, .dark-form .mc_merge_var input {
   background-color: #3f3f3f; }
 
 .input-group-field, .mc_merge_var input {
@@ -6608,13 +6636,6 @@ hr.divider {
   #single-post .main-content section#share-follow {
     margin-left: 0;
     margin-right: 0; }
-    #single-post .main-content section#share-follow .column:first-of-type h3::before, #single-post .main-content section#share-follow .columns:first-of-type h3::before {
-      content: url(/wp-content/themes/mspflymag/assets/images/icons/follow-fly-icon.png);
-      height: 24px;
-      width: 24px;
-      position: relative;
-      margin-right: 5px;
-      top: 7px; }
     @media screen and (max-width: 49.9375em) {
       #single-post .main-content section#share-follow .column:first-of-type, #single-post .main-content section#share-follow .columns:first-of-type {
         border-bottom: 1px solid #000000;
