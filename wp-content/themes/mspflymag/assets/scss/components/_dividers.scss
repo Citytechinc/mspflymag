@@ -4,7 +4,7 @@
 }
 
 hr.divider {
-	border-bottom: 2px solid $medium-gray;
+	border-bottom: 2px solid $dark-gray;
 	margin: rem-calc(30);
 
 	@include breakpoint(tablet) {

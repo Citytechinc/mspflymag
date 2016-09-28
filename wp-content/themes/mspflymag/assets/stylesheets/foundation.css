@@ -5981,7 +5981,7 @@ body#tinymce {
   margin: 2rem 0; }
 
 hr.divider {
-  border-bottom: 2px solid #cacaca;
+  border-bottom: 2px solid #8a8a8a;
   margin: 1.875rem; }
   @media screen and (min-width: 50em) {
     hr.divider {
@@ -6699,7 +6699,9 @@ div.wp_rp_footer a.wp_rp_edit:hover {
   padding: 0; }
   @media screen and (min-width: 50em) {
     #single-post .main-content {
-      margin-top: 1.25rem; } }
+      margin-top: 1.25rem; }
+      #single-post .main-content .entry-content {
+        margin: 0 1.5625rem; } }
   #single-post .main-content > section:not(#comments), #single-post .main-content > main {
     background-color: #ecf1f6;
     border-bottom: 7px solid #000000;

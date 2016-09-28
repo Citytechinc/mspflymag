@@ -9,6 +9,10 @@
 
 		@include breakpoint(tablet) {
 			margin-top: rem-calc(20);
+			
+			.entry-content {
+				margin: 0 rem-calc(25);
+			}
 		}
 
 		>section:not(#comments), >main {
