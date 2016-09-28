@@ -1,42 +1,50 @@
-//Follow Fly and Search form across top of desktop site
+/**
+ * Follow Fly and Search form across top of desktop site
+ */
+
 #follow-search-bar--wrapper {
 	background-color: $black;
 	color: $white;
 	padding-top: 10px;
 	
+	input {
+		margin-bottom: 0;
+		height: rem-calc(24);
+		vertical-align: top;
+		padding: rem-calc(5);
+	}
+	
+	//Follow Fly stuff
 	#follow-fly--wrapper {
 		padding-right: 0;
+		text-align: right;
 		
-		input {
-			margin-bottom: 0;
-			height: 26px;
-		}
-
-		#follow-fly--button {
-			float: right;	
+		#follow-fly--button img {
+			margin-right: 5px;
 		}
 		
-//		.follow-fly-icon::before {
-//			content: url(/wp-content/themes/mspflymag/assets/images/icons/follow-fly-white.png);
-//		}
-
 		.mc_merge_var {
 			display: inline;
 			float: left;
 			width: calc(100% - 112px);
 			margin-right: 0.9375rem;
+			//width: 70%;
+		  //float: left;
 		}
 		
 		.mc-signup_submit {
 			float: left;
+			//width: 20%;
+			//float: left;
+			//padding-left: .5em;
+			input {
+				vertical-align: top;
+			}
 		}
 	}
 	
+	//Search stuff
 	#search-form--wrapper .input-group {
 		margin-bottom: 0.5rem;
-		
-		input {
-			height: rem-calc(24);
-		}
 	}
 }

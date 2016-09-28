@@ -5655,7 +5655,6 @@ meter {
   opacity: 0;
   list-style: none;
   background-color: #000000;
-  text-align: center;
   -webkit-transform: translateX(-100%) rotateX(40deg);
           transform: translateX(-100%) rotateX(40deg);
   -webkit-transition: all 400ms cubic-bezier(1, -0.4, 0.44, 0.985);
@@ -5663,7 +5662,9 @@ meter {
   padding: 0 1.25rem;
   overflow-x: hidden; }
   .mobile-menu--container li {
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0.5rem 0; }
   .mobile-menu--container a {
     display: block;
     color: #fefefe;
@@ -5671,6 +5672,11 @@ meter {
     line-height: 6.25rem; }
     .mobile-menu--container a:hover {
       color: #e5e5e5; }
+  .mobile-menu--container #searchform::before {
+    height: 24px;
+    width: 24px;
+    margin-right: 5px;
+    top: 7px; }
 
 .is-open {
   top: 52px;
@@ -5810,24 +5816,6 @@ header#masthead {
       border-bottom: 1px solid #e6e6e6;
       background-color: #fefefe; } }
 
-#searchform .input-group-field::before {
-  content: url(/assets/images/search.png);
-  height: 24px;
-  width: 24px;
-  position: relative;
-  margin-right: 5px;
-  top: 7px; }
-
-#searchform .input-goup-field {
-  padding-left: 40px; }
-
-#searchform #searchsubmit {
-  position: absolute !important;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0); }
-
 #mc_custom_border_hdr {
   position: absolute !important;
   width: 1px;
@@ -5894,17 +5882,27 @@ body#tinymce {
   margin-right: 5px;
   top: 1px; }
 
+#searchform .input-group-field {
+  padding-left: 30px; }
+
+#searchform::before {
+  content: url(/wp-content/themes/mspflymag/assets/images/icons/search-sm.png);
+  height: 18px;
+  width: 19px;
+  position: absolute;
+  margin-right: 5px;
+  margin-top: 4px;
+  margin-left: 5px; }
+
+#searchform #searchsubmit {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0); }
+
 .dark-form .input-group-field, .dark-form .mc_merge_var input {
   background-color: #3f3f3f; }
-
-.dark-form #mc_signup .mc_merge_var {
-  width: 70%;
-  float: left; }
-
-.dark-form #mc_signup .mc_signup_submit {
-  width: 20%;
-  float: left;
-  padding-left: .5em; }
 
 #single-post #mc_signup {
   margin-top: 1.5em;
@@ -5933,9 +5931,6 @@ body#tinymce {
 
 #mc_signup_form .mc_var_label {
   display: none; }
-
-#searchform .input-group-button {
-  font-family: FontAwesome; }
 
 .mc_error_msg {
   font-weight: normal; }
@@ -6169,17 +6164,23 @@ div.wp_rp_footer a.wp_rp_edit:hover {
 #comments section.comment {
   margin-left: 5.625rem; }
 
+/**
+ * Follow Fly and Search form across top of desktop site
+ */
 #follow-search-bar--wrapper {
   background-color: #000000;
   color: #fefefe;
   padding-top: 10px; }
+  #follow-search-bar--wrapper input {
+    margin-bottom: 0;
+    height: 1.5rem;
+    vertical-align: top;
+    padding: 0.3125rem; }
   #follow-search-bar--wrapper #follow-fly--wrapper {
-    padding-right: 0; }
-    #follow-search-bar--wrapper #follow-fly--wrapper input {
-      margin-bottom: 0;
-      height: 26px; }
-    #follow-search-bar--wrapper #follow-fly--wrapper #follow-fly--button {
-      float: right; }
+    padding-right: 0;
+    text-align: right; }
+    #follow-search-bar--wrapper #follow-fly--wrapper #follow-fly--button img {
+      margin-right: 5px; }
     #follow-search-bar--wrapper #follow-fly--wrapper .mc_merge_var {
       display: inline;
       float: left;
@@ -6187,10 +6188,10 @@ div.wp_rp_footer a.wp_rp_edit:hover {
       margin-right: 0.9375rem; }
     #follow-search-bar--wrapper #follow-fly--wrapper .mc-signup_submit {
       float: left; }
+      #follow-search-bar--wrapper #follow-fly--wrapper .mc-signup_submit input {
+        vertical-align: top; }
   #follow-search-bar--wrapper #search-form--wrapper .input-group {
     margin-bottom: 0.5rem; }
-    #follow-search-bar--wrapper #search-form--wrapper .input-group input {
-      height: 1.5rem; }
 
 #front-hero {
   background: url("../images/demo/hero-bg-foundation-6-small.svg") bottom center;

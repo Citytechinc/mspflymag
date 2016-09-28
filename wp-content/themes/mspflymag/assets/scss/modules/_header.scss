@@ -9,25 +9,6 @@ header#masthead {
 	}
 }
 
-#searchform {
-	.input-group-field::before {       
-		content: url(/assets/images/search.png);
-		height: 24px;
-		width: 24px;
-		position: relative;
-		margin-right: 5px;
-		top: 7px;
-	}
-
-	.input-goup-field {
-		padding-left: 40px;
-	}
-
-	#searchsubmit {
-		@include element-invisible;
-	}
-}
-
 #mc_custom_border_hdr {
 	@include element-invisible;
 }

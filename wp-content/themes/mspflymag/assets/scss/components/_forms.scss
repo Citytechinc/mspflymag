@@ -9,55 +9,78 @@
 	}				
 }
 
+//Search form
+#searchform {
+//	.input-group-field::before {       
+//		content: url(/assets/images/search.png);
+//		height: 24px;
+//		width: 24px;
+//		position: relative;
+//		margin-right: 5px;
+//		top: 7px;
+//	}
+
+	.input-group-field {
+			padding-left: 30px; //padding to account for search icon size
+		}
+		
+		&::before {
+			content: url(/wp-content/themes/mspflymag/assets/images/icons/search-sm.png);
+			height: 18px;
+			width: 19px;
+			position: absolute;
+			margin-right: 5px;
+			margin-top: 4px;
+			margin-left: 5px;
+		}		
+	
+	.input-goup-field {
+		//padding-left: 40px;
+	}
+
+	#searchsubmit {
+		@include element-invisible;
+	}
+	.input-group-button {
+    //font-family: FontAwesome; Probably won't use FontAwesome icons...
+  }   
+}
+
+//Darken input
 .dark-form {
 	.input-group-field, .mc_merge_var input {
 		background-color: $charcoal;
 	}
-
-	#mc_signup {
-
-		.mc_merge_var {
-		    width: 70%;
-		    float: left;
-		}
-
-		.mc_signup_submit {
-		    width: 20%;
-		    float: left;
-		    padding-left: .5em;
-		}
-	}
 }
 
-
+//Mailchimp subscribe default styling
 #single-post #mc_signup {
-    margin-top: 1.5em;
-    display: block;
+	margin-top: 1.5em;
+	display: block;
 }
 
 #single-post #mc_signup .mc_merge_var {
-    padding: 0;
-    margin: 0;
-    width: 70%;
-		width: calc(100% - 100px);
-    float: left;
+	padding: 0;
+	margin: 0;
+	width: 70%;
+	width: calc(100% - 100px);
+	float: left;
 }
 
 #single-post #mc_signup .mc_signup_submit {
-    text-align: center;
-    //width: 20%;
-		width: 100px;
-    float: left;
+	text-align: center;
+	//width: 20%;
+	width: 100px;
+	float: left;
 
-    .button {
-	    font-size: 1em;
-	    padding: .7em;
-	    background-color: transparent;
-	    color: #000;
-	    font-weight: bold;
+	.button {
+		font-size: 1em;
+		padding: .7em;
+		background-color: transparent;
+		color: #000;
+		font-weight: bold;
 	}
 }
-
 
 .input-group-field, .mc_merge_var input {
   border: none;
@@ -67,17 +90,6 @@
 	display: none;
 }
 
-#searchform {
-  .input-group-button {
-    font-family: FontAwesome;
-  }
-}		
-
 .mc_error_msg {
-    font-weight: normal;
-}
-
-//this needs to be restricted to header or applied somewhere else
-div#mc_message {
-	//padding: 20px;
+	font-weight: normal;
 }
