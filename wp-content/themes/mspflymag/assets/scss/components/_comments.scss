@@ -20,6 +20,10 @@ $gravatar-padding: rem-calc(10);
 	ol, ul {
 			list-style-type: none;    
 	}
+
+	article {
+		margin-bottom: rem-calc(20);
+	}
 	
 	.reply {
 		margin-left: $gravatar-size + $gravatar-padding;

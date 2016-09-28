@@ -1,8 +1,5 @@
 #single-post {
   
-	@include breakpoint(tablet) {
-		//margin-top: 3rem;
-	}
 	.carousel-container {
 		padding: 0;
 	}
@@ -18,16 +15,14 @@
 			background-color: map-get($foundation-palette, secondary);
 			border-bottom: 7px solid $black;
 			margin-bottom: rem-calc(20);
-			//@include grid-col;
 			padding: rem-calc(20);
-
 
 			h3 {
 				text-align: center;
-				font-size: rem-calc(34px);
+				font-size: rem-calc(24px);
 			}
 		}
-        
+  
 		section#share-follow {
 				margin-left: 0;
 				margin-right: 0;
@@ -40,34 +35,32 @@
 				}
 					
 				@include breakpoint(tablet) {
-					box-shadow: 30px 0px -0px -29px $black;
+					box-shadow: 20px 0px -0px -19px $black;
 				}
 			}
+			
 			.column:last-of-type {
 				@include breakpoint(medium down) {
 					padding-top: rem-calc(20);
 				}
 			}
+			
 			.addtoany_list {
-				//@include vertical-center;
-				//padding: rem-calc(20);
 				display: block;
 				padding: rem-calc(20);
 			}
 		}
 	  
 		header {
-			padding-top: rem-calc(20px);
-
 			@include breakpoint(tablet) {
-				padding-top: rem-calc(40px);
+				padding-top: rem-calc(10);
 			}
 
 			h1 {
-				font-size: rem-calc(40);
+				font-size: rem-calc(35);
 
 				@include breakpoint(tablet) {
-				  font-size: rem-calc(60);
+				  font-size: rem-calc(52);
 				}
 			}
 		}

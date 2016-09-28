@@ -13,11 +13,11 @@ get_header(); ?>
 <?php do_action( 'foundationpress_before_content' ); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 
-    <div class="carousel-container column row tablet-7 small-centered">  
+    <div class="carousel-container column row tablet-8 large-7 small-centered">  
         <?php  get_template_part( 'template-parts/carousel') ?>
     </div>
     
-    <article <?php post_class('main-content column row tablet-7 small-centered') ?> id="post-<?php the_ID(); ?>">
+    <article <?php post_class('main-content column row tablet-8 large-7 small-centered') ?> id="post-<?php the_ID(); ?>">
       <section>
 				<header class="text-center">
 					<h1 class="entry-title"><?php the_title(); ?></h1>
