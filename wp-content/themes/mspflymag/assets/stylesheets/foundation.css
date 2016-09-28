@@ -2505,7 +2505,7 @@ body {
   font-weight: normal;
   line-height: 1.5;
   color: #000000;
-  background: #fefefe;
+  background: #f9f9f9;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -4096,7 +4096,7 @@ legend {
   padding: 1.25rem;
   margin: 1.125rem 0; }
   .fieldset legend {
-    background: #fefefe;
+    background: #f9f9f9;
     padding: 0 0.1875rem;
     margin: 0;
     margin-left: -0.1875rem; }
@@ -4191,8 +4191,8 @@ input[type="range"] {
     color: transparent;
     border: 0;
     overflow: visible;
-    border-top: 0.45rem solid #fefefe;
-    border-bottom: 0.45rem solid #fefefe; }
+    border-top: 0.45rem solid #f9f9f9;
+    border-bottom: 0.45rem solid #f9f9f9; }
   input[type="range"]::-ms-thumb {
     background: #164780;
     width: 1.4rem;
@@ -4331,7 +4331,7 @@ body {
 .off-canvas-content,
 .off-canvas-content {
   min-height: 100%;
-  background: #fefefe;
+  background: #f9f9f9;
   -webkit-transition: -webkit-transform 0.5s ease;
   transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
@@ -5841,7 +5841,6 @@ header#masthead {
 
 @media screen and (min-width: 50em) {
   #main-content--container {
-    background-color: #f9f9f9;
     padding-top: 2.1875rem; } }
 
 #home-page-logo {
