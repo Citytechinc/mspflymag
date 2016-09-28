@@ -5846,26 +5846,6 @@ header#masthead {
 #home-page-logo {
   padding: 1.25rem; }
 
-#follow-search-bar--wrapper {
-  background-color: #000000;
-  color: #fefefe;
-  padding-top: 10px; }
-  #follow-search-bar--wrapper #follow-fly--wrapper {
-    padding-right: 0; }
-    #follow-search-bar--wrapper #follow-fly--wrapper input {
-      margin-bottom: 0; }
-    #follow-search-bar--wrapper #follow-fly--wrapper #follow-fly--button {
-      float: right; }
-    #follow-search-bar--wrapper #follow-fly--wrapper .mc_merge_var {
-      display: inline;
-      float: left;
-      width: calc(100% - 112px);
-      margin-right: 0.9375rem; }
-    #follow-search-bar--wrapper #follow-fly--wrapper .mc-signup_submit {
-      float: left; }
-  #follow-search-bar--wrapper #search-form--wrapper .input-group {
-    margin-bottom: 0.5rem; }
-
 .sidebar {
   width: 100%;
   float: left;
@@ -5912,7 +5892,7 @@ body#tinymce {
   width: 22px;
   position: relative;
   margin-right: 5px;
-  bottom: 3px; }
+  top: 1px; }
 
 .dark-form .input-group-field, .dark-form .mc_merge_var input {
   background-color: #3f3f3f; }
@@ -6188,6 +6168,29 @@ div.wp_rp_footer a.wp_rp_edit:hover {
 
 #comments section.comment {
   margin-left: 5.625rem; }
+
+#follow-search-bar--wrapper {
+  background-color: #000000;
+  color: #fefefe;
+  padding-top: 10px; }
+  #follow-search-bar--wrapper #follow-fly--wrapper {
+    padding-right: 0; }
+    #follow-search-bar--wrapper #follow-fly--wrapper input {
+      margin-bottom: 0;
+      height: 26px; }
+    #follow-search-bar--wrapper #follow-fly--wrapper #follow-fly--button {
+      float: right; }
+    #follow-search-bar--wrapper #follow-fly--wrapper .mc_merge_var {
+      display: inline;
+      float: left;
+      width: calc(100% - 112px);
+      margin-right: 0.9375rem; }
+    #follow-search-bar--wrapper #follow-fly--wrapper .mc-signup_submit {
+      float: left; }
+  #follow-search-bar--wrapper #search-form--wrapper .input-group {
+    margin-bottom: 0.5rem; }
+    #follow-search-bar--wrapper #search-form--wrapper .input-group input {
+      height: 1.5rem; }
 
 #front-hero {
   background: url("../images/demo/hero-bg-foundation-6-small.svg") bottom center;

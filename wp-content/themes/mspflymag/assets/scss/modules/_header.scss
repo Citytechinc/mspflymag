@@ -48,35 +48,4 @@ header#masthead {
 	//padding-bottom: 1.5rem;
 }
 
-#follow-search-bar--wrapper {
-	background-color: $black;
-	color: $white;
-	padding-top: 10px;
-	
-	#follow-fly--wrapper {
-		padding-right: 0;
-		
-		input {
-			margin-bottom: 0;
-		}
 
-		#follow-fly--button {
-			float: right;	
-		}
-
-		.mc_merge_var {
-			display: inline;
-			float: left;
-			width: calc(100% - 112px);
-			margin-right: 0.9375rem;
-		}
-		
-		.mc-signup_submit {
-			float: left;
-		}
-	}
-	
-	#search-form--wrapper .input-group {
-		margin-bottom: 0.5rem;
-	}
-}

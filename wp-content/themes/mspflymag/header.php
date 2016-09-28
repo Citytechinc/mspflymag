@@ -29,42 +29,29 @@
 	<?php do_action( 'foundationpress_layout_start' ); ?>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div id="follow-search-bar--wrapper" class="show-for-tablet dark-form">
-			<section id="follow-search-bar" class="row tablet-12 small-centered">
-				<div id="follow-fly--wrapper" class="medium-6 large-5 medium-offset-3 large-offset-4 columns">
-					<button id="follow-fly--button" data-toggle="follow-fly-form--wrapper follow-fly--button" data-toggler=".hide"><h3 class="follow-fly-icon">Follow Fly</h3></button>
-					<div id="follow-fly-form--wrapper" class="hide" data-toggler=".hide">
-						<?php mailchimpSF_signup_form(); ?>
-					</div>
+		<?php get_template_part( 'template-parts/utility-bar' ); ?>
+		
+		<!--      Mobile menu-->
+		<div class="title-bar-container hide-for-tablet" data-sticky-container>
+				<div class="sticky" data-sticky data-options="anchor-top: page; marginTop: 0; stickyOn: small;" style="width:100%; z-index:2">
+						<div class="title-bar" data-responsive-toggle="site-navigation" data-hide-for="tablet">
+								<button class="menu-icon" type="button" data-toggle="mobile-menu--container main-content--container"></button>
+								<div class="title-bar-title">
+										<a href="<?php echo esc_url( home_url( '/' ) ); ?>" alt="MSP Fly Mag Home" rel="home"><img class="mobile-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-mobile.png" width="67" height="37"></a>
+								</div>
+						</div>
 				</div>
-
-				<div id="search-form--wrapper" class="medium-3 columns">
-					<?php get_search_form(); ?>
+				<div class="mobile-menu--container dark-form" id="mobile-menu--container" data-toggler=".is-open" >
+						<?php get_search_form(); ?>
+						<?php get_template_part( 'template-parts/mobile-top-bar' ); //pull in nav class=vertical menu ?>
+						<div id="follow-fly--container">
+								<span>Sign up for Fly - MSP Airport</span>
+								<?php mailchimpSF_signup_form(); ?>
+						</div>
 				</div>
-			</section>
 		</div>
-<!--      Mobile menu-->
-        <div class="title-bar-container hide-for-tablet" data-sticky-container>
-            <div class="sticky" data-sticky data-options="anchor-top: page; marginTop: 0; stickyOn: small;" style="width:100%; z-index:2">
-                <div class="title-bar" data-responsive-toggle="site-navigation" data-hide-for="tablet">
-                    <button class="menu-icon" type="button" data-toggle="mobile-menu--container main-content--container"></button>
-                    <div class="title-bar-title">
-                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" alt="MSP Fly Mag Home" rel="home"><img class="mobile-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-mobile.png" width="67" height="37"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="mobile-menu--container dark-form" id="mobile-menu--container" data-toggler=".is-open" >
-                <?php get_search_form(); ?>
-                <?php get_template_part( 'template-parts/mobile-top-bar' ); //pull in nav class=vertical menu ?>
-                <div id="follow-fly--container">
-                    <span>Sign up for Fly - MSP Airport</span>
-                    <?php mailchimpSF_signup_form(); ?>
-                </div>
-            </div>
-        </div>
         
-        
-<!--      Full size menu-->
+		<!--      Full size menu-->
 		<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
 			<div class="top-bar-left text-center">
 				<ul class="menu">
@@ -72,9 +59,7 @@
 				</ul>
 			</div>
 			<div class="top-bar-right">
-				<?php foundationpress_top_bar_r(); ?>
-
-				
+				<?php foundationpress_top_bar_r(); ?>		
 			</div>
 		</nav>
            
