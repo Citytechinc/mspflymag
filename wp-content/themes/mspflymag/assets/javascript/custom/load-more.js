@@ -45,6 +45,8 @@ jQuery(function($){
                             $('.content-grid-container').append( button );
                             page = page + 1;
                             loading = false;
+                            //We need to recalculate the height of the element the stickied item is stuck to. Without this the menu unsticks prematurely because we've increased the height of the page.
+                            $('.sticky').foundation('_calc', true);
                             //$( '#content-grid-container' ).foundation();
                             if( !res.data ) {
                                 allDone = true;
