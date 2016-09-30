@@ -10,14 +10,14 @@
 
 ?>
 <!doctype html>
-<html class="no-js" <?php language_attributes(); ?> >
+<html id="html" class="no-js" <?php language_attributes(); ?> data-toggler=".no-scroll">
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 		<?php wp_head(); ?>
 	</head>
-	<body <?php body_class(); ?>>
+	<body  data-toggler=".no-scroll" id="body" <?php body_class(); ?>>
 	<?php do_action( 'foundationpress_after_body' ); ?>
 
 	<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) == 'offcanvas' ) : ?>
@@ -33,9 +33,9 @@
 		
 		<!--      Mobile menu-->
 		<div class="title-bar-container hide-for-tablet" data-sticky-container>
-				<div class="sticky" data-sticky data-options="anchor-top: page; marginTop: 0; stickyOn: small;" style="width:100%; z-index:2">
+				<div class="sticky" data-sticky data-options="top-anchor: body;  marginTop: 0; stickyOn: small;" style="width:100%; z-index:2">
 						<div class="title-bar" data-responsive-toggle="site-navigation" data-hide-for="tablet">
-								<button class="menu-icon" type="button" data-toggle="mobile-menu--container main-content--container"></button>
+								<button class="menu-icon" type="button" data-toggle="mobile-menu--container html body"></button>
 								<div class="title-bar-title">
 										<a href="<?php echo esc_url( home_url( '/' ) ); ?>" alt="MSP Fly Mag Home" rel="home"><img class="mobile-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-mobile.png" width="67" height="37"></a>
 								</div>
@@ -65,5 +65,5 @@
            
 	</header>
 
-	<section class="container" id="main-content--container" data-toggler=".show-for-sr">
+	<section class="container" id="main-content--container">
 		<?php do_action( 'foundationpress_after_header' );

@@ -5593,6 +5593,9 @@ meter {
   My custom styles:
   Add your scss files below to structure your project styles
 */
+.no-scroll {
+  overflow: hidden; }
+
 .menu-item {
   font-family: "Oswald", sans-serif; }
 
@@ -5636,31 +5639,35 @@ meter {
             box-shadow: 0 8px 0 #e6e6e6, 0 16px 0 #e6e6e6; }
 
 .mobile-menu--container {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  position: absolute;
+  position: fixed;
   z-index: 1000;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  top: 52px;
   height: 100vh;
+  width: 100vw;
   height: calc(100vh - 52px);
-  width: 100%;
-  margin: 0;
-  padding: 5rem 0 0;
-  opacity: 0;
-  list-style: none;
   background-color: #000000;
-  -webkit-transform: translateX(-100%) rotateX(40deg);
-          transform: translateX(-100%) rotateX(40deg);
-  -webkit-transition: all 400ms cubic-bezier(1, -0.4, 0.44, 0.985);
-  transition: all 400ms cubic-bezier(1, -0.4, 0.44, 0.985);
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
   padding: 0 1.25rem;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .mobile-menu--container > * {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+  .mobile-menu--container #follow-fly-container {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
   .mobile-menu--container li {
     font-size: 1.5rem;
     text-align: center;
@@ -5679,10 +5686,9 @@ meter {
     top: 7px; }
 
 .is-open {
-  top: 52px;
-  opacity: 1;
-  -webkit-transform: perspective(200px) translateX(0) rotateX(0);
-          transform: perspective(200px) translateX(0) rotateX(0); }
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0); }
 
 /* Tablet and desktop menu */
 .top-bar {
