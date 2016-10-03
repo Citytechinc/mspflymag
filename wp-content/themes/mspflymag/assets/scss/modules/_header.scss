@@ -1,3 +1,7 @@
+html {
+  overflow-x: hidden; //TODO: This is a bandaid. What is causing content to stretch past viewport?
+}
+
 header#masthead {
 	position: relative;
 	background-color: $titlebar-background;
@@ -31,4 +35,7 @@ header#masthead {
 	//padding-bottom: 1.5rem;
 }
 
+.title-bar-container .sticky {
+  max-width: 100% !important; //TODO: Remove important. JS is appying inline max width which is not always updated to current width. Seems to get stuck at 385px
+}
 

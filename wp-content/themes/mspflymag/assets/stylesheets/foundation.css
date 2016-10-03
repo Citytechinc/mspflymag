@@ -5716,6 +5716,9 @@ meter {
       margin: 0;
       padding: 0; }
 
+html {
+  overflow-x: hidden; }
+
 header#masthead {
   position: relative;
   background-color: #000000;
@@ -5744,6 +5747,9 @@ header#masthead {
 
 #home-page-logo {
   padding: 1.25rem; }
+
+.title-bar-container .sticky {
+  max-width: 100% !important; }
 
 .sidebar {
   width: 100%;
