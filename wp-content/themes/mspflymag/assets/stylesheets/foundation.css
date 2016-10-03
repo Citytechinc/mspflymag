@@ -6001,7 +6001,9 @@ hr.divider {
     overflow: hidden; }
     .content-grid-container .blogpost-entry .thumbnail-container img {
       width: 100%;
-      min-height: 250px; }
+      object-fit: cover;
+      height: 100%;
+      object-position: 50% 20%; }
   .content-grid-container .blogpost-entry:hover {
     background-color: #f3f6f9; }
     .content-grid-container .blogpost-entry:hover img {

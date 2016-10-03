@@ -22,7 +22,9 @@
 
 			img {
 				width: 100%;
-				min-height: 250px;
+				object-fit: cover;
+        height: 100%;
+        object-position: 50% 20%;
 			}
 
 		}
