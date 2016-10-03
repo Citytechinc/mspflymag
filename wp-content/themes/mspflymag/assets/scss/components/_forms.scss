@@ -59,11 +59,11 @@
 	display: block;
 }
 
-#single-post #mc_signup .mc_merge_var {
+#mc_signup .mc_merge_var {
 	padding: 0;
 	margin: 0;
 	width: 70%;
-	width: calc(100% - 100px);
+	width: calc(100% - 110px);
 	float: left;
 }
 
@@ -84,6 +84,7 @@
 
 .input-group-field, .mc_merge_var input {
   border: none;
+  height: 40.47px; //height of submit button
 }
 
 #mc_signup_form .mc_var_label {
