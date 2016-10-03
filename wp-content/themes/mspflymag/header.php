@@ -35,7 +35,7 @@
 		<div class="title-bar-container hide-for-tablet" data-sticky-container>
 				<div class="sticky" data-sticky data-options="top-anchor: body;  marginTop: 0; stickyOn: small;" style="width:100%; z-index:999">
 						<div class="title-bar" data-responsive-toggle="site-navigation" data-hide-for="tablet">
-								<button class="menu-icon" type="button" data-toggle="mobile-menu--container html body"></button>
+								<button class="menu-icon" id="mobile-menu--icon" type="button" data-toggle="mobile-menu--container html body mobile-menu--icon" data-toggler=".is-open"></button>
 								<div class="title-bar-title">
 										<a href="<?php echo esc_url( home_url( '/' ) ); ?>" alt="MSP Fly Mag Home" rel="home"><img class="mobile-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-mobile.png" width="67" height="37"></a>
 								</div>
