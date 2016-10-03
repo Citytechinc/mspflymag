@@ -5595,6 +5595,9 @@ meter {
 */
 .no-scroll {
   overflow: hidden; }
+  @media screen and (min-width: 50em) {
+    .no-scroll {
+      overflow: auto; } }
 
 .menu-item {
   font-family: "Oswald", sans-serif; }

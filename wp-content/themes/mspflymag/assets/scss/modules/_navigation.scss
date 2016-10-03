@@ -1,6 +1,10 @@
 //no scroll here for now
 .no-scroll {
   overflow: hidden;
+  
+  @include breakpoint(tablet) {
+    overflow: auto;
+  }
 }
 
 .menu-item {
