@@ -5971,17 +5971,22 @@ hr.divider {
 @media only screen and (max-width: 40.063em) {
   /* max-width 641px */
   .photo-carousel-controls {
-    position: absolute !important;
-    bottom: 10%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
-    display: inline !important; }
+    -webkit-transform: translate(-50%, -250%);
+        -ms-transform: translate(-50%, -250%);
+            transform: translate(-50%, -250%);
+    top: 50%;
+    left: 50%;
+    margin-bottom: -28px !important; }
+    .photo-carousel-controls .slick-track {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
     .photo-carousel-controls li {
       margin: 0 12px 0 0;
-      padding: 0;
       width: 12px !important;
-      display: inline !important;
       opacity: 1 !important; }
       .photo-carousel-controls li img {
         display: none; }

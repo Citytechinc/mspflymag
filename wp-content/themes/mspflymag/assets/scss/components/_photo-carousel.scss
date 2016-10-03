@@ -68,17 +68,27 @@
 
 @media only screen and (max-width: 40.063em) { /* max-width 641px */
 
-.photo-carousel-controls {
-  position: absolute !important;
-  bottom: 10%;
-  transform: translateX(-50%);
-  display: inline !important;
-
+  .photo-carousel-controls {
+    //position: absolute !important;
+    //bottom: 10%;
+    //transform: translateX(-50%);
+    //display: inline !important;
+    //@include absolute-center;
+    transform: translate(-50%, -250%);
+    top: 50%;
+    left: 50%;
+    margin-bottom: -28px !important;
+    
+    .slick-track {
+      display: flex;
+      justify-content: center;
+    }
+  
     li {
       margin: 0 12px 0 0;
-      padding: 0;
+      //padding: 0;
       width: 12px !important;
-      display: inline !important;
+      //display: inline !important;
       opacity: 1 !important;
 
       img {
