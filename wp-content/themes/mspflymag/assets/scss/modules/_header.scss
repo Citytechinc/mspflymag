@@ -2,10 +2,19 @@ html {
   overflow-x: hidden; //TODO: This is a bandaid. What is causing content to stretch past viewport?
 }
 
+//no scroll utility class keeps us safe from scrollbars when mobile menu is open
+.no-scroll {
+  overflow: hidden;
+  
+  @include breakpoint(tablet) {
+    overflow: auto;
+  }
+}
+
 header#masthead {
 	position: relative;
 	background-color: $titlebar-background;
-  height: 52px;
+  height: $titlebar-height;
 	
 	@include breakpoint(tablet) {
 		padding-bottom: 20px;
@@ -31,11 +40,14 @@ header#masthead {
 }
 
 #home-page-logo {
-	padding: rem-calc(20px);
-	//padding-bottom: 1.5rem;
+	padding: rem-calc(20);
 }
 
 .title-bar-container .sticky {
   max-width: 100% !important; //TODO: Remove important. JS is appying inline max width which is not always updated to current width. Seems to get stuck at 385px
+  
+  .title-bar {
+    height: $titlebar-height;
+  }
 }
 
