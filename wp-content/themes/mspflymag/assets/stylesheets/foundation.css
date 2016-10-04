@@ -5539,7 +5539,7 @@ meter {
 .mobile-menu--container {
   position: fixed;
   z-index: 1000;
-  top: 52px;
+  top: 50px;
   height: 100vh;
   width: 100vw;
   height: calc(100vh - $titlebar-height);
@@ -5582,10 +5582,6 @@ meter {
     line-height: 6.25rem; }
     .mobile-menu--container a:hover {
       color: #e5e5e5; }
-  .mobile-menu--container #follow-fly-container {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end; }
 
 /* Tablet and desktop menu */
 .top-bar {
@@ -5599,6 +5595,9 @@ meter {
     display: table; }
   .top-bar::after {
     clear: both; }
+  @media screen and (max-width: 63.9375em) {
+    .top-bar {
+      display: none !important; } }
   .top-bar .top-bar-left {
     width: 33.33333%;
     float: left;
@@ -5739,7 +5738,8 @@ header#masthead {
 
 #follow-fly--container {
   border-top: 1px solid #e6e6e6;
-  margin-top: 20px; }
+  margin-top: 20px;
+  margin-bottom: 60px; }
 
 @media screen and (min-width: 50em) {
   #main-content--container {
