@@ -5988,7 +5988,8 @@ hr.divider {
       display: flex;
       -webkit-box-pack: center;
           -ms-flex-pack: center;
-              justify-content: center; }
+              justify-content: center;
+      width: 100% !important; }
     .photo-carousel-controls li {
       margin: 0 12px 0 0;
       width: 12px !important;
