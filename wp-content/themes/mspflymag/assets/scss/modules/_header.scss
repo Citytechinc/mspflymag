@@ -2,6 +2,10 @@ html {
   overflow-x: hidden; //TODO: This is a bandaid. What is causing content to stretch past viewport?
 }
 
+.bottom-margin {
+  margin-bottom: 600px;
+}
+
 //no scroll utility class keeps us safe from scrollbars when mobile menu is open
 .no-scroll {
   overflow: hidden;

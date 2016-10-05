@@ -5595,7 +5595,7 @@ meter {
     display: table; }
   .top-bar::after {
     clear: both; }
-  @media screen and (max-width: 63.9375em) {
+  @media screen and (max-width: 49.9375em) {
     .top-bar {
       display: none !important; } }
   .top-bar .top-bar-left {
@@ -5711,6 +5711,9 @@ meter {
 
 html {
   overflow-x: hidden; }
+
+.bottom-margin {
+  margin-bottom: 600px; }
 
 .no-scroll {
   overflow: hidden; }

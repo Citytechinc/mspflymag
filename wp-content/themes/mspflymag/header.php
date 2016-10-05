@@ -33,7 +33,7 @@
 		
 		<!--      Mobile menu-->
 		<div class="title-bar-container hide-for-tablet" data-sticky-container>
-				<div class="sticky" data-sticky data-options="top-anchor: body;  marginTop: 0; stickyOn: small;" style="width:100%; z-index:999">
+				<div class="sticky" data-sticky data-options="top-anchor: main-content--container;  marginTop: 0; stickyOn: small;" style="width:100%; z-index:999">
 						<div class="title-bar" data-responsive-toggle="site-navigation" data-hide-for="tablet">
 								<button class="menu-icon" id="mobile-menu--icon" type="button" data-toggle="mobile-menu--container html body mobile-menu--icon" data-toggler=".is-open"></button>
 								<div class="title-bar-title">

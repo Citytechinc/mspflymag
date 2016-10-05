@@ -107,7 +107,7 @@
   position: relative; //keep this inside the grid
   padding-top: rem-calc(15px);
   
-  @include breakpoint(tablet down) {
+  @include breakpoint(medium down) {
     display: none !important;
   }
 

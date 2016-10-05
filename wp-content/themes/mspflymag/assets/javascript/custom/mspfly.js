@@ -17,3 +17,13 @@ $('.sticky').on('sticky.zf.stuckto:top', function () {
 }).on('sticky.zf.unstuckfrom:top', function () {
     $('.home .mobile-logo').addClass('hide');
 });
+
+
+//Move follow fly mobile form into view on focus
+$( '#follow-fly--container #mc_mv_EMAIL' ).focusin( function() {
+  $( this ).addClass( " bottom-margin " );
+});
+
+$( '#follow-fly--container #mc_mv_EMAIL' ).focusout( function() {
+  $( this ).removeClass( " bottom-margin " );
+});
