@@ -5540,9 +5540,8 @@ meter {
   position: fixed;
   z-index: 1000;
   top: 50px;
-  height: 100vh;
   width: 100vw;
-  height: calc(100vh - $titlebar-height);
+  height: calc(100vh - 52px);
   background-color: #000000;
   -webkit-transform: translateX(-100%);
       -ms-transform: translateX(-100%);
@@ -5724,13 +5723,17 @@ html {
 header#masthead {
   position: relative;
   background-color: #000000;
-  height: 52px; }
+  height: 52px;
+  position: fixed;
+  width: 100%;
+  z-index: 9999; }
   @media screen and (min-width: 50em) {
     header#masthead {
       padding-bottom: 20px;
       border-bottom: 1px solid #e6e6e6;
       background-color: #fefefe;
-      height: auto; } }
+      height: auto;
+      position: static; } }
 
 #mc_custom_border_hdr {
   position: absolute !important;
@@ -5751,10 +5754,8 @@ header#masthead {
 #home-page-logo {
   padding: 1.25rem; }
 
-.title-bar-container .sticky {
-  max-width: 100% !important; }
-  .title-bar-container .sticky .title-bar {
-    height: 52px; }
+.title-bar-container .sticky .title-bar {
+  height: 52px; }
 
 .sidebar {
   width: 100%;

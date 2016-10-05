@@ -48,9 +48,9 @@
 	position: fixed;
   z-index: 1000;
   top: $titlebar-height - 2; //set to height of top bar
-  height: 100vh;
+  //height: 100vh;
 	width: 100vw;
-  height: calc(100vh - $titlebar-height);
+  height: calc(100vh - 52px);
   background-color: $black;
   transform: translateX(-100%);
   transition: all 400ms ease;

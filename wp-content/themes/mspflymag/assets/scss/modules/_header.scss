@@ -19,12 +19,16 @@ header#masthead {
 	position: relative;
 	background-color: $titlebar-background;
   height: $titlebar-height;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
 	
 	@include breakpoint(tablet) {
 		padding-bottom: 20px;
 		border-bottom: 1px solid $light-gray;
 		background-color: $white;
     height: auto;
+    position:static;
 	}
 }
 
@@ -50,7 +54,6 @@ header#masthead {
 }
 
 .title-bar-container .sticky {
-  max-width: 100% !important; //TODO: Remove important. JS is appying inline max width which is not always updated to current width. Seems to get stuck at 385px
   
   .title-bar {
     height: $titlebar-height;
