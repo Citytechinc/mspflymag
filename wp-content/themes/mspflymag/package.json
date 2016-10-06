@@ -74,5 +74,8 @@
     "postinstall": "bower install && gulp build",
     "production": "gulp --production",
     "watch": "gulp"
+  },
+  "dependencies": {
+    "object-fit-images": "^2.5.6"
   }
 }

@@ -1,6 +1,12 @@
-//General site-wide scripts for MSP Fly Mag
+/* General site-wide scripts for MSP Fly Mag */
 
 $('.mc_input').attr("placeholder", "Enter your email address");
+
+//Some pages don't get equalized, so make sure they do
+Foundation.reInit('equalizer');
+
+//Activate polyfill for Object Fit on IE/Edge
+$(function () { objectFitImages() });
 
 //if(window.location.href.indexOf("#mc_signup") > -1) {
 //	setTimeout(function(){ 

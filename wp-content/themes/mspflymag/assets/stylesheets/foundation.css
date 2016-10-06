@@ -5918,7 +5918,8 @@ hr.divider {
       width: 100%;
       object-fit: cover;
       height: 100%;
-      object-position: 50% 20%; }
+      object-position: 50% 20%;
+      font-family: 'object-fit: cover; object-position: 50% 20%;'; }
   .content-grid-container .blogpost-entry:hover {
     background-color: #f3f6f9; }
     .content-grid-container .blogpost-entry:hover img {
@@ -5949,7 +5950,8 @@ hr.divider {
       height: 100%;
       width: 100%;
       object-fit: cover;
-      object-position: center; }
+      object-position: center;
+      font-family: 'object-fit: cover; object-position: center;'; }
   .photo-carousel-controls {
     margin-top: 3px !important;
     border: 0; }
@@ -5961,6 +5963,7 @@ hr.divider {
         width: 100%;
         object-fit: cover;
         object-position: initial;
+        font-family: 'object-fit: cover; object-position: initial;';
         outline: none;
         cursor: pointer; }
       .photo-carousel-controls li .dot {
