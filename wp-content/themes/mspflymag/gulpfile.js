@@ -65,6 +65,7 @@ var PATHS = {
     // Include your own custom scripts (located in the custom folder)
     'assets/javascript/custom/ofi.browser.js',
     'assets/javascript/custom/*.js',
+    '!assets/javascript/custom/stickyfooter.js',
   ],
   phpcs: [
     '**/*.php',
