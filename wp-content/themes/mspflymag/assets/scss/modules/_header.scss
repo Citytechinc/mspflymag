@@ -44,6 +44,7 @@ header#masthead {
 }
 
 #main-content--container {
+  padding-top: rem-calc(52);
 	@include breakpoint(tablet) {
 		padding-top: rem-calc(35);
 	}

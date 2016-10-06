@@ -11,19 +11,11 @@ $('.mc_input').attr("placeholder", "Enter your email address");
 //}
 
 //Hide mobile topbar logo until we scroll down page
-$('.home .mobile-logo').addClass('hide'); //TODO move to template to avoid flashing
-$('.sticky').on('sticky.zf.stuckto:top', function () {
+$( window ).scroll(function() {
+  console.log($('.title-bar-title').offset().top);
+  if ( $('.title-bar-title').offset().top > 148) {
     $('.home .mobile-logo').removeClass('hide');
-}).on('sticky.zf.unstuckfrom:top', function () {
+  } else {
     $('.home .mobile-logo').addClass('hide');
+  }
 });
-
-
-//Move follow fly mobile form into view on focus
-//$( '#follow-fly--container #mc_mv_EMAIL' ).focusin( function() {
-//  $( this ).addClass( " bottom-margin " );
-//});
-//
-//$( '#follow-fly--container #mc_mv_EMAIL' ).focusout( function() {
-//  $( this ).removeClass( " bottom-margin " );
-//});

@@ -26,7 +26,11 @@
 				font-size: rem-calc(24px);
 			}
 		}
-  
+    
+    section#comments {
+      padding-right: 1.25rem; 
+    }
+    
 		section#share-follow {
 				margin-left: 0;
 				margin-right: 0;

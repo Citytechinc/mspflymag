@@ -13,7 +13,7 @@
 
 /* Mobile menu */
 .menu-icon {
-  right: 0.375rem;
+  right: 0.6875rem;
   @include hamburger($white, $light-gray, 20px, 20px, 3px, 3);
   @include vertical-center;
   
@@ -30,7 +30,7 @@
       content: '';
       position: absolute;
       width: 100%;
-      top: 50%;
+      top: 40%;
       left: 0;
       background: $white;
       box-shadow: none;

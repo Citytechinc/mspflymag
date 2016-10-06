@@ -5485,7 +5485,7 @@ meter {
 
 /* Mobile menu */
 .menu-icon {
-  right: 0.375rem;
+  right: 0.6875rem;
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -5522,7 +5522,7 @@ meter {
       content: '';
       position: absolute;
       width: 100%;
-      top: 50%;
+      top: 40%;
       left: 0;
       background: #fefefe;
       -webkit-box-shadow: none;
@@ -5747,9 +5747,11 @@ header#masthead {
   margin-top: 20px;
   margin-bottom: 60px; }
 
-@media screen and (min-width: 50em) {
-  #main-content--container {
-    padding-top: 2.1875rem; } }
+#main-content--container {
+  padding-top: 3.25rem; }
+  @media screen and (min-width: 50em) {
+    #main-content--container {
+      padding-top: 2.1875rem; } }
 
 #home-page-logo {
   padding: 1.25rem; }
@@ -6646,6 +6648,8 @@ div.wp_rp_footer a.wp_rp_edit:hover {
     #single-post .main-content > section:not(#comments) h3, #single-post .main-content > main h3 {
       text-align: center;
       font-size: 1.5rem; }
+  #single-post .main-content section#comments {
+    padding-right: 1.25rem; }
   #single-post .main-content section#share-follow {
     margin-left: 0;
     margin-right: 0; }
