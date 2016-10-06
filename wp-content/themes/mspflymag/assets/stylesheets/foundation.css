@@ -5828,7 +5828,8 @@ body#tinymce {
   clip: rect(0, 0, 0, 0); }
 
 .dark-form .input-group-field, .dark-form .mc_merge_var input {
-  background-color: #3f3f3f; }
+  background-color: #3f3f3f;
+  color: #cacaca; }
 
 #single-post #mc_signup {
   margin-top: 1.5em;
