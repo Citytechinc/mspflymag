@@ -6,7 +6,8 @@ $('.mc_input').attr("placeholder", "Enter your email address");
 Foundation.reInit('equalizer');
 
 //Activate polyfill for Object Fit on IE/Edge
-$(function () { objectFitImages() });
+objectFitImages();
+
 
 //if(window.location.href.indexOf("#mc_signup") > -1) {
 //	setTimeout(function(){ 
@@ -18,7 +19,7 @@ $(function () { objectFitImages() });
 
 //Hide mobile topbar logo until we scroll down page
 $( window ).scroll(function() {
-  console.log($('.title-bar-title').offset().top);
+  //console.log($('.title-bar-title').offset().top);
   if ( $('.title-bar-title').offset().top > 148) {
     $('.home .mobile-logo').removeClass('hide');
   } else {

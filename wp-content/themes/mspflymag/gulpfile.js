@@ -63,6 +63,7 @@ var PATHS = {
     'assets/components/motion-ui/motion-ui.js',
 
     // Include your own custom scripts (located in the custom folder)
+    'assets/javascript/custom/ofi.browser.js',
     'assets/javascript/custom/*.js',
   ],
   phpcs: [
