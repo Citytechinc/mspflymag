@@ -14,13 +14,13 @@
 /* Mobile menu */
 .menu-icon {
   right: 0.6875rem;
-  @include hamburger($white, $light-gray, 20px, 20px, 3px, 3);
+  @include hamburger($white, $light-gray, 25px, 20px, 3px, 3);
   @include vertical-center;
   
   //Replace with an X when open
   &.is-open {
     display: inline-block;
-    width: 25px;
+    width: 30px;
     height: 25px;
     overflow: hidden;
     

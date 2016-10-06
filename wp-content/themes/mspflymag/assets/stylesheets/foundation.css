@@ -5490,7 +5490,7 @@ meter {
   display: inline-block;
   vertical-align: middle;
   cursor: pointer;
-  width: 20px;
+  width: 25px;
   height: 20px;
   position: absolute;
   top: 50%;
@@ -5514,7 +5514,7 @@ meter {
             box-shadow: 0 8px 0 #e6e6e6, 0 16px 0 #e6e6e6; }
   .menu-icon.is-open {
     display: inline-block;
-    width: 25px;
+    width: 30px;
     height: 25px;
     overflow: hidden; }
     .menu-icon.is-open:before, .menu-icon.is-open:after {
