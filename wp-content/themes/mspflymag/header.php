@@ -40,12 +40,11 @@
             </div>
         </div>		
 		</div>
-    <div class="mobile-menu--container dark-form" id="mobile-menu--container" data-toggler=".is-open" >
+    <div class="mobile-menu--container dark-form hide-for-tablet" id="mobile-menu--container" data-toggler=".is-open" >
         <?php get_search_form(); ?>
         <?php get_template_part( 'template-parts/mobile-top-bar' ); //pull in nav class=vertical menu ?>
         <div id="follow-fly--container">
-            <span>Sign up for Fly - MSP Airport</span>
-            <?php mailchimpSF_signup_form(); ?>
+            <?php echo do_shortcode('[epm_mailchimp]'); ?>
         </div>
     </div>    
 		<!--      Full size menu-->

@@ -32,10 +32,23 @@
     }
     
 		section#share-follow {
-				margin-left: 0;
-				margin-right: 0;
+      margin-left: 0;
+      margin-right: 0;
 			
-			.column:first-of-type {
+			//subscribe form style override
+      .epm-sign-up-form {
+        margin-top: 1.5em;
+
+        .button {
+          font-size: 1em;
+          padding: .7em;
+          background-color: transparent;
+          color: #000;
+          font-weight: bold;
+        }
+      }
+
+      .column:first-of-type {
 
 				@include breakpoint(medium down) {
 					border-bottom: 1px solid $black;
@@ -56,6 +69,10 @@
 			.addtoany_list {
 				display: block;
 				padding: rem-calc(20);
+        
+        img {
+          padding: 0 10px;
+        }
 			}
 		}
 	  

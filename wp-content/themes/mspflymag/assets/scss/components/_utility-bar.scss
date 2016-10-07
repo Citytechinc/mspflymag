@@ -2,49 +2,51 @@
  * Follow Fly and Search form across top of desktop site
  */
 
-#follow-search-bar--wrapper {
-	background-color: $black;
-	color: $white;
-	padding-top: 10px;
-	
-	input {
+#follow-search-bar {
+  position: relative;
+  
+  &--wrapper {
+    background-color: $black;
+    color: $white;
+    padding-top: 10px;
+    position: relative;
+  }  
+  
+  input {
 		margin-bottom: 0;
 		height: rem-calc(24);
 		vertical-align: top;
 		padding: rem-calc(5);
+    font-size: 0.9rem;
 	}
 	
-	//Follow Fly stuff
+	//Follow Fly
 	#follow-fly--wrapper {
 		padding-right: 0;
-		text-align: right;
+    padding-bottom: 0.5em;
 		
-		#follow-fly--button img {
-			margin-right: 5px;
-		}
+    #follow-fly--button {
+      float: right;
+      
+      img {
+        margin-right: 5px;
+      }
+    }
 		
-		.mc_merge_var {
-			display: inline;
-			float: left;
-			width: calc(100% - 92px);
-			margin-right: 0.9375rem;
-			//width: 70%;
-		  //float: left;
-		}
-		
-		.mc-signup_submit {
-			float: left;
-			//width: 20%;
-			//float: left;
-			//padding-left: .5em;
-			input {
-				vertical-align: top;
-			}
-		}
+		input[type="email"] {
+			width: 70%;
+      width: calc(100% - 92px);
+    }
 	}
 	
-	//Search stuff
-	#search-form--wrapper .input-group {
-		margin-bottom: 0.5rem;
+	//Search
+	#search-form--wrapper {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    
+    .input-group {
+		  margin-bottom: 0.5rem;
+    }
 	}
 }

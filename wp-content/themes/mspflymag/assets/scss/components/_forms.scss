@@ -1,25 +1,7 @@
-.follow-fly-icon {
-	&::before {
-		content: url(/wp-content/themes/mspflymag/assets/images/icons/follow-fly-icon.png);
-		height: 22px;
-    width: 22px;
-    position: relative;
-    margin-right: 5px;
-    top: 1px;
-	}				
-}
+
 
 //Search form
 #searchform {
-//	.input-group-field::before {       
-//		content: url(/assets/images/search.png);
-//		height: 24px;
-//		width: 24px;
-//		position: relative;
-//		margin-right: 5px;
-//		top: 7px;
-//	}
-
 	.input-group-field {
 			padding-left: 30px; //padding to account for search icon size
 		}
@@ -33,65 +15,67 @@
 			margin-top: 4px;
 			margin-left: 5px;
 		}		
-	
-	.input-goup-field {
-		//padding-left: 40px;
-	}
 
 	#searchsubmit {
 		@include element-invisible;
-	}
-	.input-group-button {
-    //font-family: FontAwesome; Probably won't use FontAwesome icons...
-  }   
+	} 
 }
 
-//Darken input
+//Follow Fly defaults
+.follow-fly-icon {
+	&::before {
+		content: url(/wp-content/themes/mspflymag/assets/images/icons/follow-fly-icon.png);
+		height: 22px;
+    width: 22px;
+    position: relative;
+    margin-right: 5px;
+    top: 1px;
+	}				
+}
+
+.epm-sign-up-form {
+  .epm-message {  
+    &.epm-error {
+      color: map-get($foundation-palette, alert)
+    }
+
+    &.epm-success {
+      color: map-get($foundation-palette, success)
+    }
+    
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  } 
+  
+  .epm-form-field {
+    label {
+      display: none;
+    }
+    
+    input[type="email"] {
+      width: 70%;
+      width: calc(100% - 110px);
+      float: left;
+      height: 40px
+    }  
+  }
+  
+  input[type="submit"] {
+    float: right;
+    height: 40px;
+  }
+}
+
+//Dark inputs
 .dark-form {
-	.input-group-field, .mc_merge_var input {
-		background-color: $charcoal;
-    color: $medium-gray;
-	}
-}
-
-//Mailchimp subscribe default styling
-#single-post #mc_signup {
-	margin-top: 1.5em;
-	display: block;
-}
-
-#mc_signup .mc_merge_var {
-	padding: 0;
-	margin: 0;
-	width: 70%;
-	width: calc(100% - 110px);
-	float: left;
-}
-
-#single-post #mc_signup .mc_signup_submit {
-	text-align: center;
-	//width: 20%;
-	width: 100px;
-	float: left;
-
-	.button {
-		font-size: 1em;
-		padding: .7em;
-		background-color: transparent;
-		color: #000;
-		font-weight: bold;
-	}
-}
-
-.input-group-field, .mc_merge_var input {
-  border: none;
-  height: 40.47px; //height of submit button
-}
-
-#mc_signup_form .mc_var_label {
-	display: none;
-}
-
-.mc_error_msg {
-	font-weight: normal;
+  input {
+    &[type="text"], 
+    &[type="email"] {
+      background-color: $charcoal;
+      color: $medium-gray;
+      border: none;
+    }
+  }
 }

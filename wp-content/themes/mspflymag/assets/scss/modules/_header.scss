@@ -32,15 +32,12 @@ header#masthead {
 	}
 }
 
-#mc_custom_border_hdr {
-	@include element-invisible;
-}
-
 #follow-fly--container {
 	border-top: 1px solid $light-gray;
 	margin-top: 20px;
   //justify-content: flex-end;
   margin-bottom: 60px;
+  padding-top: 20px
 }
 
 #main-content--container {
@@ -53,11 +50,3 @@ header#masthead {
 #home-page-logo {
 	padding: rem-calc(20);
 }
-
-.title-bar-container .sticky {
-  
-  .title-bar {
-    height: $titlebar-height;
-  }
-}
-
