@@ -41,11 +41,11 @@ function epm_mailchimp_submit_to_list() {
 	if($epm_enable_success == 'enabled') {
 
 		if(epm_get_option('display_name_fields') && !empty($epm_name) && !empty($epm_lastname) && !empty($epm_email) && is_email( $epm_email ) ) {
-			echo '<div class="epm-message epm-success message success"><p>'.__('Thank you for signing up to the newsletter.','easy-peasy-mailchimp').'</p></div>';
+			echo '<div class="epm-message epm-success message success"><p>'.__('Thank you for subscribing to Fly.','easy-peasy-mailchimp').'</p></div>';
 		}
 
 		if(!epm_get_option('display_name_fields') && !empty($epm_email) && is_email( $epm_email )) {
-			echo '<div class="epm-message epm-success message success"><p>'.__('Thank you for signing up to the newsletter.','easy-peasy-mailchimp').'</p></div>';
+			echo '<div class="epm-message epm-success message success"><p>'.__('Thank you for subscribing to Fly.','easy-peasy-mailchimp').'</p></div>';
 		}
 
 	}

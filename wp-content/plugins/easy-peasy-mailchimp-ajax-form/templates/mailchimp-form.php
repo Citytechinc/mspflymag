@@ -32,12 +32,12 @@ if(is_user_logged_in()) {
 
 	<div class="epm-form-field">
 		<label for="epm-email"><?php _e('Email Address','easy-peasy-mailchimp');?></label>
-		<input type="email" placeholder="<?php _e('Email Address','easy-peasy-mailchimp');?>" name="epm-email" tabindex="8" class="email" id="epm-email" value="<?php echo $epm_default_email_value; ?>"/>
+		<input type="email" placeholder="<?php _e('Enter your email address','easy-peasy-mailchimp');?>" name="epm-email" tabindex="8" class="email" id="epm-email" value="<?php echo $epm_default_email_value; ?>"/>
 	</div>
 
 	<input type="hidden" name="epm_submit" id="epm_submit" value="true" />
 	<input type="hidden" name="epm_list_id" id="epm_list_id" value="<?php echo $list;?>" />
 	
-	<input type="submit" name="epm-submit-chimp" value="<?php _e('Sign Up Now','easy-peasy-mailchimp');?>" data-wait-text="<?php _e('Please wait...','easy-peasy-mailchimp');?>" tabindex="10" class="button btn epm-sign-up-button epm-submit-chimp"/>
+	<input type="submit" name="epm-submit-chimp" value="<?php _e('Follow Fly','easy-peasy-mailchimp');?>" data-wait-text="<?php _e('Please wait...','easy-peasy-mailchimp');?>" tabindex="10" class="button btn epm-sign-up-button epm-submit-chimp"/>
 
 </form>
