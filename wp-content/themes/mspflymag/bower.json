@@ -7,7 +7,9 @@
   "ignore": [],
   "dependencies": {
     "foundation-sites": "~6.2.0",
-    "motion-ui" : "~1.2.0",
-    "fontawesome": "~4.5.0"
+    "motion-ui": "~1.2.0",
+    "fontawesome": "~4.5.0",
+    "jquery-validation": "^1.15.1",
+    "object-fit-images": "*"
   }
 }
