@@ -33,13 +33,13 @@
 	}				
 }
 
-.epm-sign-up-form {
-  .epm-message {  
+.mc4wp-form {
+  .mc4wp-alert {  
     &.epm-error {
       color: map-get($foundation-palette, alert)
     }
 
-    &.epm-success {
+    &.mc4wp-success {
       color: map-get($foundation-palette, success)
     }
     
@@ -49,7 +49,7 @@
     }
   } 
   
-  .epm-form-field {
+  .mc4wp-form-fields {
     label {
       display: none;
     }

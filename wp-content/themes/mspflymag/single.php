@@ -38,7 +38,7 @@ get_header(); ?>
       <section id="share-follow" class="row" data-equalizer data-equalize-on="tablet" data-equalize-by-row="true">
         <div class="columns tablet-6" id="follow-fly-post" data-equalizer-watch>
             <h3 class="follow-fly-icon">Follow Fly:</h3>
-            <?php echo do_shortcode('[epm_mailchimp]'); ?>
+            <?php echo do_shortcode('[mc4wp_form id="2624"]'); ?>
         </div>
         <div class="columns tablet-6 text-center" id="share-article" data-equalizer-watch>
             <h3>Share this article:</h3>

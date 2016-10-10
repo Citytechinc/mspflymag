@@ -44,7 +44,7 @@
         <?php get_search_form(); ?>
         <?php get_template_part( 'template-parts/mobile-top-bar' ); //pull in nav class=vertical menu ?>
         <div id="follow-fly--container">
-            <?php echo do_shortcode('[epm_mailchimp]'); ?>
+            <?php echo do_shortcode('[mc4wp_form id="2624"]'); ?>
         </div>
     </div>    
 		<!--      Full size menu-->

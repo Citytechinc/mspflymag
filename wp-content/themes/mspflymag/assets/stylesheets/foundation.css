@@ -5818,26 +5818,26 @@ body#tinymce {
   margin-right: 5px;
   top: 1px; }
 
-.epm-sign-up-form .epm-message.epm-error {
+.mc4wp-form .mc4wp-alert.epm-error {
   color: #ec5840; }
 
-.epm-sign-up-form .epm-message.epm-success {
+.mc4wp-form .mc4wp-alert.mc4wp-success {
   color: #3adb76; }
 
-.epm-sign-up-form .epm-message p {
+.mc4wp-form .mc4wp-alert p {
   margin: 0;
   padding: 0; }
 
-.epm-sign-up-form .epm-form-field label {
+.mc4wp-form .mc4wp-form-fields label {
   display: none; }
 
-.epm-sign-up-form .epm-form-field input[type="email"] {
+.mc4wp-form .mc4wp-form-fields input[type="email"] {
   width: 70%;
   width: calc(100% - 110px);
   float: left;
   height: 40px; }
 
-.epm-sign-up-form input[type="submit"] {
+.mc4wp-form input[type="submit"] {
   float: right;
   height: 40px; }
 
@@ -6124,6 +6124,8 @@ div.wp_rp_footer a.wp_rp_edit:hover {
     #follow-search-bar #follow-fly--wrapper input[type="email"] {
       width: 70%;
       width: calc(100% - 92px); }
+    #follow-search-bar #follow-fly--wrapper .mc4wp-alert.mc4wp-success {
+      text-align: right; }
   #follow-search-bar #search-form--wrapper {
     position: absolute;
     bottom: 0;
@@ -6689,9 +6691,9 @@ body.rtl a#scroll-to-top {
   #single-post .main-content section#share-follow {
     margin-left: 0;
     margin-right: 0; }
-    #single-post .main-content section#share-follow .epm-sign-up-form {
+    #single-post .main-content section#share-follow .mc4wp-form {
       margin-top: 1.5em; }
-      #single-post .main-content section#share-follow .epm-sign-up-form .button {
+      #single-post .main-content section#share-follow .mc4wp-form .button {
         font-size: 1em;
         padding: .7em;
         background-color: transparent;

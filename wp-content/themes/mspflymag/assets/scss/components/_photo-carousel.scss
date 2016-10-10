@@ -17,7 +17,8 @@
         height: 100%; 
         width: 100%; 
         object-fit: cover;
-        object-position: center; 
+        object-position: center;
+        //object-position: 50% 20%;
         font-family: 'object-fit: cover; object-position: center;';
       }
     }
@@ -35,6 +36,7 @@
 			width: 100%; 
 			object-fit: cover;
       object-position: initial;
+      //object-position: 50% 20%;
       font-family: 'object-fit: cover; object-position: initial;';
       outline: none;
       cursor: pointer;

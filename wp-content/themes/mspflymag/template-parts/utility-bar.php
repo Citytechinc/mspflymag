@@ -10,7 +10,7 @@
 		<div id="follow-fly--wrapper" class="medium-6 large-5 medium-offset-3 large-offset-4 columns">
 			<button id="follow-fly--button" data-toggle="follow-fly-form--wrapper follow-fly--button" data-toggler=".hide"><img class="follow-flyicon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/follow-fly-icon-white.png" width="22" height="22"><span>Follow Fly</span></button>
 			<div id="follow-fly-form--wrapper" class="hide" data-toggler=".hide">
-        <?php echo do_shortcode('[epm_mailchimp]'); ?>
+        <?php echo do_shortcode('[mc4wp_form id="2624"]'); ?>
 			</div>
 		</div>
 
