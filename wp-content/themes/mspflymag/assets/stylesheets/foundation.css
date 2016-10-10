@@ -6057,6 +6057,9 @@ div.wp_rp_footer a.wp_rp_edit:hover {
   color: #000000;
   font-weight: bold; }
 
+#comments a:hover, #comments a:focus {
+  color: #133d6e; }
+
 #comments img {
   float: left;
   margin-right: 0.625rem; }

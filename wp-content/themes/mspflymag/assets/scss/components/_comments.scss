@@ -8,6 +8,16 @@ $gravatar-padding: rem-calc(10);
 		font-weight: bold;
 	}
 	
+  a {
+    &:hover,
+    &:focus {
+      color: $anchor-color-hover;
+      @if $anchor-text-decoration-hover != $anchor-text-decoration {
+        text-decoration: $anchor-text-decoration-hover;
+      }
+    }
+  }
+  
 	img {
 		float: left;
 		margin-right: $gravatar-padding;
