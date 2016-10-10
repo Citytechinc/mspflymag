@@ -50,7 +50,7 @@
   top: $titlebar-height - 2; //set to height of top bar
   height: 100vh;
 	width: 100vw;
-  height: calc(100vh - 52px);
+  height: calc(100vh - 50px);
   background-color: $black;
   transform: translateX(-100%);
   transition: all 400ms ease;
