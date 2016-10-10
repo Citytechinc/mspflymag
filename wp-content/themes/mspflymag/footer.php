@@ -36,6 +36,7 @@ _gaq.push(['_trackPageview']);
 ?>
 
 </script>
+<a class="scrollToTop" id="scroll-to-top" href="#" title="Scroll to Top">Top</a>
 
 </body>
 </html>
