@@ -58,6 +58,8 @@ var PATHS = {
     'assets/components/foundation-sites/js/foundation.tabs.js',
     'assets/components/foundation-sites/js/foundation.toggler.js',
     'assets/components/foundation-sites/js/foundation.tooltip.js',
+    
+    //Scripts added via Bower
     'assets/components/object-fit-images/dist/ofi.browser.js',
     'assets/components/jquery-validation/dist/jquery.validate.min.js',
 

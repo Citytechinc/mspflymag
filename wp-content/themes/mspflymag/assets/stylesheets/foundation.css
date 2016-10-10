@@ -6089,13 +6089,13 @@ div.wp_rp_footer a.wp_rp_edit:hover {
 #comments section.comment {
   margin-left: 5.625rem; }
 
-#comments #commentform input.error, #comments #commentform textarea.error {
+#respond input.error, #respond textarea.error {
   border: 1px solid #FF0000; }
 
-#comments #commentform div.error, #comments #commentform label.error {
+#respond div.error, #respond label.error {
   color: #FF0000; }
 
-#comments #commentform div.errorlabels label {
+#respond div.errorlabels label {
   display: block; }
 
 /**

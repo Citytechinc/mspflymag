@@ -58,15 +58,18 @@ $gravatar-padding: rem-calc(10);
 	section.comment {
 		margin-left: $gravatar-size + $gravatar-padding;
 	}
-  
-  //Styles for comment validation
-  #commentform input.error, #commentform textarea.error {
+}
+
+#respond {
+  input.error, textarea.error {
     border: 1px solid #FF0000;
   }
-  #commentform div.error, #commentform label.error {
+  
+  div.error, label.error {
     color: #FF0000;
   }
-  #commentform div.errorlabels label {
+  
+  div.errorlabels label {
     display: block;
   }
 }
