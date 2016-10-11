@@ -42,11 +42,11 @@
 .mc4wp-form {
   .mc4wp-alert {  
     &.epm-error {
-      color: map-get($foundation-palette, alert)
+      color: map-get($foundation-palette, alert);
     }
 
     &.mc4wp-success {
-      color: map-get($foundation-palette, success)
+      //color: map-get($foundation-palette, success);
     }
     
     p {

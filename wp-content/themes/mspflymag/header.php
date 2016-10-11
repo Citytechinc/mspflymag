@@ -43,7 +43,7 @@
     <div class="mobile-menu--container dark-form hide-for-tablet" id="mobile-menu--container" data-toggler=".is-open" >
         <?php get_search_form(); ?>
         <?php get_template_part( 'template-parts/mobile-top-bar' ); //pull in nav class=vertical menu ?>
-        <div id="follow-fly--container">
+        <div id="follow-fly--container" class="text-center">
             <?php echo do_shortcode('[mc4wp_form id="2624"]'); ?>
         </div>
     </div>    

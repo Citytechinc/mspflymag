@@ -61,6 +61,7 @@
   //old transition effects in case they want to switch back
   //transform: translateX(-100%) rotateX(40deg);
   //transition: all 400ms cubic-bezier(1.000, -0.400, 0.440, 0.985);
+  color: $white;
   
   &.is-open {
     //opacity: 1;

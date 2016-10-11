@@ -5557,7 +5557,8 @@ meter {
           flex-direction: column;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  color: #fefefe; }
   .mobile-menu--container.is-open {
     -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
@@ -5828,9 +5829,6 @@ body#tinymce {
 
 .mc4wp-form .mc4wp-alert.epm-error {
   color: #ec5840; }
-
-.mc4wp-form .mc4wp-alert.mc4wp-success {
-  color: #3adb76; }
 
 .mc4wp-form .mc4wp-alert p {
   margin: 0;
