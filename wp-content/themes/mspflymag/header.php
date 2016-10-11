@@ -35,8 +35,8 @@
 		<div class="title-bar-container hide-for-tablet" >
         <div class="title-bar" data-responsive-toggle="site-navigation" data-hide-for="tablet">
             <button class="menu-icon" id="mobile-menu--icon" type="button" data-toggle="mobile-menu--container html body mobile-menu--icon" data-toggler=".is-open"></button>
-            <div class="title-bar-title">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" alt="MSP Fly Mag Home" rel="home"><img class="mobile-logo <?php if ( is_home() ) :?>hide<?php endif; ?>" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-mobile.png" width="67" height="37"></a>
+            <div class="title-bar-title" <?php if ( is_home() ) :?>style="display:none;"<?php endif; ?>>
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" alt="MSP Fly Mag Home" rel="home"><img class="mobile-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-mobile.png" width="67" height="37"></a>
             </div>
         </div>		
 		</div>
