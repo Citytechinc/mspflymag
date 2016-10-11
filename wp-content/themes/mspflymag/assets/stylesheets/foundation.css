@@ -6175,7 +6175,9 @@ body.rtl a#scroll-to-top {
     height: 30px;
     padding: 0 0.625rem; }
     .share-icon svg:hover {
-      fill: #133d6e; }
+      fill: #133d6e;
+      -webkit-transition: all 0.25s ease;
+      transition: all 0.25s ease; }
 
 #front-hero {
   background: url("../images/demo/hero-bg-foundation-6-small.svg") bottom center;

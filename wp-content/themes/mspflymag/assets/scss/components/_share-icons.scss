@@ -11,6 +11,7 @@
     
     &:hover {
       fill: $anchor-color-hover;
+      transition: all 0.25s ease;
     }
   }
 }
