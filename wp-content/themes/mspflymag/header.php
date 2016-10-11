@@ -51,7 +51,7 @@
 		<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
 			<div class="top-bar-left text-center">
 				<ul class="menu">
-					<?php the_custom_logo(); ?>
+          <a href="<?php echo home_url(); ?>" class="logo-link" rel="home" itemprop="url"><img width="214" height="100" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svgz" class="logo" alt="MSP Fly Mag" itemprop="logo"></a>
 				</ul>
 			</div>
 			<div class="top-bar-right">

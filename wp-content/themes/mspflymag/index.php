@@ -15,11 +15,8 @@
 
 get_header(); ?>
 
-<img src="<?php 
-    $custom_logo_id = get_theme_mod( 'custom_logo' );
-    $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-    echo $image[0]; 
-?>" class="float-center hide-for-tablet" id="home-page-logo" alt="MSP Fly Mag Logo">
+
+<img width="214" height="100" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svgz" class="float-center hide-for-tablet" id="home-page-logo" alt="MSP Fly Mag Logo">
 
 <div id="page" role="main">
 	<article class="main-content">
