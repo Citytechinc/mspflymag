@@ -5802,7 +5802,7 @@ body#tinymce {
   margin-right: 5px;
   margin-top: 4px;
   margin-left: 5px;
-  background: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' data-name='Search' viewBox='0 0 67.2 67.3'><defs><style>  .cls-1{fill:none;stroke:#cacaca;stroke-miterlimit:10;stroke-width:2.5px;}</style></defs><title>  Artboard 1</title><circle class='cls-1' cx='39.6' cy='27.8' r='23.9'/><line class='cls-1' x1='22.7' y1='44.7' y2='67.3'/></svg>") no-repeat;
+  background: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' data-name='Search' viewBox='0 0 67.2 67.3'><defs><style>  .cls-1{fill:none;stroke:%23cacaca;stroke-miterlimit:10;stroke-width:2.5px;}</style></defs><title>  Artboard 1</title><circle class='cls-1' cx='39.6' cy='27.8' r='23.9'/><line class='cls-1' x1='22.7' y1='44.7' y2='67.3'/></svg>") no-repeat;
   -webkit-background-size: 19px 18px;
           background-size: 19px 18px;
   display: inline-block; }
@@ -6147,7 +6147,7 @@ div.wp_rp_footer a.wp_rp_edit:hover {
 
 a#scroll-to-top {
   /* Background image, replace in images folder */
-  background: url("data:image/svg+xml;utf8,<svg id='arrow-up' data-name='arrow-up' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><defs><style>.cls-1{fill:#8a8a8a;}.cls-2{fill:#fff;}</style></defs><title>arrow-up</title><path class='cls-1' d='M512,480a32,32,0,0,1-32,32H32A32,32,0,0,1,0,480V32A32,32,0,0,1,32,0H480a32,32,0,0,1,32,32Z'/><path class='cls-2' d='M413.1,327.2l-1.8-2.1-136-156.5a25.3,25.3,0,0,0-19.2-8.6,25.65,25.65,0,0,0-19.2,8.6L101,324.9l-2.3,2.6a15.45,15.45,0,0,0-2.7,8.7c0,8.7,7.4,15.8,16.6,15.8H399.4c9.2,0,16.6-7.1,16.6-15.8A15.82,15.82,0,0,0,413.1,327.2Z'/></svg>") no-repeat;
+  background: url("data:image/svg+xml;utf8,<svg id='arrow-up' data-name='arrow-up' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><defs><style>.cls-1{fill:%238a8a8a;}.cls-2{fill:%23fff;}</style></defs><title>arrow-up</title><path class='cls-1' d='M512,480a32,32,0,0,1-32,32H32A32,32,0,0,1,0,480V32A32,32,0,0,1,32,0H480a32,32,0,0,1,32,32Z'/><path class='cls-2' d='M413.1,327.2l-1.8-2.1-136-156.5a25.3,25.3,0,0,0-19.2-8.6,25.65,25.65,0,0,0-19.2,8.6L101,324.9l-2.3,2.6a15.45,15.45,0,0,0-2.7,8.7c0,8.7,7.4,15.8,16.6,15.8H399.4c9.2,0,16.6-7.1,16.6-15.8A15.82,15.82,0,0,0,413.1,327.2Z'/></svg>") no-repeat;
   height: 50px;
   width: 50px;
   /* Match to background image size */
