@@ -42,7 +42,7 @@ get_header(); ?>
         </div>
         <div class="columns tablet-6 text-center" id="share-article" data-equalizer-watch>
             <h3>Share this article:</h3>
-            <?php if ( function_exists( 'ADDTOANY_SHARE_SAVE_KIT' ) ) { ADDTOANY_SHARE_SAVE_KIT(); } ?>
+            <?php get_template_part( 'template-parts/share-icons' ); ?>
         </div>
       </section>
       <?php do_action( 'foundationpress_post_before_comments' ); ?>

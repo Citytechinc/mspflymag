@@ -1,0 +1,16 @@
+/**
+ * Styles for social share icons
+ */
+.share-icon {
+  margin-top: 1.3em;
+  display: inline-block;
+  
+  svg {
+    height: 30px;
+    padding: 0 rem-calc(10);
+    
+    &:hover {
+      fill: $anchor-color-hover;
+    }
+  }
+}

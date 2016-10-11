@@ -6165,6 +6165,18 @@ body.rtl a#scroll-to-top {
     left: 0;
     bottom: 0; } }
 
+/**
+ * Styles for social share icons
+ */
+.share-icon {
+  margin-top: 1.3em;
+  display: inline-block; }
+  .share-icon svg {
+    height: 30px;
+    padding: 0 0.625rem; }
+    .share-icon svg:hover {
+      fill: #133d6e; }
+
 #front-hero {
   background: url("../images/demo/hero-bg-foundation-6-small.svg") bottom center;
   -webkit-background-size: cover;
