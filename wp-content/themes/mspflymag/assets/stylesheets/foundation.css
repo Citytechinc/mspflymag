@@ -6114,7 +6114,7 @@ div.wp_rp_footer a.wp_rp_edit:hover {
   #follow-search-bar--wrapper {
     background-color: #000000;
     color: #fefefe;
-    padding-top: 10px;
+    padding-top: 8px;
     position: relative; }
   #follow-search-bar input {
     margin-bottom: 0;
@@ -6128,7 +6128,8 @@ div.wp_rp_footer a.wp_rp_edit:hover {
     #follow-search-bar #follow-fly--wrapper #follow-fly--button {
       float: right; }
       #follow-search-bar #follow-fly--wrapper #follow-fly--button .follow-fly-icon {
-        position: relative; }
+        position: relative;
+        line-height: 24px; }
         #follow-search-bar #follow-fly--wrapper #follow-fly--button .follow-fly-icon::before {
           position: absolute;
           background: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' data-name='Layer 1' viewBox='0 0 66.7 63.5'><title>  Artboard 1</title><path class='cls-1' fill='white' d='M29.9 54.4V39.9H43V26.7H53.6V0H5.7V58.2H44V54.4ZM11 6.3H48.3v6.5H11Zm0 11.3H37.5v3.7H11Zm0 6.1H37.5v3.7H11Zm13.6 9.9H11V29.9H24.5Z'/><polygon class='cls-1' fill='white' points='66.7 50.4 66.7 43.8 53.6 43.8 53.6 30.7 53.6 30.7 47 30.7 47 43.8 33.9 43.8 33.9 43.9 33.9 43.9 33.9 50.4 47 50.4 47 58.2 47 63.5 53.6 63.5 53.6 50.4 53.6 50.4 66.7 50.4'/></svg>") no-repeat;

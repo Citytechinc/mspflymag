@@ -8,7 +8,7 @@
   &--wrapper {
     background-color: $black;
     color: $white;
-    padding-top: 10px;
+    padding-top: 8px;
     position: relative;
   }  
   
@@ -30,6 +30,7 @@
       
       .follow-fly-icon {
         position: relative;
+        line-height: 24px;
         
         &::before {
           position: absolute;
