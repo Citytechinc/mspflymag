@@ -5795,13 +5795,17 @@ body#tinymce {
   padding-left: 30px; }
 
 #searchform::before {
-  content: url(/wp-content/themes/mspflymag/assets/images/icons/search-sm.png);
+  content: ' ';
   height: 18px;
   width: 19px;
   position: absolute;
   margin-right: 5px;
   margin-top: 4px;
-  margin-left: 5px; }
+  margin-left: 5px;
+  background: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' data-name='Search' viewBox='0 0 67.2 67.3'><defs><style>  .cls-1{fill:none;stroke:#cacaca;stroke-miterlimit:10;stroke-width:2.5px;}</style></defs><title>  Artboard 1</title><circle class='cls-1' cx='39.6' cy='27.8' r='23.9'/><line class='cls-1' x1='22.7' y1='44.7' y2='67.3'/></svg>") no-repeat;
+  -webkit-background-size: 19px 18px;
+          background-size: 19px 18px;
+  display: inline-block; }
 
 #searchform #searchsubmit {
   position: absolute !important;
@@ -5811,12 +5815,16 @@ body#tinymce {
   clip: rect(0, 0, 0, 0); }
 
 .follow-fly-icon::before {
-  content: url(/wp-content/themes/mspflymag/assets/images/icons/follow-fly-icon.png);
+  content: ' ';
   height: 22px;
   width: 22px;
   position: relative;
   margin-right: 5px;
-  top: 1px; }
+  top: 1px;
+  background: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' data-name='Layer 1' viewBox='0 0 66.7 63.5'><title>  Artboard 1</title><path class='cls-1' d='M29.9 54.4V39.9H43V26.7H53.6V0H5.7V58.2H44V54.4ZM11 6.3H48.3v6.5H11Zm0 11.3H37.5v3.7H11Zm0 6.1H37.5v3.7H11Zm13.6 9.9H11V29.9H24.5Z'/><polygon class='cls-1' points='66.7 50.4 66.7 43.8 53.6 43.8 53.6 30.7 53.6 30.7 47 30.7 47 43.8 33.9 43.8 33.9 43.9 33.9 43.9 33.9 50.4 47 50.4 47 58.2 47 63.5 53.6 63.5 53.6 50.4 53.6 50.4 66.7 50.4'/></svg>") no-repeat;
+  -webkit-background-size: 22px 22px;
+          background-size: 22px 22px;
+  display: inline-block; }
 
 .mc4wp-form .mc4wp-alert.epm-error {
   color: #ec5840; }
@@ -6119,8 +6127,12 @@ div.wp_rp_footer a.wp_rp_edit:hover {
     padding-bottom: 0.5em; }
     #follow-search-bar #follow-fly--wrapper #follow-fly--button {
       float: right; }
-      #follow-search-bar #follow-fly--wrapper #follow-fly--button img {
-        margin-right: 5px; }
+      #follow-search-bar #follow-fly--wrapper #follow-fly--button .follow-fly-icon {
+        position: relative; }
+        #follow-search-bar #follow-fly--wrapper #follow-fly--button .follow-fly-icon::before {
+          position: absolute;
+          background: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' data-name='Layer 1' viewBox='0 0 66.7 63.5'><title>  Artboard 1</title><path class='cls-1' fill='white' d='M29.9 54.4V39.9H43V26.7H53.6V0H5.7V58.2H44V54.4ZM11 6.3H48.3v6.5H11Zm0 11.3H37.5v3.7H11Zm0 6.1H37.5v3.7H11Zm13.6 9.9H11V29.9H24.5Z'/><polygon class='cls-1' fill='white' points='66.7 50.4 66.7 43.8 53.6 43.8 53.6 30.7 53.6 30.7 47 30.7 47 43.8 33.9 43.8 33.9 43.9 33.9 43.9 33.9 50.4 47 50.4 47 58.2 47 63.5 53.6 63.5 53.6 50.4 53.6 50.4 66.7 50.4'/></svg>") no-repeat;
+          left: -28px; }
     #follow-search-bar #follow-fly--wrapper input[type="email"] {
       width: 70%;
       width: calc(100% - 92px); }

@@ -18,15 +18,6 @@ objectFitImages();
 //}
 
 //Hide mobile topbar logo until we scroll down page
-//$( window ).scroll(function() {
-//  //console.log($('.title-bar-title').offset().top);
-//  if ( $('.title-bar-title').offset().top > 148) {
-//    $('.home .mobile-logo').removeClass('hide');
-//  } else {
-//    $('.home .mobile-logo').addClass('hide');
-//  }
-//});
-
 if ( $( '.home' ).length ) {
   $(window).scroll(function(){
 		if ($(this).scrollTop() > 148) {
