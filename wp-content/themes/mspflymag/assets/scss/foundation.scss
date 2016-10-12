@@ -18,8 +18,8 @@
 @import "global/wp-overrides"; // Override the default WordPress styling for some elements
 
 // Third-party libraries
-@import 'font-awesome';
-@import 'motion-ui';
+//@import 'font-awesome';
+//@import 'motion-ui';
 
 // Foundation global styles
 @include foundation-global-styles;
@@ -30,7 +30,7 @@
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;
-@include foundation-range-input;
+//@include foundation-range-input;
 //@include foundation-accordion;
 //@include foundation-accordion-menu;
 //@include foundation-badge;
@@ -47,12 +47,12 @@
 @include foundation-menu;
 //@include foundation-off-canvas;
 //@include foundation-orbit;
-@include foundation-pagination;
+//@include foundation-pagination;
 //@include foundation-progress-bar;
 //@include foundation-progress-element;
-@include foundation-meter-element;
+//@include foundation-meter-element;
 //@include foundation-slider;
-@include foundation-sticky;
+//@include foundation-sticky;
 //@include foundation-reveal;
 //@include foundation-switch;
 //@include foundation-table;
@@ -67,8 +67,8 @@
 // @include foundation-flex-classes;
 
 // Motion UI
-@include motion-ui-transitions;
-@include motion-ui-animations;
+//@include motion-ui-transitions;
+//@include motion-ui-animations;
 
 /*
   My custom styles:
@@ -77,9 +77,9 @@
 
 // Modules
 @import "modules/navigation";
-@import "modules/footer";
+//@import "modules/footer";
 @import "modules/header";
-@import "modules/sidebar";
+//@import "modules/sidebar";
 @import "modules/editor-style";
 
 // Components
@@ -97,9 +97,9 @@
 @import "components/share-icons";
 
 // Templates
-@import "templates/front";
-@import "templates/kitchen-sink";
+//@import "templates/front";
+//@import "templates/kitchen-sink";
 @import "templates/page-default";
-@import "templates/page-sidebar-left";
+//@import "templates/page-sidebar-left";
 @import "templates/page-full-width";
 @import "templates/single-post";

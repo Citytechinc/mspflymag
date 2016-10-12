@@ -30,8 +30,8 @@ var COMPATIBILITY = [
 var PATHS = {
   sass: [
     'assets/components/foundation-sites/scss',
-    'assets/components/motion-ui/src',
-    'assets/components/fontawesome/scss',
+//    'assets/components/motion-ui/src',
+//    'assets/components/fontawesome/scss',
   ],
   javascript: [
     'assets/components/what-input/what-input.js',
@@ -39,32 +39,32 @@ var PATHS = {
     'assets/components/foundation-sites/js/foundation.util.*.js',
 
     // Paths to individual JS components defined below
-    'assets/components/foundation-sites/js/foundation.abide.js',
-    'assets/components/foundation-sites/js/foundation.accordion.js',
-    'assets/components/foundation-sites/js/foundation.accordionMenu.js',
-    'assets/components/foundation-sites/js/foundation.drilldown.js',
-    'assets/components/foundation-sites/js/foundation.dropdown.js',
-    'assets/components/foundation-sites/js/foundation.dropdownMenu.js',
+//    'assets/components/foundation-sites/js/foundation.abide.js',
+//    'assets/components/foundation-sites/js/foundation.accordion.js',
+//    'assets/components/foundation-sites/js/foundation.accordionMenu.js',
+//    'assets/components/foundation-sites/js/foundation.drilldown.js',
+//    'assets/components/foundation-sites/js/foundation.dropdown.js',
+//    'assets/components/foundation-sites/js/foundation.dropdownMenu.js',
     'assets/components/foundation-sites/js/foundation.equalizer.js',
     'assets/components/foundation-sites/js/foundation.interchange.js',
-    'assets/components/foundation-sites/js/foundation.magellan.js',
+//    'assets/components/foundation-sites/js/foundation.magellan.js',
     //'assets/components/foundation-sites/js/foundation.offcanvas.js',
-    'assets/components/foundation-sites/js/foundation.orbit.js',
+//    'assets/components/foundation-sites/js/foundation.orbit.js',
     'assets/components/foundation-sites/js/foundation.responsiveMenu.js',
     'assets/components/foundation-sites/js/foundation.responsiveToggle.js',
     'assets/components/foundation-sites/js/foundation.reveal.js',
     //'assets/components/foundation-sites/js/foundation.slider.js',
-    'assets/components/foundation-sites/js/foundation.sticky.js',
-    'assets/components/foundation-sites/js/foundation.tabs.js',
+//    'assets/components/foundation-sites/js/foundation.sticky.js',
+//    'assets/components/foundation-sites/js/foundation.tabs.js',
     'assets/components/foundation-sites/js/foundation.toggler.js',
-    'assets/components/foundation-sites/js/foundation.tooltip.js',
+//    'assets/components/foundation-sites/js/foundation.tooltip.js',
     
     //Scripts added via Bower
     'assets/components/object-fit-images/dist/ofi.browser.js',
     'assets/components/jquery-validation/dist/jquery.validate.min.js',
 
     // Motion UI
-    'assets/components/motion-ui/motion-ui.js',
+//    'assets/components/motion-ui/motion-ui.js',
 
     // Include your own custom scripts (located in the custom folder)
     'assets/javascript/custom/ofi.browser.js',
@@ -172,9 +172,9 @@ gulp.task('javascript', function() {
 // Copy task
 gulp.task('copy', function() {
   // Motion UI
-  var motionUi = gulp.src('assets/components/motion-ui/**/*.*')
-    .pipe($.flatten())
-    .pipe(gulp.dest('assets/javascript/vendor/motion-ui'));
+//  var motionUi = gulp.src('assets/components/motion-ui/**/*.*')
+//    .pipe($.flatten())
+//    .pipe(gulp.dest('assets/javascript/vendor/motion-ui'));
 
   // What Input
   var whatInput = gulp.src('assets/components/what-input/**/*.*')
@@ -182,10 +182,11 @@ gulp.task('copy', function() {
       .pipe(gulp.dest('assets/javascript/vendor/what-input'));
 
   // Font Awesome
-  var fontAwesome = gulp.src('assets/components/fontawesome/fonts/**/*.*')
-      .pipe(gulp.dest('assets/fonts'));
+//  var fontAwesome = gulp.src('assets/components/fontawesome/fonts/**/*.*')
+//      .pipe(gulp.dest('assets/fonts'));
 
-  return merge(motionUi, whatInput, fontAwesome);
+  //return merge(motionUi, whatInput, fontAwesome);
+  return whatInput;
 });
 
 // Package task

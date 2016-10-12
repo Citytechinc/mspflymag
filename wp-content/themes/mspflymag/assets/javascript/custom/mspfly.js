@@ -8,15 +8,6 @@ Foundation.reInit('equalizer');
 //Activate polyfill for Object Fit on IE/Edge
 objectFitImages();
 
-
-//if(window.location.href.indexOf("#mc_signup") > -1) {
-//	setTimeout(function(){ 
-//		var shareContainer = $('#share-follow');
-//		var sharePosition = shareContainer.offset().top;
-//		$("html, body").animate({ scrollTop: sharePosition-40}, 500);
-//	 }, 500);
-//}
-
 //Hide mobile topbar logo until we scroll down page
 if ( $( '.home' ).length ) {
   $(window).scroll(function(){
