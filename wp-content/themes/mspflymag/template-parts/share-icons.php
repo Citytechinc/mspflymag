@@ -8,7 +8,7 @@
 $mspurl = get_permalink();
 $msptitle = get_the_title();
 
-$twitterURL = 'https://twitter.com/intent/tweet?text='.$msptitle.'&amp;url='.$mspurl.'&amp;via=Crunchify';
+$twitterURL = 'https://twitter.com/intent/tweet?text='.$msptitle.'&amp;url='.$mspurl;
 
 $facebookURL = 'https://www.facebook.com/sharer/sharer.php?u='.$mspurl;
 

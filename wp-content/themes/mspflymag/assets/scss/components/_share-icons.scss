@@ -4,10 +4,11 @@
 .share-icon {
   margin-top: 1.3em;
   display: inline-block;
-  
+  max-width: 50px;
+  padding: 0 rem-calc(10);
+
   svg {
     height: 30px;
-    padding: 0 rem-calc(10);
     
     &:hover {
       fill: $anchor-color-hover;
