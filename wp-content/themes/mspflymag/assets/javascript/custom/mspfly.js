@@ -18,3 +18,7 @@ if ( $( '.home' ).length ) {
 		}
 	});
 }
+
+$( ".ac_results li.ac_over" ).click(function() {
+  $( "#search-form--wrapper input#s" ).submit();
+});
