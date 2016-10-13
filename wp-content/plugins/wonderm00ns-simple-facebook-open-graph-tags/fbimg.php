@@ -2,16 +2,18 @@
 	define('WP_USE_THEMES', false);
 	require( '../../../wp-blog-header.php' );
 
-	if ($webdados_fb_open_graph_settings=webdados_fb_open_graph_load_settings()) {
+
+
+	if ( $webdados_fb = webdados_fb_run() ) {
 
 		if ( isset($_GET['img']) && trim($_GET['img'])!='' ) {
-			if ($url=parse_url(trim($_GET['img']))) {
+			if ( $url=parse_url(trim($_GET['img'])) ) {
 				if ( $url['host']==$_SERVER['HTTP_HOST'] ) {
 		
 					if( $image=imagecreatefromfile($_SERVER['DOCUMENT_ROOT'].$url['path']) ) {
 	
-						$thumb_width = 1200;
-						$thumb_height = 630;
+						$thumb_width = intval(WEBDADOS_FB_W);
+						$thumb_height = intval(WEBDADOS_FB_H);
 						
 						$width = imagesx($image);
 						$height = imagesy($image);
@@ -43,14 +45,14 @@
 						                   $new_width, $new_height,
 						                   $width, $height);
 						//Barra
-						if (trim($webdados_fb_open_graph_settings['fb_image_overlay_image'])!='') {
-							$barra_url = parse_url(trim($webdados_fb_open_graph_settings['fb_image_overlay_image']));
+						if ( trim($webdados_fb->options['fb_image_overlay_image'])!='' ) {
+							$barra_url = parse_url(trim($webdados_fb->options['fb_image_overlay_image']));
 							$barra = imagecreatefromfile($_SERVER['DOCUMENT_ROOT'].$barra_url['path']);
-							imagecopy($thumb, $barra, 0, 0, 0, 0, 1200, 630);
+							imagecopy($thumb, $barra, 0, 0, 0, 0, intval(WEBDADOS_FB_W), intval(WEBDADOS_FB_H) );
 						}
 	
 						header('Content-Type: image/jpeg');
-						imagejpeg($thumb, NULL, 95);
+						imagejpeg($thumb, NULL, 95 );
 						imagedestroy($image);
 						imagedestroy($thumb);
 						imagedestroy($barra);
