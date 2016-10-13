@@ -69,7 +69,7 @@ function gss_embed_metadata( $post_id ){
 add_action( 'save_post', 'gss_embed_metadata' );
 
 
-function gss_gallery_sc_filter( $output = '', $atts, $instance ) {
+function gss_gallery_sc_filter( $output = '', $atts ) {
 	$return = $output; // fallback
 	
 	if( !empty($atts['gss']) ){
