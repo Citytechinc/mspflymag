@@ -19,6 +19,9 @@ if ( $( '.home' ).length ) {
 	});
 }
 
-$( ".ac_results li.ac_over" ).click(function() {
-  $( "#search-form--wrapper input#s" ).submit();
+//Auto submit search form when selecting solr suggestions
+$( "#s" ).change(function() {
+  $( ".ac_results li" ).click(function() {
+    $( "#searchsubmit" ).click();
+  });
 });
