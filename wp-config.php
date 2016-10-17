@@ -149,6 +149,16 @@ if ( ! defined( 'WP_DEBUG' ) ) {
 }
 
 
+/* Redirect some old URLs */
+
+// 301 Redirect from /old to /new.
+if (($_SERVER['REQUEST_URI'] == '/about-2' || $_SERVER['REQUEST_URI'] == '/contact') && (php_sapi_name() != "cli")) {
+  header('HTTP/1.0 301 Moved Permanently');
+  header('Location: /');
+  exit();
+}
+
+
 /* That's all, stop editing! Happy Pressing. */
 
 
