@@ -1,0 +1,24 @@
+/*Gallery Slideshow styles*/
+
+.gss-container {
+  
+  .gss-pager .cycle-pager-active, .gss-pager .cycle-pager-active:hover {
+    background-color: map-get($foundation-palette, primary);
+  }
+  
+  .gss-pager {
+    top: 33px;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .gss-captions, .gss-long-cap {
+    margin-left: 70px;
+    text-align: center;
+  }
+  
+  .gss-prev:hover, .gss-next:hover {
+    color: $white;
+    background-color: map-get($foundation-palette, primary);
+  }
+}
