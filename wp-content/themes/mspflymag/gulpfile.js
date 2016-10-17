@@ -61,7 +61,7 @@ var PATHS = {
     
     //Scripts added via Bower
     'assets/components/object-fit-images/dist/ofi.browser.js',
-    'assets/components/jquery-validation/dist/jquery.validate.min.js',
+    //'assets/components/jquery-validation/dist/jquery.validate.min.js',
 
     // Motion UI
 //    'assets/components/motion-ui/motion-ui.js',
@@ -70,6 +70,7 @@ var PATHS = {
     'assets/javascript/custom/ofi.browser.js',
     'assets/javascript/custom/*.js',
     '!assets/javascript/custom/stickyfooter.js',
+	'!assets/javascript/custom/slick*',
   ],
   phpcs: [
     '**/*.php',
