@@ -159,6 +159,10 @@ if (($_SERVER['REQUEST_URI'] == '/about-2' || $_SERVER['REQUEST_URI'] == '/conta
 }
 
 
+//Change directory of Autoptimize cache
+define('AUTOPTIMIZE_CACHE_CHILD_DIR','../wp-uploads/cache/');
+define('AUTOPTIMIZE_CACHEFILE_PREFIX','aggregated_');
+
 /* That's all, stop editing! Happy Pressing. */
 
 
