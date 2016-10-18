@@ -28,28 +28,30 @@ $( "#s" ).change(function() {
 
 
 //Validate comment forms
-$('#commentform').validate({
-	rules: {
-	  author: {
-		required: true,
-		minlength: 2
-	  },		 
-	  email: {
-		required: true,
-		email: true
-	  },
-	  comment: {
-		required: true,
-		minlength: 2
-	  }
-	},		 
-	messages: {
-	  author: "Please enter your name",
-	  email: "Please enter a valid email address",
-	  comment: "Please type your comment"
-	},		 
-	errorElement: "div",
-	errorPlacement: function(error, element) {
-	  element.after(error);
-	}	 
-});
+if ( $( '#commentform' ).length ) {
+  $('#commentform').validate({
+      rules: {
+        author: {
+          required: true,
+          minlength: 2
+        },		 
+        email: {
+          required: true,
+          email: true
+        },
+        comment: {
+          required: true,
+          minlength: 2
+        }
+      },		 
+      messages: {
+        author: "Please enter your name",
+        email: "Please enter a valid email address",
+        comment: "Please type your comment"
+      },		 
+      errorElement: "div",
+      errorPlacement: function(error, element) {
+        element.after(error);
+      }	 
+  });
+}
