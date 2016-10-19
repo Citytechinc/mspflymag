@@ -19,12 +19,14 @@ if ( $( '.home' ).length ) {
 	});
 }
 
+/*Disabled due to Pantheon Personal plan not supporting solr
 //Auto submit search form when selecting solr suggestions
 $( "#s" ).change(function() {
   $( ".ac_results li" ).click(function() {
     $( "#searchsubmit" ).click();
   });
 });
+*/
 
 
 //Validate comment forms
