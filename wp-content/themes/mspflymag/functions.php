@@ -133,7 +133,7 @@ function be_ajax_load_more() {
 add_action( 'wp_ajax_be_ajax_load_more', 'be_ajax_load_more' );
 add_action( 'wp_ajax_nopriv_be_ajax_load_more', 'be_ajax_load_more' );
 
-/*Remove all Jetpack css as we are only using Photon and Statistics
+/*Remove all Jetpack css as we are only using Photon and Statistics. Also remove the devicepx-jetpack.js script.
   Source: https://css-tricks.com/snippets/wordpress/removing-jetpack-css/
 */
 
@@ -168,3 +168,8 @@ function jeherve_remove_all_jp_css() {
   wp_deregister_style( 'widget-grid-and-list' ); // Top Posts widget
 }
 add_action('wp_print_styles', 'jeherve_remove_all_jp_css' );
+
+function remove_devicepx() {
+    wp_dequeue_script( 'devicepx' );
+}
+add_action( 'wp_enqueue_scripts', 'remove_devicepx' );
