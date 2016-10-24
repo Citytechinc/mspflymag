@@ -342,7 +342,8 @@ class Webdados_FB_Public {
 		}
 
 		//Trim description
-		$fb_desc = (
+		$fb_desc = trim( str_replace('&nbsp;', ' ', $fb_desc) ); //Non-breaking spaces are usefull on a meta description. We'll just convert them to normal spaces to really trim it
+		$fb_desc = trim(
 					intval($this->options['fb_desc_chars'])>0
 					?
 					mb_substr( wp_strip_all_tags( strip_shortcodes( stripslashes( $fb_desc ), true ) ), 0, intval($this->options['fb_desc_chars']) )

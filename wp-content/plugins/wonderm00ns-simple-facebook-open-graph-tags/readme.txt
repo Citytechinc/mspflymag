@@ -4,7 +4,7 @@ Donate link: http://blog.wonderm00n.com/2011/10/14/wordpress-plugin-simple-faceb
 Tags: facebook, open graph, open graph protocol, share, social, meta, rss, twitter card, twitter, schema, google+, g+, google, google plus, image, like, seo, search engine optimization, woocommerce, yoast seo, wordpress seo, woocommerce, subheading, php7
 Requires at least: 4.0
 Tested up to: 4.6.1
-Stable tag: 2.0.3
+Stable tag: 2.0.4
 Inserts Facebook Open Graph, Google+/Schema.org, Twitter and SEO Meta Tags into your WordPress Website for more efficient sharing results.
 
 == Description ==
@@ -120,6 +120,9 @@ We DO NOT provide email support for this plugin. If you send us an email asking 
 2. Or we can give you a quote on premium email/phone support if you prefer to
 
 == Changelog ==
+
+= 2.0.4 =
+* Non-breaking spaces are converted to normal spaces on the description, because they aren't needed there and this way we can really trim the description 
 
 = 2.0.3 =
 * Fixed WPML homepage custom description translation that was broken on 2.0
