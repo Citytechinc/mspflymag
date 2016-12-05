@@ -2,9 +2,9 @@
 Contributors: Ibericode, DvanKooten, hchouhan, lapzor
 Donate link: https://mc4wp.com/#utm_source=wp-plugin-repo&utm_medium=mailchimp-for-wp&utm_campaign=donate-link
 Tags: mailchimp, mc4wp, email, marketing, newsletter, subscribe, widget, mc4wp, contact form 7, woocommerce, buddypress, ibericode, mailchimp forms, mailchimp integrations
-Requires at least: 3.8
+Requires at least: 4.1
 Tested up to: 4.6.1
-Stable tag: 4.0.6
+Stable tag: 4.0.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -188,6 +188,46 @@ MailChimp for WordPress is being developed on GitHub. If you want to collaborate
 6. Detailed statistics on which methods are generating the most subscribers. **(Pro Feature)**
 
 == Changelog == 
+
+
+
+#### 4.0.9 - November 23, 2016
+
+**Fixes**
+
+- Issue with escaped HTML when using form tags introduced by previous update.
+
+
+#### 4.0.8 - November 23, 2016
+
+**Improvements**
+
+- Improved handling of large debug logs.
+- Improved error messages when writing exceptions to debug log.
+- Show notice when form is missing required MailChimp fields.
+- Custom form integration now handles arrays with 1-level depth. Thanks to [Mardari Igor](https://github.com/GarryOne).
+- You can now use nested tags in your form code, eg `{data key="utm_source" default="{current_path}"}`
+
+**Additions**
+
+- Add `data-hide-if` attribute logic to forms. See [conditionally hide form fields](https://mc4wp.com/kb/conditional-fields-elements/). Thanks to [Kurt Zenisek](http://kurtzenisek.com/).
+- Add hooks for delayed BuddyPress sign-up. Thanks to [Christian Wach](https://profiles.wordpress.org/needle).
+
+
+#### 4.0.7 - October 25, 2016
+
+**Improvements**
+
+- Obfuscate all email addresses in debug log. Thanks [Sauli Lepola](https://twitter.com/SJLfi).
+- Ask for confirmation before disabling double opt-in, which we do not recommend.
+- Allow vertical resizing of debug log.
+- Failsafe against including JavaScript file twice.
+- No longer wrapping CF7 checkbox in paragraph tags.
+
+**Additions**
+
+- Added `mc4wp_form_api_error` action hook for API errors encountered by forms.
+- Added `element_class` argument to `[mc4wp_form]` shortcode for adding CSS classes.
 
 
 #### 4.0.6 - October 10, 2016
