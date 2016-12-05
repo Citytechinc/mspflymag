@@ -3,7 +3,7 @@ jQuery(function($){
     if ($('#content-grid-container').length) { //are we even on a page with infinite scroll?
         //hide existing pager
         $(".pagination-centered").hide();
-        $('#content-grid-container').append( '<span class="load-more"></span>' );
+        $('#content-grid-container').append( '<div class="load-more" style="clear:both;"></div>' );
         //$( '#content-grid-container' ).foundation(); //initialize equalizer the first time
 
         //Reinitialize equalizer on every ajax call
@@ -31,7 +31,7 @@ jQuery(function($){
                 scrollHandling.allow = false;
                 setTimeout(scrollHandling.reallow, scrollHandling.delay);
                 var offset = $(button).offset().top - $(window).scrollTop();
-                if( 4000 > offset ) {
+                if( 1500 > offset ) {
                     loading = true;
                     var data = {
                         action: 'be_ajax_load_more',
