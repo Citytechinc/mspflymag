@@ -31,7 +31,7 @@ jQuery(function($){
                 scrollHandling.allow = false;
                 setTimeout(scrollHandling.reallow, scrollHandling.delay);
                 var offset = $(button).offset().top - $(window).scrollTop();
-                if( 1500 > offset ) {
+                if( 1800 > offset ) {
                     loading = true;
                     var data = {
                         action: 'be_ajax_load_more',
