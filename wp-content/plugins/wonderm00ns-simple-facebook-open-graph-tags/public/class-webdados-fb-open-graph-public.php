@@ -811,6 +811,11 @@ class Webdados_FB_Public {
 
 	/* Get image size */
 	private function get_open_graph_image_size( $image ) {
+		$transient_key = 'webdados_og_image_size_' . md5($image);
+		$transient_val = get_transient($transient_key);
+		if ($transient_val) {
+			return $transient_val;
+		}
 		if ( stristr($image, 'http://' ) || stristr($image, 'https://' ) || mb_substr($image, 0, 2)=='//' ) {
 			if ( function_exists('curl_version' ) && function_exists('imagecreatefromstring' ) ) {
 				//We'll get just a part of the image to speed things up. From http://stackoverflow.com/questions/4635936/super-fast-getimagesize-in-php
@@ -865,6 +870,9 @@ class Webdados_FB_Public {
 		} else {
 			//Local path
 			$img_size = getimagesize($image);
+		}
+		if ($img_size) {
+			set_transient($transient_key, $img_size, DAY_IN_SECONDS);
 		}
 		$this->image_size = $img_size;
 		return $img_size;
