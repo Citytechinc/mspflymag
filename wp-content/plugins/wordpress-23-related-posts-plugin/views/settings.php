@@ -8,14 +8,14 @@
 		<div class="support">
 			<h4><?php _e("Awesome support", 'wp_related_posts'); ?></h4>
 			<p>
-				<?php _e("If you have any questions please contact us at",'wp_related_posts');?> <a target="_blank" href="mailto:support+wprp@zemanta.com"><?php _e("support", 'wp_related_posts');?></a>.
+				<?php _e("If you have any questions please contact us at",'wp_related_posts');?> <a target="_blank" href="mailto:ea-support@sovrn.com"><?php _e("support", 'wp_related_posts');?></a>.
 			</p>
 		</div>
 		<h2 class="title">
-			<?php _e("Wordpress Related Posts",'wp_related_posts');?> 
+			<?php _e("Wordpress Related Posts",'wp_related_posts');?>
 			<span>
-				<?php _e("by",'wp_related_posts');?> 
-				<a href="http://www.zemanta.com">Zemanta</a>
+				<?php _e("by",'wp_related_posts');?>
+				<a target="_blank" href="http://www.sovrn.com">Sovrn</a>
 			</span>
 		</h2>
 	</div>
@@ -28,7 +28,7 @@
 					<?php _e('Email:', 'wp_related_posts'); ?>
 				</th>
 				<td>
-					<input type="text" id="wp_rp_subscribe_email" value="<?php esc_attr_e($meta['email']); ?>" class="regular-text" /> 
+					<input type="text" id="wp_rp_subscribe_email" value="<?php esc_attr_e($meta['email']); ?>" class="regular-text" />
 					<a id="wp_rp_subscribe_button" href="#" class="button-primary"><?php _e('Subscribe', 'wp_related_posts'); ?></a>
 					<a id="wp_rp_unsubscribe_button" href="#" class="button-primary"><?php _e('Unsubscribe', 'wp_related_posts'); ?></a>
 				</td>
@@ -54,17 +54,17 @@
 		<form method="get" action="">
 			<fieldset>
 				<input type="hidden" name="page" value="wordpress-related-posts" />
-				<input class="button-primary" type="submit" name="wp_rp_upload_articles" value="<?php _e("Upload my articles to Zemanta", 'wp_related_posts');?>">
+				<input class="button-primary" type="submit" name="wp_rp_upload_articles" value="<?php _e("Upload my articles to Sovrn", 'wp_related_posts');?>">
 			</fieldset>
 		</form>
 		<?php else: ?>
 		<p>Your articles are being uploaded.</p>
 		<?php endif; ?>
-		<h3>Number of articles in Zemanta network: <?php echo $articles_count; ?></h3>
+		<h3>Number of articles in Sovrn network: <?php echo $articles_count; ?></h3>
 	</div>
 	<!-- MAIN FORM -->
 	<form method="post" enctype="multipart/form-data" action="<?php echo $form_url; ?>" id="wp_rp_settings_form" style="display: <?php echo $form_display; ?>;">
-		<?php wp_nonce_field('wp_rp_settings', '_wp_rp_nonce') ?>		
+		<?php wp_nonce_field('wp_rp_settings', '_wp_rp_nonce') ?>
 		<div id="wp_rp_basic_settings_collapsible" block="basic_settings" class="settings_block collapsible">
 			<a href="#" class="collapse-handle">Collapse</a>
 			<h2><?php _e("Basic settings",'wp_related_posts');?></h2>
@@ -98,7 +98,7 @@
 					<input name="wp_rp_enable_themes" type="checkbox" id="wp_rp_enable_themes" value="yes"<?php checked($options["enable_themes"]); ?> />
 					<?php _e("Enable Themes",'wp_related_posts'); ?>*
 				</label>
-				
+
 				<h4><?php _e("Layout",'wp_related_posts'); ?></h4>
 				<div id="wp_rp_theme_options_wrap" style="display:none;">
 					<input type="hidden" id="wp_rp_desktop_theme_selected" value="<?php esc_attr_e($options['desktop']['theme_name']); ?>" />
@@ -214,7 +214,7 @@
 							</div>
 							<label>
 								<input name="wp_rp_classic_state" type="checkbox" id="wp_rp_classic_state" value="yes" <?php checked($meta['classic_user']); ?>>
-								<?php _e("Display widget with <a href=\"http://support.zemanta.com/customer/portal/articles/1423148-why-should-i-add-related-articles-from-around-the-web-\" target=\"blank\">articles from around the web</a> in your \"Compose-new-post\" page",'wp_related_posts');?>
+								<?php _e("Display widget with articles from around the web in your \"Compose-new-post\" page",'wp_related_posts');?>
 							</label><?php endif; ?>
 							<br/>
 							<label>
@@ -251,17 +251,15 @@
 			<div class="container">
 				<h3>Did you know?</h3>
 				This plugin supports two types of related posts - automatic and those you can add manually.
-				
-				<p>Automatic posts work out of the box. They're already turned on and they link to your own posts only. And that's just the <a href="http://zem.si/1kGo9V6" target="_blank">first step</a> towards being a better blogger.</p>
-				
-				<p>But you <a href="http://zem.si/1eolNqf" target="_blank">can do more</a>. You can attract attention from other bloggers and improve your credibility by inserting recommendations that show up below your editor, while you write. This way everybody wins.</p>
+
+				<p>Automatic posts work out of the box. They're already turned on and they link to your own posts only. And that's just the first step towards being a better blogger.</p>
+
+				<p>But you can do more. You can attract attention from other bloggers and improve your credibility by inserting recommendations that show up below your editor, while you write. This way everybody wins.</p>
 
 				<p>Also - you can now use our related articles widget while composing your posts in the <strong>Text mode</strong> of your editor. This way your workflow won't be interrupted by switching back and forth between <em>Visual</em> and <em>Text</em> mode.</p>
 				<iframe src="//player.vimeo.com/video/98542850" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 				<h3>FAQ</h3>
 				<p><strong>Are manually added related posts available only for bloggers who write in English?</strong> <br />Yes.</p>
-				<p><strong>Will my posts be recommended to others?</strong> <br />Depends, check our <a href="http://zem.si/PLAzS1" target="_blank">guidelines</a> if you fit in.
-				</p>
 
 			</div>
 		</div>
@@ -270,7 +268,3 @@
 		</p>
 	</form>
 </div>
-
-
-
-

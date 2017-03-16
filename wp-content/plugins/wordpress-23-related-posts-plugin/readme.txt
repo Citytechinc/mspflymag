@@ -1,22 +1,18 @@
-﻿=== Plugin Name ===
-Contributors: zemanta
-Tags: related,posts,post,related posts,plugin,seo
+﻿=== WordPress Related Posts ===
+Contributors: sovrn, zemanta
+Tags: related,posts,post,related posts,plugin,seo,sovrn
 License: GPLv2
 Requires at least: 3.6
 Tested up to: 4.6
-Stable tag: 3.6.1
+Stable tag: 3.6.3
 
 WordPress Related Posts - the plugin for related posts with thumbnails. Caching included.
 
 == Description ==
 
-Quickly increase your readers' engagement with your posts by adding Related Posts in the footer of your content. Automatically added Related Posts can increase your internal traffic up to 10%. Just install and activate. To attract attention and improve SEO, link out to Related Posts across the web from your compose screen. Search for posts and hand-pick them with ease. Recommendations are provided by Zemanta's world-class semantic service. Plugin supports different styles, thumbnails, is fully customizable and includes caching for improved performance. 
+Quickly increase your readers' engagement with your posts by adding Related Posts in the footer of your content. Automatically added Related Posts can increase your internal traffic up to 10%. Just install and activate. To attract attention and improve SEO, link out to Related Posts across the web from your compose screen. Search for posts and hand-pick them with ease. Recommendations are provided by Sovrn's world-class semantic service. Plugin supports different styles, thumbnails, is fully customizable and includes caching for improved performance.
 
 After installation, go to Settings -> Related Posts in your plugins list and Turn on Advanced Features!
-
-
-[Click here to read more about this plugin.](http://zem.si/1kc5j9Z)
-
 
 **Share the Link Love**
 
@@ -27,7 +23,7 @@ After installation, go to Settings -> Related Posts in your plugins list and Tur
 
 = What does this plugin do? =
 
-It places a list of links with thumbnails at the bottom of your posts. It increases pageviews and engages readers to stay on your site longer and discover more of your content.  It also recommends related posts from across the web and in turn promotes your posts to other users. In this way you get new unique visitors to your site and improve SEO.
+It places a list of links with thumbnails at the bottom of your posts. It increases page views and engages readers to stay on your site longer and discover more of your content.  It also recommends related posts from across the web and in turn promotes your posts to other users. In this way you get new unique visitors to your site and improve SEO.
 
 = Why should I use this plugin and not any other? =
 
@@ -48,15 +44,15 @@ Yes, related posts are responsive so they adapt to the screen size to ensure max
 
 = Can I customize the widget? =
 
-Yes, Zemanta is offered in different themes which you can also customize with simple CSS.
+Yes, Sovrn is offered in different themes which you can also customize with simple CSS.
 
-= Will Zemanta steal my "link-juice"? =
+= Will Sovrn steal my "link-juice"? =
 
-No, Zemanta does not use redirects and is juice friendly. :)
+No, Sovrn does not use redirects and is juice friendly. :)
 
 = What about Terms of Service and Privacy Policy? =
-	
-Before using the plugin please read the full version of [Zemanta Terms of Service](http://www.zemanta.com/legal/terms-of-service/) and [Zemanta Privacy Policy](http://www.zemanta.com/legal/privacy/).
+
+Before using the plugin please read the full version of [Sovrn Terms of Service](http://www.sovrn.com/editorial-network-terms-of-service/) and [Sovrn Privacy Policy](http://www.sovrn.com/privacy-policy/).
 
 == Installation ==
 
@@ -80,8 +76,8 @@ Before using the plugin please read the full version of [Zemanta Terms of Servic
 1. WordPress Related Posts Default Theme.
 2. WordPress Related Posts responsive theme on a Galaxy Nexus and iPhone 4s.
 
-== Terms of service ==	
-The plugin source code is released under GPLv2. Usage of our service is governed by [Zemanta Terms of Service](http://www.zemanta.com/legal/terms-of-service/) and [Zemanta Privacy Policy](http://www.zemanta.com/legal/privacy/).
+== Terms of service ==
+The plugin source code is released under GPLv2. Usage of our service is governed by [Sovrn Terms of Service](http://www.sovrn.com/editorial-network-terms-of-service/) and [Sovrn Privacy Policy](http://www.sovrn.com/privacy-policy/).
 
 == Upgrade Notice ==
 
@@ -92,6 +88,12 @@ New thumbnailer might break backwards compatibility for blogs with custom thumbn
 Fix for security vulnerability. Upgrade immediately.
 
 == Changelog ==
+
+= 3.6.3 =
+* Rebrand
+
+= 3.6.2 =
+* String change
 
 = 3.6.1 =
 * Removed a deprecated feature for which some users reported performance issues
@@ -150,7 +152,7 @@ Fix for security vulnerability. Upgrade immediately.
 = 3.3.2 =
 * Changed default thumbnail title to image file name
 * Bug fixes for thumbnailer
-* Fixed compatibility issues with Open Graph plugins 
+* Fixed compatibility issues with Open Graph plugins
 
 = 3.3.1 =
 * Added setting for admins to restrict the ability to edit automatically added Related posts to admins only
@@ -286,7 +288,7 @@ Fix for security vulnerability. Upgrade immediately.
 = 1.2.1 =
 * Sane defaults
 
-= 1.2 = 
+= 1.2 =
 * Compatible with WordPress 3.0
 
 = 1.1 =

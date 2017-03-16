@@ -17,15 +17,12 @@ $mc4wp_license_manager = $license_manager;
 
 /**
  * @ignore
- * @access private
- *
- * @param array $opts
  */
-function __mc4wp_premium_show_license_form( ) {
+function _mc4wp_premium_show_license_form( ) {
 	global $mc4wp_license_manager;
 	echo '<div class="mc4wp-license-form medium-margin">';
 	$mc4wp_license_manager->show_license_form( false );
 	echo '</div>';
 }
 
-add_action( 'mc4wp_admin_before_other_settings', '__mc4wp_premium_show_license_form' );
+add_action( 'mc4wp_admin_before_other_settings', '_mc4wp_premium_show_license_form' );

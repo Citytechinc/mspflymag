@@ -167,7 +167,7 @@ class MC4WP_Log_Table extends WP_List_Table {
 	}
 
 	public function column_datetime( $item ) {
-		$date = MC4WP_Tools::mysql_datetime_to_local_datetime( $item->datetime );
+		$date = mc4wp_logging_gmt_date_format( $item->datetime );
 		return esc_html( $date );
 	}
 

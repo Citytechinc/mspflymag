@@ -244,12 +244,13 @@ class MC4WP_Styles_Builder {
 
 	/**
 	 * Act on user-triggered actions
-	 *
-	 * @return array
 	 */
 	protected function act() {
 
 		$form_id = (int) $_POST['form_id'];
+        if( empty( $form_id ) ) {
+            return;
+        }
 
 		// was delete button clicked?
 		if( isset( $_POST['_mc4wp_delete_form_styles'] ) ) {
@@ -492,8 +493,12 @@ class MC4WP_Styles_Builder {
 			return true;
 		}
 
-		// unlink just this specific stylesheet
-		unlink( $dir . sprintf( '/form-%d.css', $form_id ) );
+		// only unlink if file exists
+        $filename = $dir . sprintf( '/form-%d.css', $form_id );
+        if( file_exists( $filename ) ) {
+            unlink( $filename );
+        }
+
 		return true;
 	}
 

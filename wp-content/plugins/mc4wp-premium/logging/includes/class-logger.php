@@ -57,7 +57,7 @@ class MC4WP_Logger {
 			'type' => 'mc4wp-top-bar',
 		);
 
-		if( is_a( $subscriber_data, 'MC4WP_MailChimp_Subscriber', true ) ) {
+		if( $subscriber_data instanceof MC4WP_MailChimp_Subscriber ) {
 			$data['email_address'] = $subscriber_data->email_address;
 			$data['merge_fields'] = $subscriber_data->merge_fields;
 			$data['vip'] = $subscriber_data->vip;
@@ -147,7 +147,7 @@ class MC4WP_Logger {
 
 		// for BC with v3.x of MailChimp for WordPress
         $plain_data_map = array_values( $data_map );
-		if( empty( $plain_data_map ) || ! is_a( $plain_data_map[0], 'MC4WP_MailChimp_Subscriber' ) ) {
+		if( empty( $plain_data_map ) || ! $plain_data_map[0] instanceof MC4WP_MailChimp_Subscriber ) {
 			$lists = $form->get_lists();
 			$list_id = array_shift( $lists );
 

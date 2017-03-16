@@ -1,6 +1,105 @@
 Changelog
 ==========
 
+#### 3.3.7 - February 14, 2017
+
+**Fixes**
+
+- E-commerce: Fixes "Schema describes ..." errors by enforcing MailChimp's JSON scheme.
+- Use correct email address when updating an abandoned cart if user has two email addresses.
+
+**Improvements**
+
+- E-commerce: Strip HTML from product titles.
+- E-commerce: Update customer data in MailChimp separately from updating a cart.
+
+**Additions**
+
+- E-commerce: Added `mc4wp_ecommerce_product_data` filter to modify product data before sending to MailChimp.
+
+
+#### 3.3.6 - January 16, 2017
+
+**Improvements**
+
+- E-commerce: Handle deleted products in (old) orders by sending a "generic deleted product" to MailChimp.
+- E-commerce: Update parent product instead of individual product variants.
+- Email notifications: Write info line to debug log whenever an email is sent.
+
+**Additions**
+
+- E-commerce: Add `mc4wp_ecommerce_send_order_to_mailchimp` filter hook.
+
+**Fixes**
+
+- E-commerce: Products missing top level `url` attribute would break product block in MailChimp campaigns.
+
+
+#### 3.3.5 - December 20, 2016
+
+**Fixes**
+
+- Fatal error on sites still running on PHP 5.2.
+
+
+#### 3.3.4 - December 12, 2016
+
+**Improvements**
+
+- E-commerce: Force-save queue when processing items, because save action may never be called on very long-lived processes.
+- AJAX Forms: Replace configuration with lazy loaded config store to work better with WP Rocket.
+- E-commerce: Add help text about connecting your store to a different MailChimp list.
+
+
+#### 3.3.3 - November 30, 2016
+
+**Fixes**
+
+- E-commerce: `ajaxurl` not set on WooCommerce checkout when capturing guest email for cart tracking.
+
+**Improvements**
+
+- E-commerce: Various SQL performance optimisations 
+- E-commerce: Don't exit WP CLI command on errors.
+- E-commerce: Use `shop_single` image size for products in MailChimp (instead of the smaller thumbnail)
+
+
+#### 3.3.2 - November 23, 2016
+
+**Improvements**
+
+- E-commerce: Background queue won't stall on PHP errors now.
+- E-commerce: Show "last updated" time on settings page.
+- E-commerce: Show status text while processing background jobs.
+- E-commerce: Don't try to send abandoned carts without an email address.
+- E-commerce: Write PHP errors in background queue to debug log.
+
+
+#### 3.3.1  - November 2, 2016
+
+**Fixes**
+
+- E-commerce: "Schema describes string, integer found instead" error when adding orders.
+
+**Improvements**
+
+- Don't show e-commerce settings when store is not connected to a list yet.
+- E-commerce: When campaign data for an order becomes corrupted, we'll now auto-retry without that campaign data.
+- E-commerce: Check if user has `billing_email` before updating remote customer.
+- E-commerce: Send "draft" products to MailChimp too. These will not be included in Product Recommendations.
+- E-commerce wizard now always starts with most recent orders.
+- Failsafe against including AJAX script for forms twice.
+
+**Additions**
+
+- Add `mc4wp_ecommerce_customer_data` to filter customer data that is sent to MailChimp.
+
+
+#### 3.3 - October 18, 2016
+
+This release allows you to [integrate your WooCommerce store with MailChimp's newest API](https://mc4wp.com/kb/upgrading-ecommerce-api-v3/), enabling cool things like [product recommendations](https://mailchimp.com/features/product-recommendations/) & [abandoned cart recovery](https://mailchimp.com/features/abandoned-cart/).
+
+
 #### 3.2.2 - September 8, 2016
 
 **Fixes**

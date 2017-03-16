@@ -2,6 +2,8 @@
 
 defined( 'ABSPATH' ) or exit;
 
+include_once dirname( __FILE__ ) . '/includes/functions.php';
+
 $plugin = new MC4WP_Plugin( __FILE__, MC4WP_PREMIUM_VERSION );
 
 if( is_admin() && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {

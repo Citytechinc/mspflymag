@@ -61,20 +61,32 @@ class MC4WP_Form_Notification_Factory {
 	 */
 	public function send_form_notification( MC4WP_Form $form, $email_address, $data, $map = array() ) {
 
-		if ( ! $form->settings['email_notification']['enabled'] ) {
+        $email_settings = $form->settings['email_notification'];
+
+		if ( ! $email_settings['enabled'] ) {
 			return false;
 		}
 
 		$email = new MC4WP_Email_Notification(
-			$form->settings['email_notification']['recipients'],
-			$form->settings['email_notification']['subject'],
-			$form->settings['email_notification']['message_body'],
-			$form->settings['email_notification']['content_type'],
+            $email_settings['recipients'],
+            $email_settings['subject'],
+            $email_settings['message_body'],
+            $email_settings['content_type'],
 			$form,
             $map
 		);
 
 		$email->send();
+
+        // write info to log
+        $this->get_log()->info( sprintf( 'Form %d > Sent email notification to %s', $form->ID, $email_settings['recipients'] ) );
 	}
+
+    /**
+     * @return MC4WP_Debug_Log
+     */
+	private function get_log() {
+        return mc4wp('log');
+    }
 
 }

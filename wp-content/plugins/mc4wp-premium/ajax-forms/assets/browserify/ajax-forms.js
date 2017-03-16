@@ -1,10 +1,16 @@
 'use strict';
 
+var ConfigStore = require('./_config.js');
 var Loader = require('./_form-loader.js');
+
 var forms = window.mc4wp.forms;
 var busy = false;
-var config = mc4wp_ajax_vars || {};
-var generalErrorMessage = '<div class="mc4wp-alert mc4wp-error"><p>'+ config.error_text + '</p></div>';
+var config = new ConfigStore('mc4wp_ajax_vars');
+
+// failsafe against including script twice
+if( config.get('ready') ) {
+	return;
+}
 
 forms.on('submit', function( form, event ) {
 
@@ -29,6 +35,10 @@ forms.on('submit', function( form, event ) {
 function submit( form ) {
 
 	var loader = new Loader(form.element);
+	var loadingChar = config.get('loading_character');
+	if( loadingChar ) {
+		loader.setCharacter(loadingChar);
+	}
 
 	function start() {
 		// Clear possible errors from previous submit
@@ -54,7 +64,7 @@ function submit( form ) {
 						console.log( 'MailChimp for WordPress: failed to parse AJAX response.\n\nError: "' + error + '"' );
 
 						// Not good..
-						form.setResponse(generalErrorMessage);
+						form.setResponse('<div class="mc4wp-alert mc4wp-error"><p>'+ config.get('error_text') + '</p></div>');
 						return;
 					}
 
@@ -65,7 +75,7 @@ function submit( form ) {
 				}
 			}
 		};
-		request.open('POST', config.ajax_url, true);
+		request.open('POST', config.get('ajax_url'), true);
 		request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 		request.send(form.getSerializedData());
 		request = null;
@@ -112,3 +122,4 @@ function submit( form ) {
 	}
 }
 
+config.set('ready', true);

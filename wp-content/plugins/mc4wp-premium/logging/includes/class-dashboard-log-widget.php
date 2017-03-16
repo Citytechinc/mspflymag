@@ -57,7 +57,7 @@ class MC4WP_Dashboard_Log_Widget {
 			<?php foreach( $items as $item ) { ?>
 				<tr>
 					<td><a href="<?php echo admin_url('admin.php?page=mailchimp-for-wp-reports&tab=log#item-' . $item->ID ) ?>"><?php echo esc_html( $item->email_address ); ?></a></td>
-					<td><?php echo MC4WP_Tools::mysql_datetime_to_local_datetime( $item->datetime, 'M, j H:i' ); ?></td>
+					<td><?php echo mc4wp_logging_gmt_date_format( $item->datetime, 'M, j H:i' ); ?></td>
 				</tr>
 			<?php } ?>
 			</table>

@@ -1,5 +1,5 @@
 <?php
-define('WP_RP_VERSION', '3.6.1');
+define('WP_RP_VERSION', '3.6.3');
 
 define('WP_RP_PLUGIN_FILE', plugin_basename(__FILE__));
 
@@ -39,13 +39,13 @@ function wp_rp_admin_style() {
 	wp_enqueue_style('wp_rp_admin_style', plugins_url('static/css/dashboard.css', __FILE__));
 }
 add_action( 'admin_enqueue_scripts', 'wp_rp_admin_style');
-  
+
 function wp_rp_global_notice() {
 	global $pagenow, $wp_rp_global_notice_pages;
 	if (!current_user_can('delete_users')) {
 		return;
 	}
-	
+
 	$meta = wp_rp_get_meta();
 	$close_url = add_query_arg( array(
 		'page' => 'wordpress-related-posts',
@@ -57,7 +57,7 @@ function wp_rp_global_notice() {
 	}
 }
 add_action('all_admin_notices', 'wp_rp_global_notice' );
-  
+
 function wp_rp_extend_adminbar() {
 	global $wp_admin_bar;
 
@@ -75,11 +75,11 @@ global $wp_rp_output;
 $wp_rp_output = array();
 function wp_rp_add_related_posts_hook($content) {
 	global $wp_rp_output, $post;
-	
+
 	if( !is_object($post) ) {
 		return $content;
 	}
-	
+
 	$options = wp_rp_get_options();
 
 	if ($content != "" && $post->post_type === 'post' && (($options["on_single_post"] && is_single()) || (is_feed() && $options["on_rss"]))) {
@@ -123,7 +123,7 @@ function wp_rp_ajax_load_articles_callback() {
 	global $post;
 
 	$platform_options = wp_rp_get_platform_options();
-    
+
 	$getdata = stripslashes_deep($_GET);
 	if (!isset($getdata['post_id'])) {
 		die('error');
@@ -168,7 +168,7 @@ function wp_rp_ajax_load_articles_callback() {
 
 	foreach (array_slice($related_posts, $from) as $related_post) {
 		$excerpt_max_length = $platform_options["excerpt_max_length"];
-		
+
 		$excerpt = $related_post->post_excerpt;
 		if (!$excerpt) {
 			$excerpt = strip_shortcodes(strip_tags($related_post->post_content));
@@ -281,7 +281,7 @@ function wp_rp_text_shorten($text, $max_chars) {
 	}
 	return $shortened_text . WP_RP_EXCERPT_SHORTENED_SYMBOL; //'...';
 }
-  
+
 function wp_rp_generate_related_posts_list_items($related_posts, $selected_related_posts, $post_categories) {
 	$options = wp_rp_get_options();
 	$platform_options = wp_rp_get_platform_options();
@@ -447,7 +447,7 @@ function wp_rp_head_resources() {
 
 	$static_url = plugins_url('static/', __FILE__);
 	$theme_url = plugins_url(WP_RP_STATIC_THEMES_PATH, __FILE__);
-	
+
 	if ($options['enable_themes']) {
 		if ($platform_options['theme_name'] !== 'plain.css' && $platform_options['theme_name'] !== 'm-plain.css') {
 			$output .= '<link rel="stylesheet" href="' . $theme_url . $platform_options['theme_name'] . '?version=' . WP_RP_VERSION . '" />' . "\n";
@@ -529,7 +529,7 @@ function wp_rp_get_related_posts($before_title = '', $after_title = '') {
 		$posts_footer .= '<div class="wp_rp_footer"><a class="wp_rp_edit" href="#" id="wp_rp_edit_related_posts">Edit Related Posts</a></div>';
 	}
 	if ($options['display_zemanta_linky']) {
-		$posts_footer .= '<div class="wp_rp_footer"><a class="wp_rp_backlink" target="_blank" href="http://www.zemanta.com/?wp-related-posts" rel="nofollow">Zemanta</a></div>';
+		$posts_footer .= '<div class="wp_rp_footer"><a class="wp_rp_backlink" target="_blank" href="http://www.sovrn.com/" rel="nofollow">Sovrn</a></div>';
 	}
 
 	$css_classes = 'related_post wp_rp';
@@ -545,13 +545,13 @@ function wp_rp_get_related_posts($before_title = '', $after_title = '') {
 		$wp_rp_is_first_widget = false;
 		$first_id_attr = 'id="wp_rp_first"';
 	}
-	
+
 	$wrap_style = '';
 	//error_log('test group when content:'  . $wp_rp_test_group);
 	if ($wp_rp_test_group == 2) {
 		$wrap_style = ' style="display:none;"';
 	}
-	
+
 	$output = '<div class="wp_rp_wrap ' . $css_classes_wrap . '" ' . $first_id_attr . $wrap_style . '>' .
 			'<div class="wp_rp_content">' .
 				$related_posts_title .

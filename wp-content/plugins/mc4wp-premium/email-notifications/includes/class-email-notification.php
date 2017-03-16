@@ -266,7 +266,7 @@ class MC4WP_Email_Notification {
 
         // for BC with MailChimp for WP 3.x
         $plain_map = array_values( $this->map );
-        if( ! empty( $plain_map ) && ! is_a( $plain_map[0], 'MC4WP_MailChimp_Subscriber' ) ) {
+        if( ! empty( $plain_map ) && ! $plain_map[0] instanceof MC4WP_MailChimp_Subscriber ) {
             foreach( $this->map as $key => $value ) {
                 $string .= sprintf( '<strong>%s</strong>: %s', $key, $this->readable_value( $value ) ) . PHP_EOL;
             }
@@ -302,19 +302,6 @@ class MC4WP_Email_Notification {
         }
 
         // TODO: Add leftover data? See https://github.com/ibericode/mc4wp-premium/issues/53
-
-        return $string;
-    }
-
-    /**
-     * @return string
-     */
-    private function replace_summary_tag_data() {
-        $string = '';
-
-        foreach( $this->data as $key => $value ) {
-            $string .= sprintf( '<strong>%s</strong>: %s <br />', $key, $this->readable_value( $value ) );
-        }
 
         return $string;
     }

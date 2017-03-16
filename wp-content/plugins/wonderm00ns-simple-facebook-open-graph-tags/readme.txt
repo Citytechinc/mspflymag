@@ -3,8 +3,8 @@ Contributors: webdados, wonderm00n
 Donate link: http://blog.wonderm00n.com/2011/10/14/wordpress-plugin-simple-facebook-open-graph-tags/
 Tags: facebook, open graph, open graph protocol, share, social, meta, rss, twitter card, twitter, schema, google+, g+, google, google plus, image, like, seo, search engine optimization, woocommerce, yoast seo, wordpress seo, woocommerce, subheading, php7
 Requires at least: 4.0
-Tested up to: 4.6.1
-Stable tag: 2.0.5
+Tested up to: 4.7.2
+Stable tag: 2.0.7
 Inserts Facebook Open Graph, Google+/Schema.org, Twitter and SEO Meta Tags into your WordPress Website for more efficient sharing results.
 
 == Description ==
@@ -120,6 +120,24 @@ We DO NOT provide email support for this plugin. If you send us an email asking 
 2. Or we can give you a quote on premium email/phone support if you prefer to
 
 == Changelog ==
+
+= 2.0.7 =
+* Better error handling when the overlay PNG image is not found or a valid image file;
+
+= 2.0.6.3 =
+* When using the overlay PNG option, the image is filled with previously filled with white in case the original OG image is a transparent PNG
+* The `fb_og_thumb_fill_color` can be used to use another color other than white, by returning an array with the rgb value
+
+= 2.0.6.2 =
+* On some server configurations using an overlay PNG would result on a 404 error on the `og:image` url
+
+= 2.0.6.1 =
+* Bumped `Tested up to` tag
+
+= 2.0.6 =
+* New `fb_og_enabled` filter that allow other plugins/themes to completely disable the tags output on specific situations
+* Fix: Use `WP_PLUGIN_DIR` instead of harcoded paths (Thanks thomasbachem)
+* Fix: Extra validation when getting Yoast SEO's icon on the 3rd party settings tab
 
 = 2.0.5 =
 * Calculated image dimensions are now stored in, 1 day valid, transients in order to avoid unnecessary http requests and improve performance (Thanks Piotr Bogdan)

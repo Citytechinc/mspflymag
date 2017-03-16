@@ -116,7 +116,7 @@ function wp_rp_set_global_notice() {
 	$wp_rp_meta = get_option('wp_rp_meta');
 	$wp_rp_meta['global_notice'] = array(
 		'title' => 'I\'ve installed Wordpress Related Posts plugin. Now what?',
-		'message' => 'Checkout how you can <a target="_blank" href="http://zem.si/1kGo9V6">create awesome content</a>. Hint: it\'s not all about YOU ;-)'
+		'message' => 'Checkout how you can create awesome content. Hint: it\'s not all about YOU ;-)'
 	);
 	update_option('wp_rp_meta', $wp_rp_meta);
 }
@@ -256,6 +256,20 @@ function wp_rp_is_classic() {
 	return false;
 }
 
+function wp_rp_migrate_3_6_2() {
+	$meta = get_option('wp_rp_meta');
+	$meta['version'] = '3.6.3';
+	$meta['new_user'] = false;
+	update_option('wp_rp_meta', $meta);
+}
+
+function wp_rp_migrate_3_6_1() {
+	$meta = get_option('wp_rp_meta');
+	$meta['version'] = '3.6.2';
+	$meta['new_user'] = false;
+	update_option('wp_rp_meta', $meta);
+}
+
 function wp_rp_migrate_3_6() {
 	$meta = get_option('wp_rp_meta');
 	$meta['version'] = '3.6.1';
@@ -279,28 +293,28 @@ function wp_rp_migrate_3_5_3() {
 	$meta = get_option('wp_rp_meta');
 	$meta['version'] = '3.5.4';
 	$meta['new_user'] = false;
-	update_option('wp_rp_meta', $meta);	
+	update_option('wp_rp_meta', $meta);
 }
 
 function wp_rp_migrate_3_5_2() {
 	$meta = get_option('wp_rp_meta');
 	$meta['version'] = '3.5.3';
 	$meta['new_user'] = false;
-	update_option('wp_rp_meta', $meta);	
+	update_option('wp_rp_meta', $meta);
 }
 
 function wp_rp_migrate_3_5_1() {
 	$meta = get_option('wp_rp_meta');
 	$meta['version'] = '3.5.2';
 	$meta['new_user'] = false;
-	update_option('wp_rp_meta', $meta);	
+	update_option('wp_rp_meta', $meta);
 }
 
 function wp_rp_migrate_3_5() {
 	$meta = get_option('wp_rp_meta');
 	$meta['version'] = '3.5.1';
 	$meta['new_user'] = false;
-	update_option('wp_rp_meta', $meta);	
+	update_option('wp_rp_meta', $meta);
 }
 
 function wp_rp_migrate_3_4_3() {
@@ -318,7 +332,7 @@ function wp_rp_migrate_3_4_3() {
 		}
 	}
 
-	
+
 	$meta['subscribed'] = false;
 	update_option('wp_rp_meta', $meta);
 

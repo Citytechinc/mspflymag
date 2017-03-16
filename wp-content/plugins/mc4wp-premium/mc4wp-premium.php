@@ -3,14 +3,14 @@
 Plugin Name: MailChimp for WordPress - Premium
 Plugin URI: https://mc4wp.com/#utm_source=wp-plugin&utm_medium=mailchimp-for-wp-pro&utm_campaign=plugins-page
 Description: Premium functionality to MailChimp for WordPress.
-Version: 3.2.2
+Version: 3.3.7
 Author: ibericode
 Author URI: https://ibericode.com/
 License: GPL v3
 Text Domain: mailchimp-for-wp
 
 MailChimp for WordPress alias MC4WP
-Copyright (C) 2012-2016, Danny van Kooten, danny@ibericode.com
+Copyright (C) 2012-2017, Danny van Kooten, danny@ibericode.com
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -30,16 +30,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 defined( 'ABSPATH' ) or exit;
 
 // Define some useful constants
-define( 'MC4WP_PREMIUM_VERSION', '3.2.2' );
+define( 'MC4WP_PREMIUM_VERSION', '3.3.7' );
 define( 'MC4WP_PREMIUM_PLUGIN_FILE', __FILE__ );
-
 /**
  * Loads the various premium add-on plugins
  *
  * @access private
  * @ignore
  */
-function __mc4wp_premium_load() {
+function _mc4wp_premium_load() {
 
 	// load autoloader
     $dir = dirname( __FILE__ );
@@ -75,9 +74,7 @@ function __mc4wp_premium_load() {
 
 	// PHP 5.3+ plugins
 	if( version_compare( PHP_VERSION, '5.3', '>=' ) ) {
-		if( ! defined( 'MC4WP_ECOMMERCE_VERSION' ) ) {
-			$plugins[] = 'ecommerce';
-		}
+		$plugins[] = 'ecommerce-loader';
 	}
 
 
@@ -92,21 +89,21 @@ function __mc4wp_premium_load() {
 
     // include each plugin
 	foreach( $plugins as $plugin ) {
-		require $dir . "/$plugin/$plugin.php";
+        require_once $dir . "/$plugin/$plugin.php";
 	}
 
 }
 
-add_action( 'plugins_loaded', '__mc4wp_premium_load', 30 );
+add_action( 'plugins_loaded', '_mc4wp_premium_load', 30 );
 
 /**
  * @access private
  * @ignore
  * */
-function __mc4wp_premium_activate() {
+function _mc4wp_premium_activate() {
     // run logging installer
-    require dirname( __FILE__ ) . '/logging/includes/class-installer.php';
+    require_once dirname( __FILE__ ) . '/logging/includes/class-installer.php';
     MC4WP_Logging_Installer::run();
 }
 
-register_activation_hook( __FILE__, '__mc4wp_premium_activate' );
+register_activation_hook( __FILE__, '_mc4wp_premium_activate' );

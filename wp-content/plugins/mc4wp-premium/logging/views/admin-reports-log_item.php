@@ -148,7 +148,7 @@ defined( 'ABSPATH' ) or exit;
 	</tr>
 	<tr>
 		<th><?php esc_html_e( 'Datetime', 'mailchimp-for-wp' ); ?></th>
-		<td><?php echo MC4WP_Tools::mysql_datetime_to_local_datetime( $item->datetime ); ?></td>
+		<td><?php echo mc4wp_logging_gmt_date_format( $item->datetime ); ?></td>
 	</tr>
 </table>
 

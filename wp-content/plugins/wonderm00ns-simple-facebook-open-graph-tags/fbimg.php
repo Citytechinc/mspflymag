@@ -35,6 +35,9 @@
 						}
 						
 						$thumb = imagecreatetruecolor( $thumb_width, $thumb_height );
+						//Fill with white because the source image can be a transparent PNG
+						$thumb_fill_color = apply_filters('fb_og_thumb_fill_color', array(255, 255, 255) );
+						imagefill($thumb, 0, 0, imagecolorallocate ( $thumb , $thumb_fill_color[0] , $thumb_fill_color[1] , $thumb_fill_color[2] ) );
 						
 						// Resize and crop
 						imagecopyresampled($thumb,
@@ -51,11 +54,14 @@
 							imagecopy($thumb, $barra, 0, 0, 0, 0, intval(WEBDADOS_FB_W), intval(WEBDADOS_FB_H) );
 						}
 	
+						@header('HTTP/1.0 200 OK');
 						header('Content-Type: image/jpeg');
-						imagejpeg($thumb, NULL, 95 );
+						imagejpeg($thumb, NULL, 95);
 						imagedestroy($image);
 						imagedestroy($thumb);
 						imagedestroy($barra);
+					} else {
+
 					}
 		
 				}
@@ -66,25 +72,30 @@
 
 
 	function imagecreatefromfile( $filename ) {
-	    if (!file_exists($filename)) {
-	        throw new InvalidArgumentException('File "'.$filename.'" not found.');
-	    }
-	    switch ( strtolower( pathinfo( $filename, PATHINFO_EXTENSION ))) {
-	        case 'jpeg':
-	        case 'jpg':
-	            return imagecreatefromjpeg($filename);
-	        break;
-	
-	        case 'png':
-	            return imagecreatefrompng($filename);
-	        break;
-	
-	        case 'gif':
-	            return imagecreatefromgif($filename);
-	        break;
-	
-	        default:
-	            throw new InvalidArgumentException('File "'.$filename.'" is not valid jpg, png or gif image.');
-	        break;
-	    }
+		try {
+	    	if (!file_exists($filename)) {
+	    	    throw new InvalidArgumentException('File "'.$filename.'" not found.');
+	    	}
+	    	switch ( strtolower( pathinfo( $filename, PATHINFO_EXTENSION ))) {
+	    	    case 'jpeg':
+	    	    case 'jpg':
+	    	        return imagecreatefromjpeg($filename);
+	    	    break;
+		
+	    	    case 'png':
+	    	        return imagecreatefrompng($filename);
+	    	    break;
+		
+	    	    case 'gif':
+	    	        return imagecreatefromgif($filename);
+	    	    break;
+		
+	    	    default:
+	    	        throw new InvalidArgumentException('File "'.$filename.'" is not valid jpg, png or gif image.');
+	    	    break;
+	    	}
+	    } catch (Exception $e) {
+    		die( 'Caught exception: '.  $e->getMessage() );
+    		return false;
+		}
 	}

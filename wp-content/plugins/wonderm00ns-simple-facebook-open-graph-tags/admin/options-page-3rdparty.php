@@ -24,11 +24,15 @@ global $webdados_fb;
 	<div class="postbox">
 		<h3 class="hndle">
 			<?php
-			if ( $webdados_fb->is_yoast_seo_active() ) {
+			if ( $webdados_fb->is_yoast_seo_active() && class_exists('WPSEO_Utils') ) {
 				$wpseo_utils = new WPSEO_Utils();
-				?>
-				<img src="<?php echo 'data:image/svg+xml;base64,' . base64_encode( str_replace('fill:#82878c', 'fill:#23282d', $wpseo_utils->get_icon_svg(false) ) ) ; ?>"/>
-				<?php
+				if( method_exists($wpseo_utils, 'get_icon_svg') ) {
+					?>
+					<img src="<?php echo 'data:image/svg+xml;base64,' . base64_encode( str_replace('fill:#82878c', 'fill:#23282d', $wpseo_utils->get_icon_svg(false) ) ) ; ?>"/>
+					<?php
+				} else {
+					?><i class="dashicons-before dashicons-editor-code"></i><?php
+				}
 			} else {
 				?><i class="dashicons-before dashicons-editor-code"></i><?php
 			}

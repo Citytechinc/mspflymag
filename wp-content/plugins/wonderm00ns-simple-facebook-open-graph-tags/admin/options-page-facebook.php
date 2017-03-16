@@ -230,7 +230,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 											$info = curl_getinfo($ch);
 											if (intval($info['http_code'])==200) {
 												//Save the file locally
-												$fh = fopen(ABSPATH . 'wp-content/plugins/wonderm00ns-simple-facebook-open-graph-tags/includes/FacebookLocales.xml', 'w') or die("Can't open file");
+												$fh = fopen(WP_PLUGIN_DIR . '/wonderm00ns-simple-facebook-open-graph-tags/includes/FacebookLocales.xml', 'w') or die("Can't open file");
 												fwrite($fh, $fb_locales);
 												fclose($fh);
 												$listLocales=true;
@@ -243,7 +243,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 							}
 							//Offline
 							if (!$listLocales) {
-								if ($fb_locales=file_get_contents(ABSPATH . 'wp-content/plugins/wonderm00ns-simple-facebook-open-graph-tags/includes/FacebookLocales.xml')) {
+								if ($fb_locales=file_get_contents(WP_PLUGIN_DIR . '/wonderm00ns-simple-facebook-open-graph-tags/includes/FacebookLocales.xml')) {
 									$listLocales=true;
 									$loadedOffline=true;
 								}
