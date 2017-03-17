@@ -20,6 +20,8 @@ before_install:
   - mkdir -p $HOME/.terminus/plugins
   - composer create-project -n -d $HOME/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:^1
   - composer create-project -n -d $HOME/.terminus/plugins pantheon-systems/terminus-secrets-plugin:^1
+  - git config --global user.email "admin@test.com"
+  - git config --global user.name "Travis CI"
 
 before_script:
   - terminus auth:login -n --machine-token="$TERMINUS_TOKEN"

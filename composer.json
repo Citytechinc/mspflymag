@@ -1,5 +1,10 @@
 {
-    "require": {
-        "pantheon-systems/terminus": "^1.1"
-    }
+  "require": {
+      "pantheon-systems/terminus": "^1.1"
+  },
+  "scripts": {
+    "build-assets": [
+      "echo 'Hello World!'"
+    ]
+  }
 }
