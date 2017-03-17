@@ -1,5 +1,7 @@
 # Always need to specify the pantheon.yml API version.
 api_version: 1
 
+web_docroot: true
+
 # You might also want some of the following here:
 php_version: 7.0
