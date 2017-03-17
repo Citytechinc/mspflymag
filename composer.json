@@ -1,0 +1,84 @@
+{
+  "name": "Fly MSP Mag",
+  "description": "",
+  "version": "0.1.0",
+  "type": "project",
+  "keywords": [],
+  "minimum-stability": "dev",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "pantheon-systems/wordpress",
+        "version": "4.7.3",
+        "dist": {
+          "url": "https://github.com/pantheon-systems/WordPress/archive/4.7.3.zip",
+          "type": "zip"
+        },
+        "source": {
+          "url": "git@github.com:pantheon-systems/WordPress.git",
+          "type": "git",
+          "reference": "4.7.3"
+        },
+        "type": "wordpress-core",
+        "require": {
+          "johnpbloch/wordpress-core-installer": "~0.1"
+        },
+        "extra": {
+          "wordpress-install-dir": "web/wp"
+        }
+      }
+    }
+  ],
+  "require": {
+    "php": ">=5.2",
+    "composer/installers": "~1.0",
+    "vlucas/phpdotenv": "^2.4.0",
+    "wpackagist-plugin/pantheon-advanced-page-cache": "^0.1.2",
+    "wpackagist-plugin/wp-cfm": "^1.4.5",
+    "wpackagist-theme/twentyseventeen": "^1.1",
+    "pantheon-systems/wordpress": "^4.7.3",
+    "roots/wp-password-bcrypt": "^1.0.0"
+  },
+  "config": {
+    "vendor-dir": "vendor",
+    "preferred-install": "dist",
+    "secure-http": false
+  },
+  "extra": {
+    "installer-paths": {
+      "web/wp-content/plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ],
+      "web/wp-content/themes/{$name}/": [
+        "type:wordpress-theme"
+      ]
+    }
+  },
+  "scripts": {
+    "build-assets": [
+      "./scripts/composer/install-or-update"
+    ],
+    "cleanup": [
+      "rsync -a web/wp/wp-content/mu-plugins/* web/wp-content/mu-plugins/",
+      "rm web/wp/wp-config.php",
+      "rm -rf web/wp/wp-content"
+    ],
+    "post-install-cmd": [
+      "@cleanup"
+    ],
+    "post-update-cmd": [
+      "@cleanup"
+    ],
+    "post-create-project-cmd": [
+      "@cleanup"
+    ]
+  }
+}
+
+
+
