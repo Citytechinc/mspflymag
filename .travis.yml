@@ -31,6 +31,11 @@ before_script:
       if [[ $TRAVIS_PULL_REQUEST != false ]] ; then
         composer build-assets
         terminus build-env:create -n "$TERMINUS_SITE.dev" "$TERMINUS_ENV" --yes --clone-content
+        # This extra push of pantheon.yml should not be necessary after
+        # pantheon.yml is present on master.
+        echo "## whitespace change to force reprocess of pantheon.yml" >> pantheon.yml
+        git push pantheon "$TERMINUS_ENV"
+
       fi
 
 script:
