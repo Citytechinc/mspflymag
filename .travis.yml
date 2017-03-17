@@ -33,4 +33,4 @@ before_script:
       fi
 
 script:
-  - "Hooray~|!"
+  - echo "Hooray~|!"
