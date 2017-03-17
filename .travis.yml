@@ -12,6 +12,7 @@ addons:
    - ssh://codeserver.dev.84245a58-c1ac-48c0-8e01-6b5a34623df1@codeserver.dev.84245a58-c1ac-48c0-8e01-6b5a34623df1.drush.in:2222
 
 before_install:
+  - export PATH="$HOME/.config/composer/vendor/bin:$PATH"
   - composer global require -n "hirak/prestissimo:^0.3"
   - composer global require -n "consolidation/cgr"
   - cgr "pantheon-systems/terminus:^1"
