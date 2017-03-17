@@ -23,6 +23,7 @@ before_install:
   - composer create-project -n -d $HOME/.terminus/plugins pantheon-systems/terminus-secrets-plugin:^1
 
 before_script:
+  - terminus auth:login -n --machine-token="$TERMINUS_TOKEN"
   - terminus build-env:delete:ci -n "$TERMINUS_SITE" --keep=2 --yes
   - composer -n build-assets
   - terminus env:wake -n "$TERMINUS_SITE.dev"
