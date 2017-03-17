@@ -31,3 +31,6 @@ before_script:
       if [[ $TRAVIS_PULL_REQUEST != false ]] ; then
         terminus build-env:create -n "$TERMINUS_SITE.dev" "$TERMINUS_ENV" --yes --clone-content
       fi
+
+script:
+  - "Hooray~|!"
